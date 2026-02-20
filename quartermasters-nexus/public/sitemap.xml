@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://quartermasters.me/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://quartermasters.me/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/contact</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/knowledge-base</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/financial-advisory</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/human-capital</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/management</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/event-logistics</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/tech-rnd</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quartermasters.me/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://quartermasters.me/terms</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>

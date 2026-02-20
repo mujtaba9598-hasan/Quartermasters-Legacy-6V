@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Environment files (NEVER commit secrets)
+.env
+.env.*
+.env.local
+.env.production
+**/.env
+**/.env.*
+**/.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Deployment artifacts
+*.zip
+
+# Temp files
+*.tmp
+inbox_output.json
+inbox_latest.json
+
+# Vercel
+.vercel
+
+# Claude settings with API tokens
+.claude/settings.local.json
+
+# Claude temp message files
+.claude/temp_*.json
+.claude/inbox_*.json
+
+# Claude session transcripts (huge files)
+.claude/projects/
+.claude/mcp-settings.json
+
+# Gemini delivery scripts (temp — not project code)
+create_kb_*.py
+expand_kb_*.py
+append_kb_*.py
+send_kb_*.py
+send_delivery.py
+check_inbox_*.py
+inbox_*.json
