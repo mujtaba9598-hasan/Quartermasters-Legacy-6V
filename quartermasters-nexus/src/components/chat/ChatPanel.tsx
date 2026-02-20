@@ -1,0 +1,194 @@
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Maximize2, Minimize2 } from 'lucide-react';
+import { useQChat } from '@/hooks/useQChat';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { TypingIndicator } from './TypingIndicator';
+
+type PanelState = 'collapsed' | 'expanded' | 'fullscreen';
+
+export function ChatPanel() {
+    const [panelState, setPanelState] = useState<PanelState>('collapsed');
+    const { messages, input, setInput, handleSubmit, isLoading, chatState } = useQChat();
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // Auto-scroll logic
+    const scrollToBottom = () => {
+        if (!scrollContainerRef.current) return;
+
+        const container = scrollContainerRef.current;
+        const isNearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 150;
+
+        if (isNearBottom || messages.length <= 2) {
+            messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages, chatState]);
+
+    // Handle Escape key to close
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape' && panelState !== 'collapsed') {
+                setPanelState('collapsed');
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [panelState]);
+
+    // Handle body scroll locking
+    useEffect(() => {
+        if (panelState === 'fullscreen') {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [panelState]);
+
+    const toggleFullscreen = () => {
+        setPanelState(prev => prev === 'fullscreen' ? 'expanded' : 'fullscreen');
+    };
+
+    const isExpanded = panelState === 'expanded';
+    const isFullscreen = panelState === 'fullscreen';
+
+    return (
+        <>
+            {/* Collapsed State: Floating Button */}
+            <AnimatePresence>
+                {panelState === 'collapsed' && (
+                    <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{
+                            opacity: 1,
+                            scale: [1, 1.05, 1],
+                            boxShadow: ['0 0 0px rgba(193,90,44,0)', '0 0 20px rgba(193,90,44,0.3)', '0 0 0px rgba(193,90,44,0)']
+                        }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{
+                            scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                            boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                            opacity: { duration: 0.2 }
+                        }}
+                        onClick={() => setPanelState('expanded')}
+                        className="fixed bottom-6 right-6 w-14 h-14 bg-[#C15A2C] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-50 hover:bg-[#A04A24] transition-colors"
+                        aria-label="Open Quartermasters Chat"
+                    >
+                        Q
+                    </motion.button>
+                )}
+            </AnimatePresence>
+
+            {/* Expanded / Fullscreen State: Chat Panel */}
+            <AnimatePresence>
+                {(isExpanded || isFullscreen) && (
+                    <motion.div
+                        initial={isFullscreen
+                            ? { opacity: 0, scale: 0.95 }
+                            : { x: '100%', opacity: 0.5 }
+                        }
+                        animate={isFullscreen
+                            ? { opacity: 1, scale: 1, x: 0 }
+                            : { x: 0, opacity: 1, scale: 1 }
+                        }
+                        exit={isFullscreen
+                            ? { opacity: 0, scale: 0.95 }
+                            : { x: '100%', opacity: 0.5 }
+                        }
+                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        className={`fixed z-50 flex flex-col bg-slate-950/95 backdrop-blur-2xl ${isFullscreen
+                                ? 'inset-0 w-full h-full'
+                                : 'top-0 right-0 h-full w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
+                            }`}
+                    >
+                        {/* Header */}
+                        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0 bg-white/5">
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-[#C15A2C] flex items-center justify-center text-white font-bold text-lg">
+                                    Q
+                                </div>
+                                <div className="flex flex-col">
+                                    <h2 className="text-slate-100 font-semibold text-base leading-tight">Q</h2>
+                                    <span className="text-[#C15A2C] text-xs font-medium tracking-wide">Senior Strategy Consultant</span>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-1">
+                                <button
+                                    onClick={toggleFullscreen}
+                                    className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors hidden sm:block"
+                                    aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                                >
+                                    {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+                                </button>
+                                <button
+                                    onClick={() => setPanelState('collapsed')}
+                                    className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                                    aria-label="Close chat"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Message Area */}
+                        <div
+                            ref={scrollContainerRef}
+                            className="flex-1 overflow-y-auto p-5 scroll-smooth"
+                        >
+                            {messages.length === 0 && (
+                                <div className="h-full flex flex-col items-center justify-center text-center px-4 opacity-70">
+                                    <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                        <span className="text-[#C15A2C] text-3xl font-bold">Q</span>
+                                    </div>
+                                    <p className="text-slate-300 text-sm max-w-[250px]">
+                                        Engage Quartermasters intelligence. Ask about our 5 licensed verticals, pricing, or methodology.
+                                    </p>
+                                </div>
+                            )}
+
+                            {messages.map((m, index) => {
+                                const isLastMessage = index === messages.length - 1;
+                                const isStreaming = isLoading && m.role === 'assistant' && isLastMessage;
+
+                                return (
+                                    <ChatMessage
+                                        key={m.id || index}
+                                        role={m.role as 'user' | 'assistant'}
+                                        content={m.content}
+                                        isStreaming={isStreaming}
+                                    />
+                                );
+                            })}
+
+                            {/* Typing Indicator */}
+                            <TypingIndicator visible={chatState === 'thinking'} />
+
+                            <div ref={messagesEndRef} className="h-4" />
+                        </div>
+
+                        {/* Input Area */}
+                        <div className="p-4 border-t border-white/10 bg-slate-950 shrink-0">
+                            <ChatInput
+                                input={input}
+                                setInput={setInput}
+                                onSubmit={handleSubmit}
+                                isLoading={isLoading}
+                            />
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
+    );
+}

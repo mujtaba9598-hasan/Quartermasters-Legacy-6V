@@ -1,5 +1,5 @@
 # Quartermasters F.Z.C — Progress Tracker
-> Last Updated: 2026-02-20 | Milestone: Phase B FULLY COMPLETE (10/10), KB COMPLETE (7/7)
+> Last Updated: 2026-02-20 | Milestone: Phase C 3/10 (C-01, C-02, C-03 accepted)
 > Git: https://github.com/mujtaba9598-hasan/Quarter_USA
 
 ---
@@ -51,20 +51,20 @@
 
 ---
 
-## Phase C — Sprint 4 Frontend (NOT STARTED)
+## Phase C — Sprint 4 Frontend (IN PROGRESS — 3/10)
 
-| Task | Description | Status |
-|------|-------------|--------|
-| C-01 | Chat UI component (ChatInterface.tsx) | PENDING |
-| C-02 | Message bubble components | PENDING |
-| C-03 | Typing indicator + streaming display | PENDING |
-| C-04 | Chat input with send button | PENDING |
-| C-05 | Pricing display card component | PENDING |
-| C-06 | Negotiation UI (counter-offer buttons) | PENDING |
-| C-07 | "Book Mujtaba" calendar integration (Cal.com) | PENDING |
-| C-08 | Q avatar (Lottie 2D + Three.js 3D) | PENDING |
-| C-09 | Chat page layout (/chat route) | PENDING |
-| C-10 | Integration testing + E2E flow | PENDING |
+| Task | File(s) | Status | Lines | Notes |
+|------|---------|--------|-------|-------|
+| C-01 | `src/components/chat/ChatPanel.tsx` | ACCEPTED | 195 | 3-state panel (collapsed/expanded/fullscreen), auto-scroll, Escape key |
+| C-02 | `ChatMessage.tsx`, `ChatInput.tsx`, `TypingIndicator.tsx` | ACCEPTED | 248 | Message bubbles, auto-grow textarea, Peak-End UX, staggered dots |
+| C-03 | `src/hooks/useQChat.ts` | ACCEPTED | 138 | useChat wrapper, visitorId, conversationId, chatState, hesitation |
+| C-04 | `src/components/avatar/QAvatar3D.tsx` | PENDING | - | R3F icosahedron, 4 animation states |
+| C-05 | `src/components/avatar/QAvatar2D.tsx` | PENDING | - | Lottie/CSS fallback avatar |
+| C-06 | `src/lib/rendering/tier-detect.ts` | PENDING | - | WebGL detection, GPU benchmark |
+| C-07 | `src/components/chat/QChatExperience.tsx` | PENDING | - | Chat + avatar orchestrator |
+| C-08 | `VelvetRope.tsx`, `PricingCard.tsx`, `BookMujtaba.tsx` | PENDING | - | Iron Grip pricing UI |
+| C-09 | `src/lib/pricing/flow-segmentation.ts` | PENDING | - | Express/Executive/Discovery flow |
+| C-10 | `src/app/layout.tsx` (MODIFY) | PENDING | - | Add Q chat launcher to root layout |
 
 ---
 
