@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 import { retrieveContext } from '@/lib/rag/retrieve'
-import { askQ } from '@/lib/ai/claude'
+import { streamQ } from '@/lib/ai/claude'
 import { validateResponse } from '@/lib/ai/guardrails'
 import { rateLimit } from '@/lib/redis'
 
@@ -14,12 +14,15 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing message or visitorId' }, { status: 400 })
         }
 
-        const { allowed, remaining } = await rateLimit(visitorId, 10, 60_000)
-        if (!allowed) {
-            return NextResponse.json(
-                { error: 'Rate limit exceeded' },
-                { status: 429, headers: { 'X-RateLimit-Remaining': '0' } }
-            )
+        const rateLimitResult = await rateLimit(visitorId, 10, 60_000)
+        if (!rateLimitResult.allowed) {
+            return new Response(JSON.stringify({ error: 'Rate limit exceeded' }), {
+                status: 429,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-RateLimit-Remaining': '0'
+                }
+            })
         }
 
         let currentConversationId = conversationId
@@ -63,38 +66,51 @@ export async function POST(req: Request) {
             .eq('conversation_id', currentConversationId)
             .single()
 
-        // It's okay if pricing state doesn't exist yet
         if (pricingError && pricingError.code !== 'PGRST116') {
             console.error('Error fetching pricing state:', pricingError)
         }
 
-        // e. Call askQ with all context
-        const qResponseText = await askQ({
-            userMessage: message,
-            conversationHistory,
-            context,
-            pricingState: pricingData || undefined
-        })
-
-        // f. Run response through validateResponse
-        const validationResult = validateResponse(qResponseText, pricingData || undefined)
-
-        // g. Store user message + Q response
-        const { error: insertError } = await supabase.from('messages').insert([
-            { conversation_id: currentConversationId, role: 'user', content: message },
-            { conversation_id: currentConversationId, role: 'assistant', content: validationResult.cleaned }
+        // e. Store user message BEFORE streaming starts
+        const { error: insertUserError } = await supabase.from('messages').insert([
+            { conversation_id: currentConversationId, role: 'user', content: message }
         ])
 
-        if (insertError) {
-            console.error('Error inserting new messages:', insertError)
-            return NextResponse.json({ error: 'Failed to save messages' }, { status: 500 })
+        if (insertUserError) {
+            console.error('Error inserting user message:', insertUserError)
+            return NextResponse.json({ error: 'Failed to save message' }, { status: 500 })
         }
 
-        // h. Return response
-        return NextResponse.json({
-            response: validationResult.cleaned,
-            conversationId: currentConversationId,
-            flags: validationResult.flags
+        // f. Stream Q response — onFinish stores assistant message + runs guardrails
+        const result = streamQ(
+            {
+                userMessage: message,
+                conversationHistory,
+                context,
+                pricingState: pricingData || undefined
+            },
+            async ({ text }) => {
+                const validationResult = validateResponse(text, pricingData || undefined)
+
+                if (validationResult.flags.length > 0) {
+                    console.warn(`Guardrail flags in conv ${currentConversationId}:`, validationResult.flags)
+                }
+
+                const { error: insertError } = await supabase.from('messages').insert([
+                    { conversation_id: currentConversationId, role: 'assistant', content: validationResult.cleaned }
+                ])
+
+                if (insertError) {
+                    console.error('Error inserting assistant message:', insertError)
+                }
+            }
+        )
+
+        // g. Return streaming response with conversation ID header
+        return result.toDataStreamResponse({
+            headers: {
+                'X-Conversation-Id': currentConversationId,
+                'X-RateLimit-Remaining': rateLimitResult.remaining.toString()
+            }
         })
 
     } catch (error: any) {
