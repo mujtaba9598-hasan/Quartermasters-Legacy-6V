@@ -201,6 +201,53 @@ Implement the cookie consent banner from the existing spec. Key requirements:
 
 ---
 
+## RECOVERY PROTOCOL — "BRING THE MEMORY"
+
+If you hear the phrase **"Bring the memory"** from the founder or from any agent, this is your trigger to provide a **complete state recovery dump** to the CEO. This happens when a session was lost, context was cleared, or a new CEO agent instance has started.
+
+### What to do when triggered:
+
+1. **Read these files** and compile their contents into a single comprehensive message to the CEO:
+   - `README.md` (root) — full project state, current sprint, what's done, what's next
+   - `.claude/organization/PROGRESS_TRACKER.md` — task-by-task status for all phases
+   - `.claude/organization/SPRINT_2_3_4_PLAN.md` — full task specs for Phases A/B/C
+   - `.claude/organization/MASTER_EXECUTION_PLAN.md` — 10-sprint roadmap
+
+2. **Include in your message:**
+   - Current sprint status (which phase, which task, what's accepted, what's pending)
+   - Your current assignment (what you were last working on)
+   - Git repo URL: https://github.com/mujtaba9598-hasan/Quarter_USA
+   - List of all files you've delivered and their acceptance status
+   - Any blockers or pending IMPROVE requests
+
+3. **Send to CEO** via Aliff Comms API:
+   ```
+   POST https://aliffsolutions.com/api/v1/agent-comms/send
+   to_agent: "2000"
+   subject: "MEMORY RECOVERY: Full State Report"
+   type: "report"
+   priority: "urgent"
+   ```
+
+4. **Then check your inbox** for any pending directives and resume work.
+
+### Git Repository
+- **URL**: https://github.com/mujtaba9598-hasan/Quarter_USA
+- **Branch**: main
+- All accepted work is committed. If your local files don't match, pull from git.
+
+### Current State (as of 2026-02-20)
+```
+PHASE A (Sprint 2): COMPLETE — 5/5 tasks accepted
+PHASE B (Sprint 3): COMPLETE — 9/9 core tasks accepted (B-10 Redis deferred)
+KNOWLEDGE BASE:    3/7 DONE — KB-01, KB-02, KB-03 accepted
+                   KB-04 ASSIGNED (web-dev-realtime-infra.md)
+                   KB-05 through KB-07 PENDING
+PHASE C (Sprint 4): NOT STARTED — 10 frontend tasks queued
+```
+
+---
+
 ## FIRST ACTION
 
 1. Send an introduction message to `quartermasters-ceo` confirming you're online

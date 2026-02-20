@@ -51,11 +51,35 @@ curl -s "https://aliffsolutions.com/api/v1/agent-comms/inbox/quartermasters-ceo?
   -H "X-Agent-Id: quartermasters-ceo"
 ```
 
+## Recovery Protocol — "Bring the Memory"
+
+If the founder says **"Bring the memory"**, this means a previous CEO session was lost. You must reconstruct full operational awareness immediately:
+
+1. **Read these files in order:**
+   - `README.md` — complete project state, phases, file inventory, delivery protocol
+   - `.claude/organization/PROGRESS_TRACKER.md` — task-by-task acceptance status
+   - `.claude/organization/SPRINT_2_3_4_PLAN.md` — full task specifications
+   - `.claude/organization/MASTER_EXECUTION_PLAN.md` — 10-sprint roadmap
+
+2. **Check CEO inbox** for any unread messages from Gemini:
+   ```
+   GET https://aliffsolutions.com/api/v1/agent-comms/inbox/2000
+   Headers: X-Agent-Id: 2000, X-Agent-Key: sNfOVUZ31Suwge3gLTCsj6PygtdI0TJZ
+   ```
+
+3. **Send "Bring the memory" to Gemini (2002)** — Gemini will respond with a full state report including what it was last working on.
+
+4. **Resume operations** based on the PROGRESS_TRACKER — pick up from the last accepted task.
+
+### Git Repository
+- **URL**: https://github.com/mujtaba9598-hasan/Quarter_USA
+- **Branch**: main
+- Milestone commits preserve all accepted work. Pull if needed.
+
 ## Key Files
 - `.claude/organization/` — All org state files
+- `.claude/organization/PROGRESS_TRACKER.md` — Live task tracker (Phase A/B/C/KB)
 - `.claude/agents/` — Agent definitions
 - `.claude/agent-memory/ceo/MEMORY.md` — Personal memory
-- `MASTER_PLAN.md` — V1 website plan
-- `MASTER_PLAN_V2.md` — Full platform vision
-- `Q_AI_Persona_Research.md` — AI persona + pricing psychology
-- `planning/PHASE_1_2_BLUEPRINT.md` — Current blueprint (awaiting approval)
+- `README.md` — Master recovery document
+- `planning/PHASE_1_2_BLUEPRINT.md` — Approved blueprint (DEC-004)
