@@ -3,35 +3,7 @@ import { supabase } from '@/lib/supabase'
 import { retrieveContext } from '@/lib/rag/retrieve'
 import { askQ } from '@/lib/ai/claude'
 import { validateResponse } from '@/lib/ai/guardrails'
-
-// Simple in-memory rate limiting map
-// Key: visitorId, Value: { count: number, resetTime: number }
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
-
-function checkRateLimit(visitorId: string): boolean {
-    const now = Date.now()
-    const windowMs = 60 * 1000 // 1 minute
-    const maxRequests = 10
-
-    const entry = rateLimitMap.get(visitorId)
-
-    if (!entry) {
-        rateLimitMap.set(visitorId, { count: 1, resetTime: now + windowMs })
-        return true
-    }
-
-    if (now > entry.resetTime) {
-        rateLimitMap.set(visitorId, { count: 1, resetTime: now + windowMs })
-        return true
-    }
-
-    if (entry.count >= maxRequests) {
-        return false
-    }
-
-    entry.count += 1
-    return true
-}
+import { rateLimit } from '@/lib/redis'
 
 export async function POST(req: Request) {
     try {
@@ -42,8 +14,12 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing message or visitorId' }, { status: 400 })
         }
 
-        if (!checkRateLimit(visitorId)) {
-            return NextResponse.json({ error: 'Rate limit exceeded' }, { status: 429 })
+        const { allowed, remaining } = await rateLimit(visitorId, 10, 60_000)
+        if (!allowed) {
+            return NextResponse.json(
+                { error: 'Rate limit exceeded' },
+                { status: 429, headers: { 'X-RateLimit-Remaining': '0' } }
+            )
         }
 
         let currentConversationId = conversationId
