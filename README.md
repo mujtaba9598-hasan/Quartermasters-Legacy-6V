@@ -1,6 +1,6 @@
 # Quartermasters F.Z.C — Project Recovery & Status Document
 
-> **Last Updated**: 2026-02-20 (Session 3 — KB expansion in progress, Phase B COMPLETE)
+> **Last Updated**: 2026-02-20 (Session 4 — Phase C in progress, 3/10 accepted)
 > **Git**: https://github.com/mujtaba9598-hasan/Quarter_USA
 > **Purpose**: Complete project state so work can resume from ANY new session without context loss.
 > **Entity**: Quartermasters F.Z.C | AFZA License #37357 | Ajman Free Zone
@@ -34,29 +34,29 @@
 
 ## 1. CRITICAL — CURRENT STATE & WHAT TO DO NEXT
 
-### Where We Are (as of 2026-02-20, Session 3 Milestone)
+### Where We Are (as of 2026-02-20, Session 4 Milestone)
 
 ```
 SPRINT 1:  COMPLETE (10/10)
-SPRINT 2:  COMPLETE (Phase A — 5/5 tasks accepted)
-SPRINT 3:  COMPLETE (Phase B — 9/9 core tasks accepted, B-10 Redis deferred)
-KB FILES:  3/7 DONE (KB-01, KB-02, KB-03 accepted. KB-04 assigned to Gemini)
-SPRINT 4:  NOT STARTED (Phase C — depends on KB + B-10 completion)
+SPRINT 2:  COMPLETE (Phase A — 6/6 tasks accepted)
+SPRINT 3:  COMPLETE (Phase B — 10/10 ALL accepted, including B-10 Redis + B-09 streaming refactor)
+KB FILES:  7/7 COMPLETE (2,626 lines of RAG content)
+SPRINT 4:  IN PROGRESS (Phase C — 3/10 accepted: C-01, C-02, C-03)
 ```
 
 ### Immediate Next Steps (in order)
 
-1. **Check Gemini inbox** for KB-04 delivery: `curl -s -H "X-Agent-Id: 2000" -H "X-Agent-Key: sNfOVUZ31Suwge3gLTCsj6PygtdI0TJZ" "https://aliffsolutions.com/api/v1/agent-comms/inbox/2000"`
-2. **Review and accept** KB-04 through KB-07 (one at a time, verify on disk)
-3. **Assign B-10** (Redis caching layer) after KB files are done
-4. **Assign Phase C** tasks (Sprint 4 frontend) after B-10 is accepted
-5. **Founder actions still pending**: Run `docker compose up -d --build`, set `RESEND_API_KEY`
+1. **Check Gemini inbox** for C-06 delivery (tiered rendering): `curl -s -H "X-Agent-Id: 2000" -H "X-Agent-Key: sNfOVUZ31Suwge3gLTCsj6PygtdI0TJZ" "https://aliffsolutions.com/api/v1/agent-comms/inbox/2000"`
+2. **Continue Phase C** tasks: C-06 → C-04/C-05 → C-07 → C-08/C-09 → C-10
+3. **After Phase C**: Q goes LIVE — site can earn revenue
+4. **Founder actions still pending**: Run `docker compose up -d --build`, set `RESEND_API_KEY`, approve Supabase + Claude API costs
 
 ### Gemini Task Queue (what Gemini should be working on RIGHT NOW)
-- KB-04: web-dev-realtime-infra.md (assigned, awaiting delivery)
-- Then KB-05 through KB-07 in sequence
-- Then B-10 (Redis caching)
-- Then Phase C tasks
+- C-06: tier-detect.ts (assigned, awaiting delivery)
+- Then C-04 + C-05 (avatars, parallel)
+- Then C-07 (chat + avatar integration)
+- Then C-08 + C-09 (pricing UI + flow segmentation)
+- Then C-10 (homepage integration — FINAL task)
 
 ---
 
@@ -65,10 +65,10 @@ SPRINT 4:  NOT STARTED (Phase C — depends on KB + B-10 completion)
 Full plan lives at: `.claude/organization/SPRINT_2_3_4_PLAN.md`
 
 ```
-PHASE A ── Sprint 2 Finish (Foundation)     ── 5 tasks + 1 bugfix ── COMPLETE
-PHASE B ── Sprint 3 Backend (Q AI Engine)   ── 9/9 core tasks      ── COMPLETE (B-10 Redis deferred)
-  KB    ── Knowledge Base Expansion          ── 7 files             ── 3/7 DONE
-PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 10 tasks            ── NOT STARTED
+PHASE A ── Sprint 2 Finish (Foundation)     ── 6/6 tasks           ── COMPLETE
+PHASE B ── Sprint 3 Backend (Q AI Engine)   ── 10/10 tasks         ── COMPLETE (incl. Redis + streaming)
+  KB    ── Knowledge Base Expansion          ── 7/7 files           ── COMPLETE (2,626 lines)
+PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 3/10 tasks          ── IN PROGRESS
 ```
 
 ### Delivery Protocol (ENFORCED — do not change)
@@ -99,7 +99,7 @@ PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 10 tasks            ─�
 
 ## 4. COMPLETED WORK — PHASE B (Sprint 3 Backend)
 
-> **Status**: 9/10 ACCEPTED. Only B-10 (Redis) remains.
+> **Status**: 10/10 ALL ACCEPTED. Phase B COMPLETE.
 
 | Task | File(s) Created | What Was Done | Verdict |
 |------|----------------|---------------|---------|
@@ -111,8 +111,8 @@ PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 10 tasks            ─�
 | B-06 | `src/lib/ai/claude.ts` | Claude API wrapper with Q personality. System prompt: scope-locked to 5 services, no price fabrication, no commitments, no legal advice. RAG context + pricing state injection. Model: claude-sonnet-4-6. | ACCEPTED |
 | B-07 | `src/lib/ai/guardrails.ts` | Anti-hallucination: commitment scanner (regex), price scanner (1% tolerance vs PricingState), scope scanner (7 off-topic terms). Returns { valid, cleaned, flags }. | ACCEPTED |
 | B-08 | `src/lib/pricing/engine.ts` + `src/lib/pricing/packages.ts` | Iron Grip pricing engine. State machine: initial→anchored→negotiating→floor→terminated/closed. Max 10% discount, 3% per step, 5% nudge at 30s. packages.ts has 20 entries (5 services × 4 tiers) with correct price ranges. | ACCEPTED (after IMPROVE — Standard/Premium/Enterprise prices were 3-5x below spec, fixed) |
-| B-09 | `src/app/api/chat/route.ts` + `src/app/api/conversations/route.ts` | Chat API: POST /api/chat with rate limiting (10/min), conversation CRUD, RAG context, guardrails, message storage. Conversations: GET by visitorId, POST to create. | ACCEPTED |
-| B-10 | `src/lib/redis.ts` | Upstash Redis client, rate limiting, caching helpers. | **PENDING — not yet assigned** |
+| B-09 | `src/app/api/chat/route.ts` + `src/app/api/conversations/route.ts` | Chat API: POST /api/chat with streaming (Vercel AI SDK streamText), distributed Redis rate limiting, RAG context, guardrails in onFinish callback. Conversations: GET/POST. | ACCEPTED (refactored to streaming in Session 4) |
+| B-10 | `src/lib/redis.ts` | Upstash Redis client: rateLimit() distributed INCR+EXPIRE, cacheGet<T>(), cacheSet(). Wired into chat route replacing in-memory Map. | ACCEPTED (CEO-built in Session 4) |
 
 ### B-08 Pricing Table (ACTUAL values on disk in packages.ts)
 
@@ -128,7 +128,7 @@ Tier ranges: Express $1K-$1.8K | Standard $12K-$25K | Premium $30K-$60K | Enterp
 
 ---
 
-## 5. IN PROGRESS — KNOWLEDGE BASE EXPANSION
+## 5. COMPLETE — KNOWLEDGE BASE EXPANSION (7/7, 2,626 lines)
 
 > **Purpose**: Give Q deep expertise for enterprise-level client conversations ($100 to $120K+)
 > **Location**: `quartermasters-nexus/src/content/knowledge-base/`
@@ -137,12 +137,12 @@ Tier ranges: Express $1K-$1.8K | Standard $12K-$25K | Premium $30K-$60K | Enterp
 | File | Category | Status | Lines |
 |------|----------|--------|-------|
 | KB-01 | `web-dev-design-systems.md` — Design systems, themes, UI frameworks, component libs, CSS, tokens | ACCEPTED | 322 |
-| KB-02 | `web-dev-frontend-tech.md` — Frontend frameworks, build tools, rendering, state management | **Awaiting delivery** | — |
-| KB-03 | `web-dev-animation-3d.md` — Animation, transitions, 3D, WebGL/WebGPU, WebXR, Lottie, Rive | Pending | — |
-| KB-04 | `web-dev-realtime-infra.md` — WebSockets, real-time, edge computing, DevOps, databases | Pending | — |
-| KB-05 | `web-dev-integrations.md` — CMS, e-commerce, payments, auth, AI, analytics, notifications | Pending | — |
-| KB-06 | `web-dev-enterprise.md` — Multi-tenancy, RBAC, SSO, security, compliance, accessibility, i18n | Pending | — |
-| KB-07 | `service-delivery-philosophy.md` — Internal Q context: budget handling, resource allocation | Pending | — |
+| KB-02 | `web-dev-frontend-tech.md` — Frontend frameworks, build tools, rendering, state management | ACCEPTED | 405 |
+| KB-03 | `web-dev-animation-3d.md` — Animation, transitions, 3D, WebGL/WebGPU, Lottie, Rive | ACCEPTED | 501 |
+| KB-04 | `web-dev-realtime-infra.md` — WebSockets, real-time, edge computing, DevOps, databases | ACCEPTED | 365 |
+| KB-05 | `web-dev-integrations.md` — CMS, payments, auth, AI, analytics, notifications | ACCEPTED | 324 |
+| KB-06 | `web-dev-enterprise.md` — Multi-tenancy, RBAC, SSO, security, compliance, accessibility, i18n | ACCEPTED | 352 |
+| KB-07 | `service-delivery-philosophy.md` — QM delivery philosophy, consulting methodology, pricing | ACCEPTED | 357 |
 
 ### Existing KB files (from Sprint 2, Feb 13 — still on disk)
 - `banking-services.md` — Banking Services Consultancy
@@ -163,9 +163,9 @@ Tier ranges: Express $1K-$1.8K | Standard $12K-$25K | Premium $30K-$60K | Enterp
 
 ---
 
-## 6. UPCOMING — PHASE C (Sprint 4 Frontend)
+## 6. IN PROGRESS — PHASE C (Sprint 4 Frontend) — 3/10
 
-> **Status**: NOT STARTED. Depends on Phase B completion + KB files.
+> **Status**: IN PROGRESS. C-01, C-02, C-03 ACCEPTED. C-06 assigned to Gemini.
 > **MILESTONE**: After Phase C, the site can earn revenue.
 
 | Task | File(s) to Create | Description |
@@ -212,8 +212,14 @@ Quartermasters 3/                          ← PROJECT ROOT
 │   │   │   ├── robots.ts                  ← NEW (Phase A) — Robots.txt
 │   │   │   └── [all page routes]          ← 12 pages (see File Map)
 │   │   ├── components/                    ← React components
+│   │   │   ├── chat/ChatPanel.tsx         ← NEW (Phase C) — 3-state chat container
+│   │   │   ├── chat/ChatMessage.tsx       ← NEW (Phase C) — Message bubbles
+│   │   │   ├── chat/ChatInput.tsx         ← NEW (Phase C) — Input + send button
+│   │   │   └── chat/TypingIndicator.tsx   ← NEW (Phase C) — Three-dot animation
 │   │   ├── content/knowledge-base/        ← Markdown for RAG (6 existing + 7 new KB files)
-│   │   ├── hooks/                         ← Custom React hooks (useConsent.ts)
+│   │   ├── hooks/                         ← Custom React hooks
+│   │   │   ├── useConsent.ts              ← Cookie consent hook (existing)
+│   │   │   └── useQChat.ts               ← NEW (Phase C) — Streaming chat hook
 │   │   └── lib/                           ← Utilities + NEW backend modules
 │   │       ├── ai/claude.ts               ← NEW (Phase B) — Q + Claude integration
 │   │       ├── ai/guardrails.ts           ← NEW (Phase B) — Anti-hallucination
@@ -260,9 +266,14 @@ Quartermasters 3/                          ← PROJECT ROOT
 | tailwindcss | v4 | Styling (via PostCSS) |
 | typescript | 5.x | Type safety |
 
-### Needs Install (for Sprint 3-4 — code written but packages not yet installed)
+### Additionally Installed in Session 4
+| Package | Version | Purpose |
+|---|---|---|
+| @ai-sdk/anthropic | latest | Vercel AI SDK Anthropic provider (streaming) |
+
+### Still Needs Install (for Sprint 4 frontend)
 ```bash
-npm install @supabase/supabase-js ai @anthropic-ai/sdk @upstash/redis lottie-react
+npm install lottie-react
 ```
 
 ### Env Vars Needed (.env.local)
@@ -319,7 +330,7 @@ RESEND_API_KEY=                   # Email (contact form)
 | `rag/retrieve.ts` | pgvector cosine similarity search | DONE |
 | `pricing/engine.ts` | Iron Grip state machine class | DONE |
 | `pricing/packages.ts` | 20 pricing entries (5×4) | DONE |
-| `redis.ts` | Upstash Redis client | **PENDING (B-10)** |
+| `redis.ts` | Upstash Redis client + rate limiter + cache helpers | DONE (B-10) |
 
 ### Middleware — NEW in Phase A
 | File | Purpose | Status |
@@ -354,10 +365,10 @@ RESEND_API_KEY=                   # Email (contact form)
 | `web-dev-design-systems.md` | Design systems, themes, UI | DONE (KB-01, 322 lines) |
 | `web-dev-frontend-tech.md` | Frontend frameworks, build tools, state mgmt | DONE (KB-02, 405 lines) |
 | `web-dev-animation-3d.md` | Animation, 3D, Framer Motion, Three.js/R3F | DONE (KB-03, 501 lines) |
-| `web-dev-realtime-infra.md` | Real-time, infrastructure | **ASSIGNED (KB-04)** |
-| `web-dev-integrations.md` | CMS, payments, AI, plugins | **PENDING (KB-05)** |
-| `web-dev-enterprise.md` | Enterprise, security, a11y | **PENDING (KB-06)** |
-| `service-delivery-philosophy.md` | Internal Q philosophy | **PENDING (KB-07)** |
+| `web-dev-realtime-infra.md` | Real-time, infrastructure | DONE (KB-04, 365 lines) |
+| `web-dev-integrations.md` | CMS, payments, AI, plugins | DONE (KB-05, 324 lines) |
+| `web-dev-enterprise.md` | Enterprise, security, a11y | DONE (KB-06, 352 lines) |
+| `service-delivery-philosophy.md` | QM delivery philosophy | DONE (KB-07, 357 lines) |
 
 ---
 
