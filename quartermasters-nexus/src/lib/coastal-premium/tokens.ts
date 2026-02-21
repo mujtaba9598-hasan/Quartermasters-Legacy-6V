@@ -1,6 +1,6 @@
 /**
  * Coastal Premium — Design Token System
- * Light mode, ocean-inspired, California coastal aesthetic.
+ * Light mode, ocean-inspired, Arabian coastal aesthetic.
  * DM Serif Display (headings) + DM Sans (body).
  */
 

@@ -10,6 +10,7 @@ import {
   staggerItem,
   scrollViewport,
 } from "@/lib/animations";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -52,7 +53,7 @@ export default function ContactPage() {
       setSubmitted(true);
     } catch {
       setError(
-        "Unable to reach our servers. Please check your connection and try again, or contact us directly at hello@example.com."
+        "Unable to reach our servers. Please check your connection and try again, or contact us directly at ceocli@quartermasters.me."
       );
     } finally {
       setSubmitting(false);
@@ -416,33 +417,35 @@ export default function ContactPage() {
 
                     {/* Submit */}
                     <div className="mt-8">
-                      <button
-                        type="submit"
-                        disabled={submitting}
-                        className="btn-glow-line inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-sm font-semibold"
-                        style={{
-                          fontFamily: "var(--font-heading)",
-                          background: submitting
-                            ? "var(--color-gold)"
-                            : "var(--color-gold)",
-                          color: "var(--color-white)",
-                          letterSpacing: "0.02em",
-                          opacity: submitting ? 0.7 : 1,
-                          cursor: submitting ? "not-allowed" : "pointer",
-                        }}
-                      >
-                        {submitting ? (
-                          <>
-                            Sending...
-                            <Loader2 size={16} className="animate-spin" />
-                          </>
-                        ) : (
-                          <>
-                            Send Inquiry
-                            <Send size={16} />
-                          </>
-                        )}
-                      </button>
+                      <ClickSpark sparkColor="#C8872E">
+                        <button
+                          type="submit"
+                          disabled={submitting}
+                          className="btn-glow-line inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-sm font-semibold"
+                          style={{
+                            fontFamily: "var(--font-heading)",
+                            background: submitting
+                              ? "var(--color-gold)"
+                              : "var(--color-gold)",
+                            color: "var(--color-white)",
+                            letterSpacing: "0.02em",
+                            opacity: submitting ? 0.7 : 1,
+                            cursor: submitting ? "not-allowed" : "pointer",
+                          }}
+                        >
+                          {submitting ? (
+                            <>
+                              Sending...
+                              <Loader2 size={16} className="animate-spin" />
+                            </>
+                          ) : (
+                            <>
+                              Send Inquiry
+                              <Send size={16} />
+                            </>
+                          )}
+                        </button>
+                      </ClickSpark>
                     </div>
                   </form>
                 )}
@@ -473,11 +476,11 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:ceocli@quartermasters.me"
                     className="text-sm transition-colors hover:underline"
                     style={{ color: "var(--color-gold)" }}
                   >
-                    hello@example.com
+                    ceocli@quartermasters.me
                   </a>
                 </div>
               </motion.div>

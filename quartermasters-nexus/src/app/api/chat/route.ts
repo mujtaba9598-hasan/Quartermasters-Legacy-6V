@@ -106,7 +106,7 @@ export async function POST(req: Request) {
         )
 
         // g. Return streaming response with conversation ID header
-        return result.toDataStreamResponse({
+        return result.toTextStreamResponse({
             headers: {
                 'X-Conversation-Id': currentConversationId,
                 'X-RateLimit-Remaining': rateLimitResult.remaining.toString()

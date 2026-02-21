@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Financial Advisory & Banking Services | Quartermasters",
     description: "Institutional Financial Architecture & Regulatory Positioning. From banking structures to regulatory compliance.",
-    url: 'https://example.com/financial-advisory',
+    url: 'https://quartermasters.me/financial-advisory',
   }
 };
 
@@ -46,8 +46,8 @@ export default function FinancialAdvisoryPage() {
       <ServiceJsonLd service={{
         name: "Financial Advisory & Banking Services",
         description: "Institutional Financial Architecture & Regulatory Positioning.",
-        url: "https://example.com/financial-advisory",
-        image: "https://example.com/og-image.jpg"
+        url: "https://quartermasters.me/financial-advisory",
+        image: "https://quartermasters.me/og-image.jpg"
       }} />
       <FinancialClient capabilities={capabilities} />
     </>

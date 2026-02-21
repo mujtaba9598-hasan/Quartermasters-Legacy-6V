@@ -83,7 +83,7 @@ export function GlitchEffect({ children }: { children: React.ReactNode }) {
 export function RippleEffect({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      className="glass relative overflow-hidden rounded-xl p-6"
+      className="glass relative overflow-hidden rounded-xl p-6 group"
       style={{
         borderWidth: 1,
         borderStyle: "solid",

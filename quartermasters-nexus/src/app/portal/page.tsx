@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Lock, ArrowLeft } from "lucide-react";
 import { QuartermasterLogo } from "@/components/icons/QuartermasterLogo";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export default function PortalPage() {
   const [email, setEmail] = useState("");
@@ -127,19 +128,21 @@ export default function PortalPage() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="btn-glow-line flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition-all"
-              style={{
-                fontFamily: "var(--font-heading)",
-                background: "var(--color-gold)",
-                color: "var(--color-white)",
-                letterSpacing: "0.02em",
-              }}
-            >
-              <Lock size={14} />
-              Sign In
-            </button>
+            <ClickSpark sparkColor="#C8872E">
+              <button
+                type="submit"
+                className="btn-glow-line flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition-all"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  background: "var(--color-gold)",
+                  color: "var(--color-white)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                <Lock size={14} />
+                Sign In
+              </button>
+            </ClickSpark>
           </form>
 
           {/* Coming Soon notice */}

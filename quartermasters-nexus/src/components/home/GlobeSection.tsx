@@ -42,7 +42,7 @@ export function GlobeSection() {
                 Global Reach
               </motion.p>
               <motion.h2 variants={staggerItem} className="heading-2 mb-6">
-                California Based.
+                Ajman Free Zone, UAE Based.
                 <br />
                 <span style={{ color: "var(--text-muted)" }}>
                   Globally Connected.

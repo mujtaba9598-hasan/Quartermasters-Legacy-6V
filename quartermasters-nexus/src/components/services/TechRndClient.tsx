@@ -2,6 +2,7 @@
 
 import { Cpu } from "lucide-react";
 import { ServicePageLayout } from "@/components/layout/ServicePageLayout";
+import GlareHover from "@/components/ui/GlareHover";
 import { GlitchEffect } from "@/components/ui/SectorEffects";
 import { WireframePattern } from "@/components/ui/HexagonalPattern";
 
@@ -13,6 +14,12 @@ interface TechRndClientProps {
 }
 
 export function TechRndClient({ capabilities }: TechRndClientProps) {
+    const Wrapper = ({ children }: { children: React.ReactNode }) => (
+        <GlareHover glareColor="#3B82C4" borderRadius="16px" background="transparent" width="100%" height="auto">
+            <GlitchEffect>{children}</GlitchEffect>
+        </GlareHover>
+    );
+
     return (
         <ServicePageLayout
             overline="Technology & Innovation"
@@ -24,7 +31,7 @@ export function TechRndClient({ capabilities }: TechRndClientProps) {
             icon={Cpu}
             metaphor="The Observatory"
             capabilities={capabilities}
-            CardWrapper={GlitchEffect}
+            CardWrapper={Wrapper}
             backgroundPattern={<WireframePattern />}
             sectorKey="tech"
         />

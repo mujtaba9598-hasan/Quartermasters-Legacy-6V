@@ -7,6 +7,9 @@ import { useQChat } from '@/hooks/useQChat';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { TypingIndicator } from './TypingIndicator';
+import { VelvetRope } from './VelvetRope';
+import { QAvatar2D } from '../avatar/QAvatar2D';
+import { QAvatar3D } from '../avatar/QAvatar3D';
 
 type PanelState = 'collapsed' | 'expanded' | 'fullscreen';
 
@@ -82,10 +85,11 @@ export function ChatPanel() {
                             opacity: { duration: 0.2 }
                         }}
                         onClick={() => setPanelState('expanded')}
-                        className="fixed bottom-6 right-6 w-14 h-14 bg-[#C15A2C] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-50 hover:bg-[#A04A24] transition-colors"
+                        className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-105 transition-transform"
+                        style={{ background: 'transparent' }}
                         aria-label="Open Quartermasters Chat"
                     >
-                        Q
+                        <QAvatar2D chatState={chatState} className="w-full h-full" />
                     </motion.button>
                 )}
             </AnimatePresence>
@@ -108,16 +112,14 @@ export function ChatPanel() {
                         }
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
                         className={`fixed z-50 flex flex-col bg-slate-950/95 backdrop-blur-2xl ${isFullscreen
-                                ? 'inset-0 w-full h-full'
-                                : 'top-0 right-0 h-full w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
+                            ? 'inset-0 w-full h-full'
+                            : 'top-0 right-0 h-full w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
                             }`}
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0 bg-white/5">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-[#C15A2C] flex items-center justify-center text-white font-bold text-lg">
-                                    Q
-                                </div>
+                                <QAvatar3D chatState={chatState} className="w-12 h-12" />
                                 <div className="flex flex-col">
                                     <h2 className="text-slate-100 font-semibold text-base leading-tight">Q</h2>
                                     <span className="text-[#C15A2C] text-xs font-medium tracking-wide">Senior Strategy Consultant</span>
@@ -148,26 +150,47 @@ export function ChatPanel() {
                         >
                             {messages.length === 0 && (
                                 <div className="h-full flex flex-col items-center justify-center text-center px-4 opacity-70">
-                                    <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4">
-                                        <span className="text-[#C15A2C] text-3xl font-bold">Q</span>
-                                    </div>
+                                    <QAvatar3D chatState="idle" className="w-24 h-24 mb-4" />
                                     <p className="text-slate-300 text-sm max-w-[250px]">
                                         Engage Quartermasters intelligence. Ask about our 5 licensed verticals, pricing, or methodology.
                                     </p>
                                 </div>
                             )}
 
-                            {messages.map((m, index) => {
+                            {messages.map((m: any, index: number) => {
                                 const isLastMessage = index === messages.length - 1;
                                 const isStreaming = isLoading && m.role === 'assistant' && isLastMessage;
 
+                                const content = m.parts?.[0]?.text || '';
+                                const hasPricingTrigger = content.includes('[RENDER_VELVET_ROPE]');
+                                const displayContent = content.replace('[RENDER_VELVET_ROPE]', '').trim();
+
                                 return (
-                                    <ChatMessage
-                                        key={m.id || index}
-                                        role={m.role as 'user' | 'assistant'}
-                                        content={m.content}
-                                        isStreaming={isStreaming}
-                                    />
+                                    <React.Fragment key={m.id || index}>
+                                        {displayContent && (
+                                            <ChatMessage
+                                                role={m.role as 'user' | 'assistant'}
+                                                content={displayContent}
+                                                isStreaming={isStreaming}
+                                            />
+                                        )}
+                                        {hasPricingTrigger && m.role === 'assistant' && (
+                                            <VelvetRope
+                                                service="Quartermasters Retainer"
+                                                standardPrice={5000}
+                                                premiumPrice={12000}
+                                                discount={0}
+                                                hesitating={chatState === 'thinking'}
+                                                onSelectTier={(tier) => {
+                                                    setInput(`I want to proceed with the ${tier} tier.`);
+                                                    handleSubmit(new Event('submit') as any);
+                                                }}
+                                                onBookCall={() => {
+                                                    window.location.href = '/contact';
+                                                }}
+                                            />
+                                        )}
+                                    </React.Fragment>
                                 );
                             })}
 

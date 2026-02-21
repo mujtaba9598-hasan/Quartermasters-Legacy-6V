@@ -3,13 +3,13 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Quartermasters",
-    url: "https://example.com", // TODO: Replace with final domain
+    url: "https://quartermasters.me", // TODO: Replace with final domain
     logo: "/og-image.jpg",
     description:
       "Premium strategic consulting across five verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
     address: {
       "@type": "PostalAddress",
-      addressRegion: "California",
+      addressRegion: "Ajman Free Zone, UAE",
       addressCountry: "US",
     },
     contactPoint: {
@@ -26,7 +26,7 @@ export function JsonLd() {
     image: "/og-image.jpg",
     address: {
       "@type": "PostalAddress",
-      addressRegion: "California",
+      addressRegion: "Ajman Free Zone, UAE",
       addressCountry: "US",
     },
     description:
@@ -94,7 +94,7 @@ export function JsonLd() {
         name: "Where is Quartermasters based?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Quartermasters is based in California, United States, serving clients globally.",
+          text: "Quartermasters is based in Ajman Free Zone, UAE, serving clients globally.",
         },
       },
       {

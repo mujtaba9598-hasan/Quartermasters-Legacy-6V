@@ -2,6 +2,7 @@
 
 import { Coins } from "lucide-react";
 import { ServicePageLayout } from "@/components/layout/ServicePageLayout";
+import GlareHover from "@/components/ui/GlareHover";
 import { VaultEffect } from "@/components/ui/SectorEffects";
 import { HexagonalPattern } from "@/components/ui/HexagonalPattern";
 
@@ -13,6 +14,12 @@ interface FinancialClientProps {
 }
 
 export function FinancialClient({ capabilities }: FinancialClientProps) {
+    const Wrapper = ({ children }: { children: React.ReactNode }) => (
+        <GlareHover glareColor="#C8872E" borderRadius="16px" background="transparent" width="100%" height="auto">
+            <VaultEffect>{children}</VaultEffect>
+        </GlareHover>
+    );
+
     return (
         <ServicePageLayout
             overline="Financial Advisory"
@@ -24,7 +31,7 @@ export function FinancialClient({ capabilities }: FinancialClientProps) {
             icon={Coins}
             metaphor="The Lighthouse"
             capabilities={capabilities}
-            CardWrapper={VaultEffect}
+            CardWrapper={Wrapper}
             backgroundPattern={<HexagonalPattern />}
             sectorKey="financial"
         />

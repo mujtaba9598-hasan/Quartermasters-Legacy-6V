@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { fadeInUp, scrollViewport } from "@/lib/animations";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export function CTABanner() {
   return (
@@ -47,19 +48,21 @@ export function CTABanner() {
               Schedule a confidential consultation with our advisory team.
               We respond within 24 business hours.
             </p>
-            <Link
-              href="/contact"
-              className="btn-glow-line inline-flex items-center gap-2 rounded-lg px-10 py-4 text-sm font-semibold"
-              style={{
-                fontFamily: "var(--font-body)",
-                background: "var(--color-gold)",
-                color: "var(--color-white)",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Get Started
-              <ArrowRight size={16} />
-            </Link>
+            <ClickSpark sparkColor="#C8872E">
+              <Link
+                href="/contact"
+                className="btn-glow-line inline-flex items-center gap-2 rounded-lg px-10 py-4 text-sm font-semibold"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  background: "var(--color-gold)",
+                  color: "var(--color-white)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Get Started
+                <ArrowRight size={16} />
+              </Link>
+            </ClickSpark>
           </div>
         </motion.div>
       </div>

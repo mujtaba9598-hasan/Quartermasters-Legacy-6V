@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Organization & Event Management | Quartermasters",
     description: "High-Stakes Logistics, Coordination & Operational Deployment. From venue logistics to stakeholder management.",
-    url: 'https://example.com/event-logistics',
+    url: 'https://quartermasters.me/event-logistics',
   }
 };
 
@@ -51,8 +51,8 @@ export default function EventLogisticsPage() {
       <ServiceJsonLd service={{
         name: "Organization and Event Management",
         description: "High-Stakes Logistics, Coordination & Operational Deployment.",
-        url: "https://example.com/event-logistics",
-        image: "https://example.com/og-image.jpg"
+        url: "https://quartermasters.me/event-logistics",
+        image: "https://quartermasters.me/og-image.jpg"
       }} />
       <EventLogisticsClient capabilities={capabilities} />
     </>

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Human Capital & Resource Management | Quartermasters",
     description: "Workforce Infrastructure & Regulatory Compliance. HR systems for the UAE operational landscape.",
-    url: 'https://example.com/human-capital',
+    url: 'https://quartermasters.me/human-capital',
   }
 };
 
@@ -46,8 +46,8 @@ export default function HumanCapitalPage() {
       <ServiceJsonLd service={{
         name: "Human Capital & Resource Management",
         description: "Workforce Infrastructure & Regulatory Compliance.",
-        url: "https://example.com/human-capital",
-        image: "https://example.com/og-image.jpg"
+        url: "https://quartermasters.me/human-capital",
+        image: "https://quartermasters.me/og-image.jpg"
       }} />
       <HumanCapitalClient capabilities={capabilities} />
     </>

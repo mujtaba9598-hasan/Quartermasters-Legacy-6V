@@ -254,9 +254,13 @@ const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
 // Server-side singleton with service role (for admin operations)
-export const supabase = createClient<Database>(supabaseUrl, supabaseServiceRoleKey)
+// Lazy init: avoids crash during static export build when env vars are absent
+export const supabase = supabaseUrl
+    ? createClient(supabaseUrl, supabaseServiceRoleKey)
+    : (null as unknown as ReturnType<typeof createClient>)
 
 // Client-side helper
 export const createBrowserClient = () => {
-    return createClient<Database>(supabaseUrl, supabaseAnonKey)
+    if (!supabaseUrl) throw new Error('NEXT_PUBLIC_SUPABASE_URL not configured')
+    return createClient(supabaseUrl, supabaseAnonKey)
 }

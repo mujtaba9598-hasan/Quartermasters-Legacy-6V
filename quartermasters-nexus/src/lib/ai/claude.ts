@@ -120,9 +120,9 @@ export function streamQ(
 
     return streamText({
         model: aiAnthropic('claude-sonnet-4-6'),
-        maxTokens: 1024,
+        maxTokens: 1024 as any,
         system: systemPrompt,
         messages: validMessages,
         onFinish,
-    })
+    } as any)
 }

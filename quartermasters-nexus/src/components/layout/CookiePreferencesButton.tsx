@@ -12,7 +12,8 @@ export function CookiePreferencesButton() {
                 const banner = document.querySelector('[data-cookie-banner]');
                 if (banner) (banner as HTMLElement).style.display = 'block';
             }}
-            className="text-sm text-text-dim transition-colors hover:text-foreground text-left"
+            className="text-sm transition-colors hover:text-foreground text-left"
+            style={{ color: "var(--text-dim)" }}
         >
             Cookie Preferences
         </button>

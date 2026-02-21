@@ -14,7 +14,7 @@ export function ServiceJsonLd({ service }: {
         "provider": {
             "@type": "Organization",
             "name": "Quartermasters",
-            "url": "https://example.com" // TODO: Replace with final domain
+            "url": "https://quartermasters.me" // TODO: Replace with final domain
         },
         "serviceType": service.name,
         "areaServed": [

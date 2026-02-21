@@ -73,6 +73,13 @@ export const colors = {
       label: "Strategic Management",
       metaphor: "The Helm",
     },
+    it: {
+      primary: "#6366F1",
+      secondary: "#818CF8",
+      glow: "rgba(99,102,241,0.15)",
+      label: "IT Services",
+      metaphor: "The Forge",
+    },
   },
 } as const;
 

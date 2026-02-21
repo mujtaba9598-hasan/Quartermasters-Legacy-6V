@@ -1,15 +1,13 @@
-'use client';
-
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { useChat } from 'ai/react';
+import { useChat } from '@ai-sdk/react';
 
 export type ChatState = 'idle' | 'thinking' | 'speaking';
 
 export type UseQChatReturn = {
-    messages: ReturnType<typeof useChat>['messages'];
+    messages: any[];
     input: string;
-    setInput: ReturnType<typeof useChat>['setInput'];
-    handleSubmit: ReturnType<typeof useChat>['handleSubmit'];
+    setInput: React.Dispatch<React.SetStateAction<string>>;
+    handleSubmit: (e: any, options?: any) => void;
     isLoading: boolean;
     error: Error | undefined;
     conversationId: string | null;
@@ -42,30 +40,37 @@ export function useQChat(): UseQChatReturn {
         setLastInteractionTime(Date.now());
     }, []);
 
-    // 4. useChat Configuration
-    const {
-        messages,
-        input,
-        setInput,
-        handleSubmit,
-        isLoading,
-        error
-    } = useChat({
-        api: '/api/chat',
-        body: {
-            visitorId,
-            conversationId
-        },
-        onError: (err: any) => {
-            console.error('Chat error:', err);
-        },
-        onResponse: (response: Response) => {
+    // 4. Custom Input State Management
+    const [input, setInput] = useState<string>('');
+
+    // 5. useChat Configuration
+    const chatConfig: any = {
+        chatId: conversationId || undefined,
+        fetch: async (url: any, options: any) => {
+            const parsedBody = options?.body ? JSON.parse(options.body as string) : {};
+            const response = await fetch('/api/chat', {
+                ...options,
+                body: JSON.stringify({ ...parsedBody, visitorId, conversationId })
+            });
             const returnedConvId = response.headers.get('X-Conversation-Id');
             if (returnedConvId && !conversationId) {
                 setConversationId(returnedConvId);
             }
+            return response;
+        },
+        onError: (err: Error) => {
+            console.error('Chat error:', err);
         }
-    });
+    };
+
+    const {
+        messages,
+        status,
+        error,
+        handleSubmit: originalHandleSubmit
+    } = useChat(chatConfig) as any;
+
+    const isLoading = status === 'submitted' || status === 'streaming';
 
     // 5. Derived Chat State
     const chatState = useMemo<ChatState>(() => {
@@ -78,18 +83,18 @@ export function useQChat(): UseQChatReturn {
         return 'idle';
     }, [messages, isLoading]);
 
-    // 6. Hook into input changes and form submission to reset hesitation
-    const handleSetInput: ReturnType<typeof useChat>['setInput'] = useCallback((value) => {
+    // 7. Hook into input changes and form submission to reset hesitation
+    const handleSetInput: React.Dispatch<React.SetStateAction<string>> = useCallback((value) => {
         setLastInteractionTime(Date.now());
         setHesitating(false);
         setInput(value);
-    }, [setInput]);
+    }, []);
 
-    const handleFormSubmit: ReturnType<typeof useChat>['handleSubmit'] = useCallback((e, options) => {
+    const handleFormSubmit: (e: any, options?: any) => void = useCallback((e: any, options?: any) => {
         setLastInteractionTime(Date.now());
         setHesitating(false);
-        handleSubmit(e, options);
-    }, [handleSubmit]);
+        originalHandleSubmit(e, options);
+    }, [originalHandleSubmit]);
 
     // 7. Hesitation Timer
     useEffect(() => {

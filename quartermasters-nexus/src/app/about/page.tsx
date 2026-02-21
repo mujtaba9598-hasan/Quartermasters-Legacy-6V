@@ -9,6 +9,7 @@ import {
   fadeInUp,
   scrollViewport,
 } from "@/lib/animations";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 const milestones = [
   {
@@ -147,17 +148,19 @@ export default function AboutPage() {
               >
                 Schedule a confidential consultation with our leadership team.
               </p>
-              <a
-                href="/contact"
-                className="btn-glow-line inline-block rounded-lg px-10 py-4 text-sm font-semibold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  background: "var(--color-gold)",
-                  color: "var(--color-white)",
-                }}
-              >
-                Request Consultation
-              </a>
+              <ClickSpark sparkColor="#C8872E">
+                <a
+                  href="/contact"
+                  className="btn-glow-line inline-block rounded-lg px-10 py-4 text-sm font-semibold"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    background: "var(--color-gold)",
+                    color: "var(--color-white)",
+                  }}
+                >
+                  Request Consultation
+                </a>
+              </ClickSpark>
             </motion.div>
           </div>
         </section>

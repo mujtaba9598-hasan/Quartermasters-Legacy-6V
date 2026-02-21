@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 import { TextShimmer } from "@/components/ui/TextShimmer";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export function HeroSection() {
   return (
@@ -81,25 +82,27 @@ export function HeroSection() {
           >
             Premium consulting across Financial Advisory, Human Capital,
             Technology &amp; Innovation, Events &amp; Experiences, and Strategic
-            Management. California-based, globally minded.
+            Management. Ajman-headquartered, globally minded.
           </motion.p>
 
           {/* CTAs */}
           <motion.div variants={staggerItem} className="flex flex-wrap items-center justify-center gap-4">
-            <a href="#services" className="group">
-              <span
-                className="btn-glow-line group-hover:bg-opacity-90 transition-all duration-300 inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  background: "var(--color-gold)",
-                  color: "var(--color-white)",
-                  letterSpacing: "0.02em",
-                  "--active-glow": "rgba(200, 135, 46, 0.3)"
-                } as React.CSSProperties}
-              >
-                Explore Services
-              </span>
-            </a>
+            <ClickSpark sparkColor="#C8872E">
+              <a href="/services" className="group">
+                <span
+                  className="btn-glow-line group-hover:bg-opacity-90 transition-all duration-300 inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    background: "var(--color-gold)",
+                    color: "var(--color-white)",
+                    letterSpacing: "0.02em",
+                    "--active-glow": "rgba(200, 135, 46, 0.3)"
+                  } as React.CSSProperties}
+                >
+                  Explore Services
+                </span>
+              </a>
+            </ClickSpark>
             <a href="#methodology" className="group">
               <span
                 className="btn-glow-line group-hover:bg-opacity-10 transition-all duration-300 inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"

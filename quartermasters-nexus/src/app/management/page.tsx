@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Strategic Management Consultancy | Quartermasters",
     description: "Strategic Operations & Organizational Infrastructure for complex regulatory landscapes.",
-    url: 'https://example.com/management',
+    url: 'https://quartermasters.me/management',
   }
 };
 
@@ -46,8 +46,8 @@ export default function ManagementPage() {
       <ServiceJsonLd service={{
         name: "Strategic Management Consultancy",
         description: "Strategic Operations & Organizational Infrastructure.",
-        url: "https://example.com/management",
-        image: "https://example.com/og-image.jpg"
+        url: "https://quartermasters.me/management",
+        image: "https://quartermasters.me/og-image.jpg"
       }} />
       <ManagementClient capabilities={capabilities} />
     </>

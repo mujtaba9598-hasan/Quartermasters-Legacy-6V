@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { QuartermasterLogo } from "@/components/icons/QuartermasterLogo";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export default function NotFound() {
   return (
@@ -41,18 +42,20 @@ export default function NotFound() {
           framework.
         </p>
 
-        <Link
-          href="/"
-          className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
-          style={{
-            fontFamily: "var(--font-heading)",
-            background: "var(--color-gold)",
-            color: "var(--color-white)",
-            letterSpacing: "0.02em",
-          }}
-        >
-          Return to Headquarters
-        </Link>
+        <ClickSpark sparkColor="#C8872E">
+          <Link
+            href="/"
+            className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+            style={{
+              fontFamily: "var(--font-heading)",
+              background: "var(--color-gold)",
+              color: "var(--color-white)",
+              letterSpacing: "0.02em",
+            }}
+          >
+            Return to Headquarters
+          </Link>
+        </ClickSpark>
       </motion.div>
     </div>
   );

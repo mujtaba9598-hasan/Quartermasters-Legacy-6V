@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Technology & R&D Services | Quartermasters",
     description: "Innovation Infrastructure & Technical Operations. From education technology to R&D frameworks.",
-    url: 'https://example.com/tech-rnd',
+    url: 'https://quartermasters.me/tech-rnd',
   }
 };
 
@@ -46,8 +46,8 @@ export default function TechRndPage() {
       <ServiceJsonLd service={{
         name: "Technology & R&D Services",
         description: "Innovation Infrastructure & Technical Operations.",
-        url: "https://example.com/tech-rnd",
-        image: "https://example.com/og-image.jpg"
+        url: "https://quartermasters.me/tech-rnd",
+        image: "https://quartermasters.me/og-image.jpg"
       }} />
       <TechRndClient capabilities={capabilities} />
     </>

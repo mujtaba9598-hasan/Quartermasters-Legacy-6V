@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Quartermasters — Strategic Consulting & Advisory",
   description:
-    "Premium consulting across Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. California-based, globally minded.",
+    "Premium consulting across Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. Ajman-headquartered, globally minded.",
   keywords: [
     "strategic consulting",
     "financial advisory",
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     "event management consulting",
     "management consulting",
     "business advisory",
-    "California consulting firm",
+    "Ajman-headquartered consulting firm",
     "premium consulting",
   ],
   authors: [{ name: "Quartermasters" }],
   openGraph: {
     title: "Quartermasters — Strategic Consulting & Advisory",
     description:
-      "Premium consulting across six integrated verticals. California-based, globally minded.",
+      "Premium consulting across six integrated verticals. Ajman-headquartered, globally minded.",
     type: "website",
     locale: "en_US",
   },
@@ -92,7 +92,7 @@ export default function HomePage() {
             <li>Review — Post-engagement assessment and optimization.</li>
           </ol>
           <p>
-            California, United States. Serving clients globally.
+            Ajman Free Zone, UAE. Serving clients globally.
           </p>
         </section>
 

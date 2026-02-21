@@ -13,6 +13,7 @@ import {
 } from "@/lib/animations";
 import { useSector } from "@/lib/SectorContext";
 import type { SectorKey } from "@/lib/design-tokens";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 interface ServiceCapability {
   title: string;
@@ -140,17 +141,19 @@ export function ServicePageLayout({
               )}
 
               <motion.div variants={staggerItem} className="mt-10">
-                <a
-                  href="/contact"
-                  className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    background: accent,
-                    color: "var(--color-white)",
-                  }}
-                >
-                  Get Started
-                </a>
+                <ClickSpark sparkColor={accent}>
+                  <a
+                    href="/contact"
+                    className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      background: accent,
+                      color: "var(--color-white)",
+                    }}
+                  >
+                    Get Started
+                  </a>
+                </ClickSpark>
               </motion.div>
             </motion.div>
           </div>
@@ -219,17 +222,19 @@ export function ServicePageLayout({
               <p className="mb-8 text-sm" style={{ color: "var(--text-muted)" }}>
                 Schedule a confidential consultation to discuss your requirements.
               </p>
-              <a
-                href="/contact"
-                className="btn-glow-line inline-block rounded-lg px-10 py-4 text-sm font-semibold"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  background: accent,
-                  color: "var(--color-white)",
-                }}
-              >
-                Get Started
-              </a>
+              <ClickSpark sparkColor={accent}>
+                <a
+                  href="/contact"
+                  className="btn-glow-line inline-block rounded-lg px-10 py-4 text-sm font-semibold"
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    background: accent,
+                    color: "var(--color-white)",
+                  }}
+                >
+                  Get Started
+                </a>
+              </ClickSpark>
             </motion.div>
           </div>
         </section>

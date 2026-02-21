@@ -144,7 +144,7 @@ export default function CookieConsentBanner() {
                             ) : (
                                 <p>
                                     {geoMode === 'ccpa'
-                                        ? 'Under California law, you have the right to opt-out of the sale of your personal information. Click "Manage Preferences" to control your data choices.'
+                                        ? 'Under UAE law, you have the right to opt-out of the sale of your personal information. Click "Manage Preferences" to control your data choices.'
                                         : geoMode === 'pdpl'
                                             ? 'We process data in accordance with the UAE Personal Data Protection Law (PDPL). Your data is handled with appropriate safeguards.'
                                             : 'We use cookies to analyze traffic and enhance your experience.'}

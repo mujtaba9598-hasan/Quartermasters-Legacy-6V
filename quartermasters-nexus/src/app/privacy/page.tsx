@@ -139,12 +139,12 @@ export default function PrivacyPolicyPage() {
                 collects, uses, discloses, and safeguards your personal data
                 when you visit{" "}
                 <span style={{ color: "var(--color-gold)" }}>
-                  example.com
+                  quartermasters.me
                 </span>{" "}
                 or interact with our services. We are committed to protecting
                 your privacy in accordance with the UAE Personal Data Protection
                 Law (PDPL), the EU General Data Protection Regulation (GDPR),
-                the California Consumer Privacy Act / California Privacy Rights
+                the UAE Data Protection Law / UAE Privacy Rights
                 Act (CCPA/CPRA), and the CAN-SPAM Act.
               </p>
               <div
@@ -243,36 +243,36 @@ export default function PrivacyPolicyPage() {
                     <p>Free Zone Company &mdash; Limited Liability</p>
                     <p>(removed — placeholder for US registration)</p>
                     <p>
-                      California, United States
+                      Ajman Free Zone, UAE
                     </p>
                     <p>
                       Email:{" "}
                       <a
-                        href="mailto:hello@example.com"
+                        href="mailto:ceocli@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        hello@example.com
+                        ceocli@quartermasters.me
                       </a>
                     </p>
                     <p>
                       Website:{" "}
                       <a
-                        href="https://example.com"
+                        href="https://quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        example.com
+                        quartermasters.me
                       </a>
                     </p>
                   </div>
                   <p>
-                    Quartermasters F.Z.C is licensed by relevant California regulatory authorities and operates under applicable law. For any
+                    Quartermasters F.Z.C is licensed by relevant UAE regulatory authorities and operates under applicable law. For any
                     privacy-related inquiries or to exercise your data subject
                     rights, please contact us at{" "}
                     <a
-                      href="mailto:hello@example.com"
+                      href="mailto:ceocli@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      hello@example.com
+                      ceocli@quartermasters.me
                     </a>
                     .
                   </p>
@@ -861,10 +861,10 @@ export default function PrivacyPolicyPage() {
                     You may request a copy of the relevant transfer safeguards
                     by contacting us at{" "}
                     <a
-                      href="mailto:hello@example.com"
+                      href="mailto:ceocli@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      hello@example.com
+                      ceocli@quartermasters.me
                     </a>
                     .
                   </p>
@@ -956,7 +956,7 @@ export default function PrivacyPolicyPage() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    Additional Rights for California Residents (CCPA/CPRA)
+                    Additional Rights for UAE Residents (CCPA/CPRA)
                   </h3>
                   <ul className="ml-4 list-inside list-disc space-y-2">
                     <li>
@@ -1020,10 +1020,10 @@ export default function PrivacyPolicyPage() {
                     <p>
                       To exercise any of these rights, email us at{" "}
                       <a
-                        href="mailto:hello@example.com"
+                        href="mailto:ceocli@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        hello@example.com
+                        ceocli@quartermasters.me
                       </a>{" "}
                       with the subject line &ldquo;Data Subject Request.&rdquo;
                       We will verify your identity and respond within 30 days
@@ -1286,10 +1286,10 @@ export default function PrivacyPolicyPage() {
                     that we may have collected data from a minor, please contact
                     us at{" "}
                     <a
-                      href="mailto:hello@example.com"
+                      href="mailto:ceocli@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      hello@example.com
+                      ceocli@quartermasters.me
                     </a>{" "}
                     so we can investigate and take appropriate action.
                   </p>
@@ -1429,15 +1429,15 @@ export default function PrivacyPolicyPage() {
                       Quartermasters F.Z.C &mdash; Data Privacy
                     </p>
                     <p>
-                      California, United States
+                      Ajman Free Zone, UAE
                     </p>
                     <p className="mt-2">
                       Email:{" "}
                       <a
-                        href="mailto:hello@example.com"
+                        href="mailto:ceocli@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        hello@example.com
+                        ceocli@quartermasters.me
                       </a>
                     </p>
                     <p>
@@ -1467,7 +1467,7 @@ export default function PrivacyPolicyPage() {
                       </strong>{" "}
                       The UAE Data Office (established under Federal Decree-Law
                       No. 45 of 2021 on the Protection of Personal Data), or
-                      the relevant California regulatory authorities.
+                      the relevant UAE regulatory authorities.
                     </li>
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
@@ -1479,10 +1479,10 @@ export default function PrivacyPolicyPage() {
                     </li>
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
-                        California:
+                        Ajman Free Zone, UAE:
                       </strong>{" "}
-                      The California Attorney General&rsquo;s Office or the
-                      California Privacy Protection Agency (CPPA).
+                      The UAE Telecommunications and Digital Government Regulatory Authority&rsquo;s Office or the
+                      UAE Data Office (CPPA).
                     </li>
                   </ul>
 
@@ -1549,9 +1549,9 @@ export default function PrivacyPolicyPage() {
                     accordance with the laws of the United Arab Emirates,
                     including Federal Decree-Law No. 45 of 2021 on the
                     Protection of Personal Data (as amended), and the
-                    regulations of relevant California regulatory authorities. For EU
+                    regulations of relevant UAE regulatory authorities. For EU
                     residents, the GDPR applies as supplementary law. For
-                    California residents, the CCPA/CPRA applies in addition.
+                    UAE residents, the CCPA/CPRA applies in addition.
                   </p>
                   <div
                     className="mx-auto my-6 h-px w-24"

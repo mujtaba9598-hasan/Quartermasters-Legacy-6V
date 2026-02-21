@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { QuartermasterLogo } from "@/components/icons/QuartermasterLogo";
 import { playTick, playClick } from "@/lib/sounds";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -60,18 +61,20 @@ export function Header() {
               ))}
 
               {/* CTA */}
-              <Link
-                href="/contact"
-                onClick={playClick}
-                className="btn-glow-line rounded-lg px-5 py-2 text-sm font-semibold hover:bg-opacity-90 transition-all duration-300"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  background: "var(--color-gold)",
-                  color: "var(--color-white)",
-                }}
-              >
-                Get Started
-              </Link>
+              <ClickSpark sparkColor="#C8872E">
+                <Link
+                  href="/contact"
+                  onClick={playClick}
+                  className="btn-glow-line rounded-lg px-5 py-2 text-sm font-semibold hover:bg-opacity-90 transition-all duration-300"
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    background: "var(--color-gold)",
+                    color: "var(--color-white)",
+                  }}
+                >
+                  Get Started
+                </Link>
+              </ClickSpark>
             </nav>
 
             {/* Mobile Toggle */}
@@ -116,18 +119,20 @@ export function Header() {
 
 
                 <div className="mt-6">
-                  <Link
-                    href="/contact"
-                    onClick={() => { playClick(); setMobileOpen(false); }}
-                    className="btn-glow-line block w-full rounded-lg py-3 text-center text-sm font-semibold"
-                    style={{
-                      fontFamily: "var(--font-body)",
-                      background: "var(--color-gold)",
-                      color: "var(--color-white)",
-                    }}
-                  >
-                    Get Started
-                  </Link>
+                  <ClickSpark sparkColor="#C8872E">
+                    <Link
+                      href="/contact"
+                      onClick={() => { playClick(); setMobileOpen(false); }}
+                      className="btn-glow-line block w-full rounded-lg py-3 text-center text-sm font-semibold"
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        background: "var(--color-gold)",
+                        color: "var(--color-white)",
+                      }}
+                    >
+                      Get Started
+                    </Link>
+                  </ClickSpark>
                 </div>
               </nav>
             </motion.div>

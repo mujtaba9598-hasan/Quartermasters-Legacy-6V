@@ -2,6 +2,7 @@
 
 import { Briefcase } from "lucide-react";
 import { ServicePageLayout } from "@/components/layout/ServicePageLayout";
+import GlareHover from "@/components/ui/GlareHover";
 import { PanoramicEffect } from "@/components/ui/SectorEffects";
 import { GridPattern } from "@/components/ui/HexagonalPattern";
 
@@ -13,6 +14,12 @@ interface ManagementClientProps {
 }
 
 export function ManagementClient({ capabilities }: ManagementClientProps) {
+    const Wrapper = ({ children }: { children: React.ReactNode }) => (
+        <GlareHover glareColor="#1B3A4B" borderRadius="16px" background="transparent" width="100%" height="auto">
+            <PanoramicEffect>{children}</PanoramicEffect>
+        </GlareHover>
+    );
+
     return (
         <ServicePageLayout
             overline="Strategic Management"
@@ -24,7 +31,7 @@ export function ManagementClient({ capabilities }: ManagementClientProps) {
             icon={Briefcase}
             metaphor="The Helm"
             capabilities={capabilities}
-            CardWrapper={PanoramicEffect}
+            CardWrapper={Wrapper}
             backgroundPattern={<GridPattern />}
             sectorKey="management"
         />

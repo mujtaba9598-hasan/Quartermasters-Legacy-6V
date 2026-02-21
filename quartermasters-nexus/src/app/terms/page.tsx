@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Quartermasters",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms of Service — Quartermasters",
     description:
-      "Terms of Service governing use of example.com and all advisory services provided by Quartermasters under AFZA License 37357.",
+      "Terms of Service governing use of quartermasters.me and all advisory services provided by Quartermasters under AFZA License 37357.",
     type: "website",
     locale: "en_AE",
   },
@@ -42,7 +43,7 @@ const sections: Section[] = [
       <>
         <p>
           By accessing or using the website located at{" "}
-          <strong>example.com</strong> (the &ldquo;Website&rdquo;), any
+          <strong>quartermasters.me</strong> (the &ldquo;Website&rdquo;), any
           sub-domains thereof, or any services provided by{" "}
           <strong>Quartermasters</strong> (referred to herein as
           &ldquo;Quartermasters,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
@@ -87,8 +88,8 @@ const sections: Section[] = [
               ["Trade License", "AFZA #37357"],
               ["Regulatory Authority", "Ajman Free Zone Authority (AFZA)"],
               ["Registered Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
-              ["Email", "hello@example.com"],
-              ["Website", "example.com"],
+              ["Email", "ceocli@quartermasters.me"],
+              ["Website", "quartermasters.me"],
             ].map(([label, value]) => (
               <div key={label}>
                 <dt
@@ -378,7 +379,7 @@ const sections: Section[] = [
           <li>
             Immediately notify Quartermasters of any unauthorized use of your
             account or any other breach of security at{" "}
-            <strong>hello@example.com</strong>.
+            <strong>ceocli@quartermasters.me</strong>.
           </li>
         </ul>
         <p className="mt-3">
@@ -505,7 +506,7 @@ const sections: Section[] = [
         <ul className="list-disc pl-6 space-y-1 mt-2">
           <li>
             Refund requests must be submitted in writing to{" "}
-            <strong>hello@example.com</strong> within fourteen (14) days
+            <strong>ceocli@quartermasters.me</strong> within fourteen (14) days
             of the payment date.
           </li>
           <li>
@@ -746,7 +747,7 @@ const sections: Section[] = [
           processing of your personal data as described in our Privacy Policy.
           You may exercise your data rights — including the right to access,
           correct, delete, or restrict processing of your personal data — by
-          contacting us at <strong>hello@example.com</strong>.
+          contacting us at <strong>ceocli@quartermasters.me</strong>.
         </p>
         <p className="mt-3">
           The Privacy Policy is hereby incorporated into these Terms by
@@ -961,8 +962,8 @@ const sections: Section[] = [
               ["Entity", "Quartermasters"],
               ["Attention", "Compliance Department"],
               ["Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
-              ["Email", "hello@example.com"],
-              ["Website", "example.com"],
+              ["Email", "ceocli@quartermasters.me"],
+              ["Website", "quartermasters.me"],
             ].map(([label, value]) => (
               <div key={label} className="flex flex-col sm:flex-row sm:gap-4">
                 <dt
@@ -1185,23 +1186,25 @@ export default function TermsOfServicePage() {
                     className="text-sm max-w-xl mx-auto"
                     style={{ color: "var(--text-muted)" }}
                   >
-                    By continuing to use example.com and/or engaging
+                    By continuing to use quartermasters.me and/or engaging
                     Quartermasters for advisory services, you confirm that
                     you have read, understood, and agreed to these Terms of
                     Service in their entirety.
                   </p>
                   <div className="mt-6 flex flex-wrap justify-center gap-3">
-                    <Link
-                      href="/contact"
-                      className="btn-glow-line inline-block rounded-lg px-8 py-3 text-sm font-semibold transition-all"
-                      style={{
-                        fontFamily: "var(--font-heading)",
-                        background: "var(--color-gold)",
-                        color: "var(--color-white)",
-                      }}
-                    >
-                      Contact Us
-                    </Link>
+                    <ClickSpark sparkColor="#C8872E">
+                      <Link
+                        href="/contact"
+                        className="btn-glow-line inline-block rounded-lg px-8 py-3 text-sm font-semibold transition-all"
+                        style={{
+                          fontFamily: "var(--font-heading)",
+                          background: "var(--color-gold)",
+                          color: "var(--color-white)",
+                        }}
+                      >
+                        Contact Us
+                      </Link>
+                    </ClickSpark>
                     <Link
                       href="/"
                       className="inline-block rounded-lg px-8 py-3 text-sm font-semibold transition-all"

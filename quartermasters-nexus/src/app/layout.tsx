@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "management consulting",
     "IT services consulting",
     "business advisory",
-    "California consulting firm",
+    "international consulting firm",
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'Quartermasters F.Z.C',

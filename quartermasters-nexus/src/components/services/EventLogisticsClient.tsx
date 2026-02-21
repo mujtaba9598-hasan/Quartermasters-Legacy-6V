@@ -2,6 +2,7 @@
 
 import { MapPin } from "lucide-react";
 import { ServicePageLayout } from "@/components/layout/ServicePageLayout";
+import GlareHover from "@/components/ui/GlareHover";
 import { RippleEffect } from "@/components/ui/SectorEffects";
 import { RadarPattern } from "@/components/ui/HexagonalPattern";
 
@@ -13,6 +14,12 @@ interface EventLogisticsClientProps {
 }
 
 export function EventLogisticsClient({ capabilities }: EventLogisticsClientProps) {
+    const Wrapper = ({ children }: { children: React.ReactNode }) => (
+        <GlareHover glareColor="#D4763C" borderRadius="16px" background="transparent" width="100%" height="auto">
+            <RippleEffect>{children}</RippleEffect>
+        </GlareHover>
+    );
+
     return (
         <ServicePageLayout
             overline="Events & Experiences"
@@ -24,7 +31,7 @@ export function EventLogisticsClient({ capabilities }: EventLogisticsClientProps
             icon={MapPin}
             metaphor="The Compass"
             capabilities={capabilities}
-            CardWrapper={RippleEffect}
+            CardWrapper={Wrapper}
             backgroundPattern={<RadarPattern />}
             sectorKey="events"
         />
