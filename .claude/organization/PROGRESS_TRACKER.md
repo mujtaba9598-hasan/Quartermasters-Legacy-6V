@@ -1,5 +1,5 @@
-# Quartermasters F.Z.C — Progress Tracker
-> Last Updated: 2026-02-21 | Milestone: Phase C COMPLETE (10/10) + Sub-Phase D COMPLETE + Build Clean
+# Quartermasters — Progress Tracker
+> Last Updated: 2026-02-22 | Milestone: Post-Deploy Fixes + California Scrub + ScrollStack (react-bits)
 > Git: https://github.com/mujtaba9598-hasan/Quarter_USA
 
 ---
@@ -79,7 +79,7 @@
 | INT-03 | Bug fixes (CookieBanner, dead imports) | DONE | CookieBanner duplicate fixed, example.com purged |
 | INT-04 | btn-glow-line fixes | DONE | All buttons have correct class |
 | INT-05 | /it-services page | DONE | Page + ITServicesClient + ServiceJsonLd |
-| INT-06 | /services overview | DONE | CardSwap hub page, all 6 services |
+| INT-06 | /services overview | DONE | ScrollStack hub page, all 6 services |
 | INT-07 | Placeholder URLs | DONE | 0 example.com remaining — verified |
 | INT-08 | TypeScript build | DONE | 0 errors, npx tsc --noEmit clean |
 
@@ -99,6 +99,61 @@
 
 ---
 
+## Post-Deploy Fixes (2026-02-22) — CEO-Applied
+
+### Phase 1: Bug Fixes
+| Fix | File(s) | Status | Notes |
+|-----|---------|--------|-------|
+| SearchBar white screen | `SearchBar.tsx` | DONE | Dark modal bg, try-catch on res.json() |
+| Contact response handling | `contact/page.tsx`, `contact.php` | DONE | try-catch, IT service in PHP |
+| ChatPanel transparency | `ChatPanel.tsx` | DONE | Solid bg-slate-950 |
+| QAvatar3D fallback | `QAvatar3D.tsx` | DONE | Copper "Q" fallback + WebGL ErrorBoundary |
+
+### Phase 2: Improvements
+| Fix | File | Status | Notes |
+|-----|------|--------|-------|
+| Footer ticker | `FooterTicker.tsx` | DONE | 9 service hashtags replacing generic messages |
+
+### Phase 3: ScrollStack
+| Fix | File(s) | Status | Notes |
+|-----|---------|--------|-------|
+| ScrollStack component | `ScrollStack.tsx`, `ScrollStack.css` | DONE | Faithful TypeScript conversion of founder's react-bits code |
+| Services page | `services/page.tsx` | DONE | Replaced CardSwap with ScrollStack (useWindowScroll + Lenis) |
+| CardSwap deprecated | `CardSwap.tsx` | DONE | @deprecated comment added |
+
+### California Scrub (42 files)
+| Category | Files | Status | Notes |
+|----------|-------|--------|-------|
+| Homepage + SEO | `page.tsx`, `layout.tsx`, `JsonLd.tsx` | DONE | All "Ajman" → "California" |
+| Globe component | `Globe.tsx`, `GlobeSection.tsx` | DONE | HQ pin moved to LA (34.05, -118.24) |
+| Hero | `HeroSection.tsx` | DONE | "Ajman-headquartered" → "California-based" |
+| Service pages | `financial-advisory`, `human-capital`, `it-services` | DONE | UAE refs → US market |
+| Legal pages | `terms/page.tsx`, `privacy/page.tsx` | DONE | Full legal rewrite UAE→California law |
+| Compliance | `CookieConsentBanner.tsx`, `consent-constants.ts` | DONE | UAE PDPL → Data Protection Compliant |
+| Pricing | `packages.ts` | DONE | UAE Labor Law → US Labor Law |
+| AI prompt | `claude.ts` | DONE | Q scope updated to 6 verticals |
+| Contact | `contact.php` | DONE | Footer scrubbed |
+| Footer | `Footer.tsx` | DONE | California, United States |
+| Knowledge base | 13 .md files | DONE | All F.Z.C → Quartermasters, UAE → US market |
+
+### 5→6 Verticals Fix
+| File | Status |
+|------|--------|
+| `ChatPanel.tsx` | DONE — "6 service verticals" |
+| `claude.ts` | DONE — IT Services added to scope |
+| `knowledge-base/page.tsx` | DONE — "six key consultancy verticals" |
+| `JsonLd.tsx` | DONE — IT Services in schema + descriptions + FAQ |
+| `PhaseGate.tsx` | DONE — "six verticals" |
+| `privacy/page.tsx` | DONE — IT Services added to list |
+| `service-delivery-philosophy.md` | DONE — 6-Vertical Moat |
+
+### Email Exposure Fix
+| Fix | File(s) | Status |
+|-----|---------|--------|
+| ceocli@ → hello@ | `contact/page.tsx`, `terms/page.tsx`, `privacy/page.tsx` | DONE — 20 occurrences |
+
+---
+
 ## Corrections Log
 
 | Task | Issue | Fix |
@@ -107,8 +162,9 @@
 | B-03 | Service filename mapping used startsWith instead of includes | IMPROVE sent, fixed |
 | B-08 | Package prices 3-5x below spec ranges | IMPROVE sent, all 20 prices corrected |
 | A-02 | Cookie maxAge was 1 year instead of 30 days | Fixed in previous session |
-| CookieConsent | PDPL mode displayed "CCPA Compliant" text | Fixed to "UAE PDPL Compliant" |
+| CookieConsent | PDPL mode displayed "CCPA Compliant" text | Fixed to "Data Protection Compliant" |
 | KB-04 | Sections 6+ degenerated into filler word-salad, sections 11-24 copy-paste gibberish | IMPROVE sent, redelivered clean 365 lines |
+| Email | Gemini exposed ceocli@quartermasters.me on public pages (commit 9be6b1a) | Fixed to hello@quartermasters.me — formal reprimand sent |
 
 ---
 
@@ -117,3 +173,4 @@
 2. Set RESEND_API_KEY environment variable
 3. Approve Supabase + Claude API costs (ZERO spend authority — CEO cannot approve)
 4. Run Supabase migrations (001 + 002) when database provisioned
+5. Review ScrollStack on /services localhost

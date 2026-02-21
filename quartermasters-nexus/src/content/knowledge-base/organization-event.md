@@ -2,13 +2,13 @@
 title: "Organization & Event Management: Precision Logistics"
 description: "High-stakes event strategy, venue coordination, and operational deployment for corporate and government entities."
 date: "2026-02-14"
-author: "Quartermasters F.Z.C"
+author: "Quartermasters"
 ---
 
 # Organization and Event Management
 
 ## Failure is Not an Option
-In the world of corporate and government events, there are no rehearsals. You are live, or you are dead. Quartermasters F.Z.C approaches **Organization and Event Management** with military precision. We do not just "plan parties"; we execute complex logistical operations that serve a strategic purpose—whether that is brand positioning, stakeholder engagement, or market education.
+In the world of corporate and government events, there are no rehearsals. You are live, or you are dead. Quartermasters approaches **Organization and Event Management** with military precision. We do not just "plan parties"; we execute complex logistical operations that serve a strategic purpose—whether that is brand positioning, stakeholder engagement, or market education.
 
 Our license allows us to manage the full lifecycle of events, from the initial concept to the final post-event audit.
 

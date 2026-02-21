@@ -65,7 +65,7 @@ export function HeroSection() {
             {/* 2. Subtitle - Smaller & Centered */}
             <span
               className="block max-w-3xl mx-auto text-xl md:text-2xl lg:text-3xl font-light tracking-wide leading-tight"
-              style={{ color: "var(--text-body)" }}
+              style={{ color: "var(--color-seafoam)" }}
             >
               Elevating businesses through{" "}
               <span style={{ color: "var(--color-gold)" }}>strategy</span>,{" "}
@@ -82,7 +82,7 @@ export function HeroSection() {
           >
             Premium consulting across Financial Advisory, Human Capital,
             Technology &amp; Innovation, Events &amp; Experiences, and Strategic
-            Management. Ajman-headquartered, globally minded.
+            Management. California-based, globally connected.
           </motion.p>
 
           {/* CTAs */}

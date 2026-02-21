@@ -42,10 +42,15 @@ export default function ContactPage() {
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      let data: any;
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error("Server returned an invalid response.");
+      }
 
       if (!res.ok) {
-        setError(data.error ?? "Something went wrong. Please try again.");
+        setError(data?.error ?? "Something went wrong. Please try again.");
         setSubmitting(false);
         return;
       }
@@ -53,7 +58,7 @@ export default function ContactPage() {
       setSubmitted(true);
     } catch {
       setError(
-        "Unable to reach our servers. Please check your connection and try again, or contact us directly at ceocli@quartermasters.me."
+        "Unable to reach our servers. Please check your connection and try again, or contact us directly at hello@quartermasters.me."
       );
     } finally {
       setSubmitting(false);
@@ -469,18 +474,18 @@ export default function ContactPage() {
                       <Mail size={20} />
                     </div>
                     <p
-                      className="text-sm font-semibold"
+                      className="text-sm font-bold text-white"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       Email
                     </p>
                   </div>
                   <a
-                    href="mailto:ceocli@quartermasters.me"
+                    href="mailto:hello@quartermasters.me"
                     className="text-sm transition-colors hover:underline"
                     style={{ color: "var(--color-gold)" }}
                   >
-                    ceocli@quartermasters.me
+                    hello@quartermasters.me
                   </a>
                 </div>
               </motion.div>

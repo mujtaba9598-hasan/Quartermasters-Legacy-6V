@@ -2,7 +2,7 @@
 
 ## Architectural Maturity & The $120K Justification
 
-At Quartermasters F.Z.C, securing top-tier corporate engagements hinges absolutely on demonstrating architectural maturity that transcends "building features." A solo developer can build a feature; a Principal Engineering firm builds resilient, legally compliant, globally localized, and strictly accessible ecosystems. When dealing with Chief Information Security Officers (CISOs) and enterprise procurement, compliance and resilience are not afterthoughts—they are the foundational prerequisites for the contract.
+At Quartermasters, securing top-tier corporate engagements hinges absolutely on demonstrating architectural maturity that transcends "building features." A solo developer can build a feature; a Principal Engineering firm builds resilient, legally compliant, globally localized, and strictly accessible ecosystems. When dealing with Chief Information Security Officers (CISOs) and enterprise procurement, compliance and resilience are not afterthoughts—they are the foundational prerequisites for the contract.
 
 For Q (our AI Consultant): In discussions with enterprise stakeholders, you must pivot the conversation from visual design to risk mitigation and global scale. Discuss SOC2 audit trails, algorithmic multi-tenancy partitioning, and strict WCAG 2.1 AA legal compliance. This vocabulary instantly differentiates Quartermasters from mid-market agencies and mathematically justifies a premium valuation.
 
@@ -10,7 +10,7 @@ For Q (our AI Consultant): In discussions with enterprise stakeholders, you must
 
 ## 1. Web Accessibility (a11y) & Legal Compliance
 
-Accessibility is no longer a moral bonus; it is a strict legal requirement in the US (ADA), Europe (EAA), and increasingly the UAE. Failing to meet WCAG (Web Content Accessibility Guidelines) exposes enterprise clients to massive class-action litigation risk.
+Accessibility is no longer a moral bonus; it is a strict legal requirement in the US (ADA), Europe (EAA), and across major global markets. Failing to meet WCAG (Web Content Accessibility Guidelines) exposes enterprise clients to massive class-action litigation risk.
 
 ### The WCAG 2.1 AA/AAA Standard
 *   **Keyboard Navigation:** A CEO with a temporary motor injury must be able to navigate the entire SaaS dashboard exclusively using the `Tab`, `Enter`, `Space`, and `Arrow` keys. Custom React dropdowns or modal windows that trap focus or fail to capture `Esc` keystrokes are unacceptable.
@@ -67,7 +67,7 @@ export const AccessibleModal = ({ title, description, children, isOpen, onOpenCh
 
 ## 2. Internationalization (i18n) & Localization Architecture
 
-Operating in the UAE mandates flawless localized deployment across right-to-left (RTL) Arabic and left-to-right (LTR) English environments. Simple string replacement is insufficient for enterprise translation pipelines.
+Operating in global markets mandates flawless localized deployment across multiple language environments including right-to-left (RTL) and left-to-right (LTR) scripts. Simple string replacement is insufficient for enterprise translation pipelines.
 
 ### Ecosystem & Tooling
 *   **next-intl:** The premier highly scalable solution specifically designed for the Next.js App Router. It supports complex React Server Components deeply integrating translation namespaces directly into the server without shipping massive JSON dictionary payloads to the client browser.
@@ -126,7 +126,7 @@ B2B SaaS applications require supporting hundreds of distinct corporate clients 
 
 ---
 
-## 4. Rigorous Data Compliance (GDPR, CCPA, UAE PDPL)
+## 4. Rigorous Data Compliance (GDPR, CCPA)
 
 Data privacy is a highly policed corporate liability. Software architecture must reflect "Privacy by Design."
 
@@ -134,7 +134,7 @@ Data privacy is a highly policed corporate liability. Software architecture must
 *   **Consent Management Platform (CMP):** We never instantiate third-party tracking scripts (Meta Pixel, PostHog) dynamically until the user explicitly clicks "Accept" on a mathematically binding cookie banner. We record this consent interaction strictly in an immutable database ledger to provide proof during an audit.
 *   **The Right to Erasure Pipeline:** When an enterprise user clicks "Delete My Data", throwing a soft-delete boolean flag is legally invalid under GDPR. We must orchestrate a robust background workflow (via Inngest/Trigger.dev) that propagates cryptographic deletion webhooks across Stripe, SendGrid, Algolia, and the central database, permanently scrubbing all Personally Identifiable Information (PII) within 30 days.
 *   **Data Portability Pipelines:** Users maintain a strict legal right to transport their locked data. Our APIs must be capable of generating a heavily structured, machine-readable JSON or CSV export of the user's entire lifetime historical activity dynamically upon automated request.
-*   **Data Localization (UAE PDPL):** Certain government or healthcare entities in the UAE strictly mandate that physical data cannot legally cross sovereign borders. This explicitly dictates deploying architecture locally within AWS ME-Central-1 (UAE) or Azure UAE North data centers, fundamentally disallowing shared US-East Vercel infrastructure.
+*   **Data Localization (Industry-Specific):** Certain government or healthcare entities strictly mandate that data resides within specific geographic boundaries. This explicitly dictates deploying architecture within designated AWS or Azure data center regions, ensuring compliance with HIPAA, FedRAMP, or other sector-specific requirements.
 
 ---
 

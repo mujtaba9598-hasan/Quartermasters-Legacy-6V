@@ -24,13 +24,13 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://quartermasters.me'), // TODO: Replace with final domain
   title: {
-    default: "Quartermasters F.Z.C — Strategic Consulting & Advisory",
-    template: "%s | Quartermasters F.Z.C"
+    default: "Quartermasters — Strategic Consulting & Advisory",
+    template: "%s | Quartermasters"
   },
   description:
-    "Premium consulting across six verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. Ajman Free Zone licensed, globally minded.",
-  applicationName: 'Quartermasters F.Z.C',
-  authors: [{ name: 'Quartermasters F.Z.C' }],
+    "Premium consulting across six verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. California-based, globally connected.",
+  applicationName: 'Quartermasters',
+  authors: [{ name: 'Quartermasters' }],
   generator: 'Next.js 16',
   keywords: [
     "strategic consulting",
@@ -44,25 +44,25 @@ export const metadata: Metadata = {
     "international consulting firm",
   ],
   referrer: 'origin-when-cross-origin',
-  creator: 'Quartermasters F.Z.C',
-  publisher: 'Quartermasters F.Z.C',
+  creator: 'Quartermasters',
+  publisher: 'Quartermasters',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Quartermasters F.Z.C — Strategic Consulting & Advisory",
+    title: "Quartermasters — Strategic Consulting & Advisory",
     description:
       "Premium consulting across Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
     url: 'https://quartermasters.me', // TODO: Replace with final domain
-    siteName: 'Quartermasters F.Z.C',
+    siteName: 'Quartermasters',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Quartermasters F.Z.C — Strategic Consulting',
+        alt: 'Quartermasters — Strategic Consulting',
       },
     ],
     locale: "en_US",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quartermasters F.Z.C',
+    title: 'Quartermasters',
     description: 'Premium strategic consulting across six verticals.',
     images: ['/og-image.jpg'],
   },

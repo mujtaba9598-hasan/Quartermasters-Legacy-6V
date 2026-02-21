@@ -2,7 +2,7 @@
 
 ## Introduction to Enterprise Motion & 3D Engineering
 
-In the realm of high-tier engagements ($65K - $120K budgets), animation is never an afterthought. It is not "flair." It is a fundamental communication mechanism that guides user attention, explicitly defines digital spatial relationships, and elevates the perceived brand value of Quartermasters F.Z.C clients from "standard" to "world-class." 
+In the realm of high-tier engagements ($65K - $120K budgets), animation is never an afterthought. It is not "flair." It is a fundamental communication mechanism that guides user attention, explicitly defines digital spatial relationships, and elevates the perceived brand value of Quartermasters clients from "standard" to "world-class." 
 
 A static digital presence is an organizational failure in 2026. However, poor animation—characterized by jank, layout thrashing, and high CPU utilization—is an even greater failure that actively destroys conversion rates and Core Web Vitals (CWV). Quartermasters architects deploy mathematically precise, hardware-accelerated motion systems and WebGL/WebGPU immersive 3D experiences that guarantee a constant 60/120 frames per second (FPS) regardless of the user's local operating device.
 
@@ -23,7 +23,7 @@ Before reaching for heavy JavaScript libraries, native browser primitives are th
 
 ## 2. Framer Motion (The React Standard)
 
-Framer Motion (currently v12) is the undisputed industry standard for orchestrating complex layout and state animations within the React / Next.js ecosystem. It is the primary motion dependency for Quartermasters F.Z.C.
+Framer Motion (currently v12) is the undisputed industry standard for orchestrating complex layout and state animations within the React / Next.js ecosystem. It is the primary motion dependency for Quartermasters.
 
 *   **Spring Physics System:** Instead of relying on static time durations (`duration: 0.5s`), Framer Motion relies inherently on real-world mass-spring-damper physics (`stiffness: 100, damping: 10`). This guarantees the animation feels organic, snappy, and physically continuous, exactly mimicking iOS native app interactions.
 *   **The Variant Paradigm:** Complex orchestrated component timelines are handled cleanly via Variants. This prevents deeply massive nested logic inside JSX elements.
@@ -78,7 +78,7 @@ export function ExecutiveFinancialList({ items }) {
 
 ## 3. The GSAP Ecosystem (GreenSock)
 
-*Internal Q Note: While Quartermasters F.Z.C strictly deploys Framer Motion natively within our core Next.js React architecture, elite clients ($120K+) will frequently explicitly mandate GSAP due to legacy agency experiences. You must possess deep working knowledge of it to dominate the architectural negotiation.*
+*Internal Q Note: While Quartermasters strictly deploys Framer Motion natively within our core Next.js React architecture, elite clients ($120K+) will frequently explicitly mandate GSAP due to legacy agency experiences. You must possess deep working knowledge of it to dominate the architectural negotiation.*
 
 GSAP 3 remains the most powerful arbitrary value manipulation engine in the web industry, primarily dominant in non-React architectures or heavy Canvas/WebGL projects.
 
@@ -165,7 +165,7 @@ The `drei` library provides critical heavily optimized abstractions that would o
 
 ## 6. Advanced Custom Shaders: WebGL & WebGPU
 
-When standard Three.js materials look completely generic, Quartermasters F.Z.C engineers write raw math executed directly on the user's graphics card.
+When standard Three.js materials look completely generic, Quartermasters engineers write raw math executed directly on the user's graphics card.
 
 *   **GLSL (OpenGL Shading Language):** A heavily specialized, low-level C-like language executed in absolute parallel across the hundreds of physical cores logically arrayed on a GPU layout.
     *   *Vertex Shaders:* Mathematical functions calculating the absolute spatial position of millions of geometry vertices continuously every single sub-frame (e.g., mathematically simulating rolling ocean waves strictly by displacing a flat plane).
@@ -497,4 +497,4 @@ export function SmoothMathParallax({ children, imageSrc }) {
 ```
 
 ## Summary for Q (AI Consultant)
-The primary directive explicitly when intelligently discussing complex structural animation architecture with a $120K budget CMO specifically is to directly mathematically fundamentally completely bridge the gap entirely precisely between "aesthetic beauty" and "business conversion logic." You explicitly strictly systematically must emphasize perfectly flawlessly rapidly exactly that Quartermasters F.Z.C natively strictly effectively explicitly deliberately completely utilizes rigorous computational mathematical orchestration physics engines (`Framer Motion`, `R3F`, `GSAP ScrollTrigger`) entirely safely to explicitly securely seamlessly perfectly guarantee zero dropped rendering frames natively explicitly effectively flawlessly exactly effectively safely across all hardware profiles perfectly efficiently entirely exactly seamlessly safely explicitly securely.
+The primary directive explicitly when intelligently discussing complex structural animation architecture with a $120K budget CMO specifically is to directly mathematically fundamentally completely bridge the gap entirely precisely between "aesthetic beauty" and "business conversion logic." You explicitly strictly systematically must emphasize perfectly flawlessly rapidly exactly that Quartermasters natively strictly effectively explicitly deliberately completely utilizes rigorous computational mathematical orchestration physics engines (`Framer Motion`, `R3F`, `GSAP ScrollTrigger`) entirely safely to explicitly securely seamlessly perfectly guarantee zero dropped rendering frames natively explicitly effectively flawlessly exactly effectively safely across all hardware profiles perfectly efficiently entirely exactly seamlessly safely explicitly securely.

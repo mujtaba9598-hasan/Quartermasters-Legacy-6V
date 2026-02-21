@@ -4,15 +4,15 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Quartermasters F.Z.C",
+  title: "Privacy Policy — Quartermasters",
   description:
-    "Privacy Policy for Quartermasters F.Z.C. Learn how we collect, use, store, and protect your personal data in compliance with UAE PDPL, GDPR, CCPA/CPRA, and CAN-SPAM regulations.",
+    "Privacy Policy for Quartermasters. Learn how we collect, use, store, and protect your personal data in compliance with CCPA/CPRA, GDPR, and CAN-SPAM regulations.",
   openGraph: {
-    title: "Privacy Policy — Quartermasters F.Z.C",
+    title: "Privacy Policy — Quartermasters",
     description:
-      "Privacy Policy for Quartermasters F.Z.C. Learn how we collect, use, store, and protect your personal data.",
+      "Privacy Policy for Quartermasters. Learn how we collect, use, store, and protect your personal data.",
     type: "website",
-    locale: "en_AE",
+    locale: "en_US",
   },
 };
 
@@ -134,7 +134,7 @@ export default function PrivacyPolicyPage() {
                 className="max-w-2xl text-lg leading-relaxed"
                 style={{ color: "var(--text-muted)" }}
               >
-                This Privacy Policy explains how Quartermasters F.Z.C
+                This Privacy Policy explains how Quartermasters
                 (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;)
                 collects, uses, discloses, and safeguards your personal data
                 when you visit{" "}
@@ -142,9 +142,9 @@ export default function PrivacyPolicyPage() {
                   quartermasters.me
                 </span>{" "}
                 or interact with our services. We are committed to protecting
-                your privacy in accordance with the UAE Personal Data Protection
-                Law (PDPL), the EU General Data Protection Regulation (GDPR),
-                the UAE Data Protection Law / UAE Privacy Rights
+                your privacy in accordance with applicable data protection
+                laws, including the EU General Data Protection Regulation (GDPR),
+                the California Consumer Privacy Act and California Privacy Rights
                 Act (CCPA/CPRA), and the CAN-SPAM Act.
               </p>
               <div
@@ -238,20 +238,17 @@ export default function PrivacyPolicyPage() {
                         color: "var(--text-primary)",
                       }}
                     >
-                      Quartermasters F.Z.C
+                      Quartermasters
                     </p>
-                    <p>Free Zone Company &mdash; Limited Liability</p>
-                    <p>(removed — placeholder for US registration)</p>
-                    <p>
-                      Ajman Free Zone, UAE
-                    </p>
+                    <p>Strategic Consulting Firm</p>
+                    <p>California, United States</p>
                     <p>
                       Email:{" "}
                       <a
-                        href="mailto:ceocli@quartermasters.me"
+                        href="mailto:hello@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        ceocli@quartermasters.me
+                        hello@quartermasters.me
                       </a>
                     </p>
                     <p>
@@ -265,14 +262,14 @@ export default function PrivacyPolicyPage() {
                     </p>
                   </div>
                   <p>
-                    Quartermasters F.Z.C is licensed by relevant UAE regulatory authorities and operates under applicable law. For any
+                    Quartermasters operates under applicable federal and state law. For any
                     privacy-related inquiries or to exercise your data subject
                     rights, please contact us at{" "}
                     <a
-                      href="mailto:ceocli@quartermasters.me"
+                      href="mailto:hello@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      ceocli@quartermasters.me
+                      hello@quartermasters.me
                     </a>
                     .
                   </p>
@@ -446,7 +443,7 @@ export default function PrivacyPolicyPage() {
                 >
                   <p>
                     We process your personal data under one or more of the
-                    following legal bases, as applicable under the UAE PDPL, GDPR,
+                    following legal bases, as applicable under the GDPR
                     and CCPA/CPRA:
                   </p>
 
@@ -465,7 +462,7 @@ export default function PrivacyPolicyPage() {
                           color: "var(--text-primary)",
                         }}
                       >
-                        Consent (PDPL Art. 5; GDPR Art. 6(1)(a))
+                        Consent (CCPA/CPRA; GDPR Art. 6(1)(a))
                       </p>
                       <p>
                         Where you have given clear, affirmative consent for us to
@@ -489,7 +486,7 @@ export default function PrivacyPolicyPage() {
                           color: "var(--text-primary)",
                         }}
                       >
-                        Contractual Necessity (PDPL Art. 5; GDPR Art. 6(1)(b))
+                        Contractual Necessity (CCPA/CPRA; GDPR Art. 6(1)(b))
                       </p>
                       <p>
                         Processing that is necessary for the performance of a
@@ -514,7 +511,7 @@ export default function PrivacyPolicyPage() {
                           color: "var(--text-primary)",
                         }}
                       >
-                        Legitimate Interest (PDPL Art. 5; GDPR Art. 6(1)(f))
+                        Legitimate Interest (CCPA/CPRA; GDPR Art. 6(1)(f))
                       </p>
                       <p>
                         Processing that is necessary for our legitimate business
@@ -540,12 +537,12 @@ export default function PrivacyPolicyPage() {
                           color: "var(--text-primary)",
                         }}
                       >
-                        Legal Obligation (PDPL Art. 5; GDPR Art. 6(1)(c))
+                        Legal Obligation (CCPA/CPRA; GDPR Art. 6(1)(c))
                       </p>
                       <p>
                         Processing required to comply with applicable laws,
                         regulations, or lawful government requests &mdash;
-                        including UAE federal law, AFZA regulations, anti-money
+                        including federal and California state law, anti-money
                         laundering (AML) requirements, and tax obligations.
                       </p>
                     </div>
@@ -570,10 +567,10 @@ export default function PrivacyPolicyPage() {
                         Service delivery:
                       </strong>{" "}
                       Responding to inquiries, providing consultancy services
-                      across our five licensed verticals (Human Resources
+                      across our six service verticals (Human Resources
                       Consultancy, Management Consultancies, Consulting &amp;
                       R&amp;D in Technology Education, Organization &amp; Event
-                      Management, and Banking Services Consultancy), and
+                      Management, Banking Services Consultancy, and IT Services), and
                       managing client relationships.
                     </li>
                     <li>
@@ -602,8 +599,7 @@ export default function PrivacyPolicyPage() {
                       <strong style={{ color: "var(--text-primary)" }}>
                         Legal compliance:
                       </strong>{" "}
-                      Fulfilling our obligations under UAE law, AFZA
-                      regulations, and other applicable legislation.
+                      Fulfilling our obligations under federal and California state law, and other applicable legislation.
                     </li>
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
@@ -686,7 +682,7 @@ export default function PrivacyPolicyPage() {
                         <tr>
                           <td className="py-3 pr-6">Payment transaction records</td>
                           <td className="py-3 pr-6">7 years</td>
-                          <td className="py-3">Legal obligation (UAE tax law)</td>
+                          <td className="py-3">Legal obligation (US tax law)</td>
                         </tr>
                         <tr>
                           <td className="py-3 pr-6">Cookie / analytics data</td>
@@ -800,7 +796,7 @@ export default function PrivacyPolicyPage() {
                   <p className="mt-4">
                     We may also disclose personal data where required by law,
                     regulation, legal process, or enforceable governmental
-                    request, including requests from UAE authorities and AFZA.
+                    request, including requests from United States federal and state authorities.
                   </p>
                 </PolicySection>
 
@@ -813,15 +809,15 @@ export default function PrivacyPolicyPage() {
                   title="International Data Transfers & Safeguards"
                 >
                   <p>
-                    Quartermasters F.Z.C is headquartered in the United Arab
-                    Emirates. However, some of our third-party service providers
-                    operate in jurisdictions outside the UAE, including the
-                    United States and the European Economic Area (EEA).
+                    Quartermasters is headquartered in California, United
+                    States. Some of our third-party service providers
+                    operate in jurisdictions outside the United States, including the
+                    European Economic Area (EEA).
                   </p>
                   <p>
-                    When personal data is transferred outside the UAE or the
+                    When personal data is transferred outside the United States or the
                     EEA, we ensure that appropriate safeguards are in place, in
-                    compliance with the UAE PDPL and GDPR Chapter V:
+                    compliance with the CCPA/CPRA and GDPR Chapter V:
                   </p>
                   <ul className="ml-4 list-inside list-disc space-y-2">
                     <li>
@@ -836,7 +832,7 @@ export default function PrivacyPolicyPage() {
                         Adequacy decisions:
                       </strong>{" "}
                       Where transfers are to jurisdictions recognized by the
-                      European Commission or the UAE Data Office as providing an
+                      European Commission as providing an
                       adequate level of data protection.
                     </li>
                     <li>
@@ -861,10 +857,10 @@ export default function PrivacyPolicyPage() {
                     You may request a copy of the relevant transfer safeguards
                     by contacting us at{" "}
                     <a
-                      href="mailto:ceocli@quartermasters.me"
+                      href="mailto:hello@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      ceocli@quartermasters.me
+                      hello@quartermasters.me
                     </a>
                     .
                   </p>
@@ -883,7 +879,7 @@ export default function PrivacyPolicyPage() {
                     the following rights regarding your personal data:
                   </p>
 
-                  {/* Rights under UAE PDPL + GDPR */}
+                  {/* Rights under CCPA/CPRA + GDPR */}
                   <h3
                     className="mt-4 text-base font-semibold"
                     style={{
@@ -891,7 +887,7 @@ export default function PrivacyPolicyPage() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    Under UAE PDPL &amp; EU GDPR
+                    Under CCPA/CPRA &amp; EU GDPR
                   </h3>
                   <ul className="ml-4 list-inside list-disc space-y-2">
                     <li>
@@ -956,7 +952,7 @@ export default function PrivacyPolicyPage() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    Additional Rights for UAE Residents (CCPA/CPRA)
+                    Additional Rights for California Residents (CCPA/CPRA)
                   </h3>
                   <ul className="ml-4 list-inside list-disc space-y-2">
                     <li>
@@ -1020,14 +1016,14 @@ export default function PrivacyPolicyPage() {
                     <p>
                       To exercise any of these rights, email us at{" "}
                       <a
-                        href="mailto:ceocli@quartermasters.me"
+                        href="mailto:hello@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        ceocli@quartermasters.me
+                        hello@quartermasters.me
                       </a>{" "}
                       with the subject line &ldquo;Data Subject Request.&rdquo;
                       We will verify your identity and respond within 30 days
-                      (UAE PDPL / GDPR) or 45 days (CCPA/CPRA). If we need
+                      (GDPR) or 45 days (CCPA/CPRA). If we need
                       additional time, we will notify you of the extension and
                       the reason for it.
                     </p>
@@ -1239,7 +1235,7 @@ export default function PrivacyPolicyPage() {
                       <strong style={{ color: "var(--text-primary)" }}>
                         Right to object:
                       </strong>{" "}
-                      Under GDPR Article 22 and UAE PDPL, you have the right
+                      Under GDPR Article 22 and CCPA/CPRA, you have the right
                       not to be subject to solely automated decision-making.
                       You may request human intervention at any time by
                       contacting us.
@@ -1286,10 +1282,10 @@ export default function PrivacyPolicyPage() {
                     that we may have collected data from a minor, please contact
                     us at{" "}
                     <a
-                      href="mailto:ceocli@quartermasters.me"
+                      href="mailto:hello@quartermasters.me"
                       style={{ color: "var(--color-gold)" }}
                     >
-                      ceocli@quartermasters.me
+                      hello@quartermasters.me
                     </a>{" "}
                     so we can investigate and take appropriate action.
                   </p>
@@ -1351,7 +1347,7 @@ export default function PrivacyPolicyPage() {
                       personal data breach, we will notify affected individuals
                       and the relevant supervisory authority in accordance with
                       applicable law (within 72 hours under GDPR and as
-                      required under UAE PDPL).
+                      required under CCPA/CPRA).
                     </li>
                   </ul>
                   <p>
@@ -1386,7 +1382,7 @@ export default function PrivacyPolicyPage() {
                       users (where feasible and where we have contact details).
                     </li>
                     <li>
-                      Where required by law (e.g., under GDPR or UAE PDPL),
+                      Where required by law (e.g., under GDPR or CCPA/CPRA),
                       we will obtain your renewed consent before applying
                       changes that affect the legal basis for processing.
                     </li>
@@ -1426,18 +1422,18 @@ export default function PrivacyPolicyPage() {
                         color: "var(--text-primary)",
                       }}
                     >
-                      Quartermasters F.Z.C &mdash; Data Privacy
+                      Quartermasters &mdash; Data Privacy
                     </p>
                     <p>
-                      Ajman Free Zone, UAE
+                      California, United States
                     </p>
                     <p className="mt-2">
                       Email:{" "}
                       <a
-                        href="mailto:ceocli@quartermasters.me"
+                        href="mailto:hello@quartermasters.me"
                         style={{ color: "var(--color-gold)" }}
                       >
-                        ceocli@quartermasters.me
+                        hello@quartermasters.me
                       </a>
                     </p>
                     <p>
@@ -1463,11 +1459,10 @@ export default function PrivacyPolicyPage() {
                   <ul className="ml-4 list-inside list-disc space-y-2">
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
-                        UAE:
+                        United States:
                       </strong>{" "}
-                      The UAE Data Office (established under Federal Decree-Law
-                      No. 45 of 2021 on the Protection of Personal Data), or
-                      the relevant UAE regulatory authorities.
+                      The Federal Trade Commission (FTC), or your state
+                      attorney general&rsquo;s office.
                     </li>
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
@@ -1479,10 +1474,9 @@ export default function PrivacyPolicyPage() {
                     </li>
                     <li>
                       <strong style={{ color: "var(--text-primary)" }}>
-                        Ajman Free Zone, UAE:
+                        California:
                       </strong>{" "}
-                      The UAE Telecommunications and Digital Government Regulatory Authority&rsquo;s Office or the
-                      UAE Data Office (CPPA).
+                      The California Privacy Protection Agency (CPPA).
                     </li>
                   </ul>
 
@@ -1497,7 +1491,7 @@ export default function PrivacyPolicyPage() {
                   </h3>
                   <p>
                     In accordance with the CAN-SPAM Act, all marketing emails
-                    sent by Quartermasters F.Z.C will:
+                    sent by Quartermasters will:
                   </p>
                   <ul className="ml-4 list-inside list-disc space-y-1">
                     <li>
@@ -1546,12 +1540,11 @@ export default function PrivacyPolicyPage() {
                     style={{ color: "var(--text-muted)" }}
                   >
                     This Privacy Policy is governed by and construed in
-                    accordance with the laws of the United Arab Emirates,
-                    including Federal Decree-Law No. 45 of 2021 on the
-                    Protection of Personal Data (as amended), and the
-                    regulations of relevant UAE regulatory authorities. For EU
+                    accordance with the laws of the United States and the
+                    State of California, including the CCPA/CPRA and other
+                    applicable federal and state privacy regulations. For EU
                     residents, the GDPR applies as supplementary law. For
-                    UAE residents, the CCPA/CPRA applies in addition.
+                    California residents, the CCPA/CPRA applies in addition.
                   </p>
                   <div
                     className="mx-auto my-6 h-px w-24"
@@ -1564,14 +1557,13 @@ export default function PrivacyPolicyPage() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    Quartermasters F.Z.C
+                    Quartermasters
                   </p>
                   <p
                     className="text-xs"
                     style={{ color: "var(--text-light)" }}
                   >
-                    (removed — placeholder for US registration) &middot; Subject to UAE Government
-                    Authority Approvals
+                    California, United States
                   </p>
                 </div>
 

@@ -57,10 +57,15 @@ export function SearchBar() {
         }),
       });
 
-      const data = await res.json();
+      let data: any;
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error("Server returned an invalid response.");
+      }
 
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong.");
+        throw new Error(data?.error || "Something went wrong.");
       }
 
       setStatus("success");
@@ -126,10 +131,9 @@ export function SearchBar() {
                 onBlur={() => setFocused(false)}
                 onKeyDown={handleKeyDown}
                 placeholder="How can we help your organization?"
-                className="flex-1 bg-transparent text-sm outline-none placeholder:opacity-50"
+                className="flex-1 bg-transparent text-sm outline-none text-white placeholder:text-white/60"
                 style={{
                   fontFamily: "var(--font-body)",
-                  color: "var(--text-body)",
                 }}
               />
               <button
@@ -158,15 +162,15 @@ export function SearchBar() {
               <button
                 key={s}
                 onClick={() => setQuery(s)}
-                className="pill-tag transition-all"
-                style={{ cursor: "pointer", fontSize: "0.75rem" }}
+                className="pill-tag transition-all text-white/70 hover:text-white"
+                style={{ cursor: "pointer", fontSize: "0.75rem", color: "inherit" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "var(--color-gold)";
                   e.currentTarget.style.color = "var(--color-gold)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "var(--glass-border)";
-                  e.currentTarget.style.color = "var(--text-body)";
+                  e.currentTarget.style.color = "rgba(255,255,255,0.7)";
                 }}
               >
                 {s}
@@ -194,8 +198,8 @@ export function SearchBar() {
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              className="glass relative w-full max-w-lg overflow-hidden rounded-2xl border border-[var(--glass-border)] p-8 shadow-2xl"
-              style={{ background: "var(--bg-card)" }}
+              className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 p-8 shadow-2xl"
+              style={{ background: "rgba(0, 33, 71, 0.95)", backdropFilter: "blur(20px)" }}
             >
               <button
                 onClick={() => setIsModalOpen(false)}

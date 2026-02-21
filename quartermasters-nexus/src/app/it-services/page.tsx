@@ -26,10 +26,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-    title: "IT Services | Quartermasters F.Z.C",
+    title: "IT Services | Quartermasters",
     description: "Custom Software & Digital Product Engineering. From web applications to SaaS architectures.",
     openGraph: {
-        title: "IT Services | Quartermasters F.Z.C",
+        title: "IT Services | Quartermasters",
         description: "Custom Software & Digital Product Engineering. From web applications to SaaS architectures.",
         url: 'https://quartermasters.me/it-services',
     }

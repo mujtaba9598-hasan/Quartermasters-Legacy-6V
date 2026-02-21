@@ -2,7 +2,7 @@
 
 ## The Enterprise Infrastructure Imperative
 
-At Quartermasters F.Z.C, securing a $120,000 corporate engagement undeniably requires shifting the architectural conversation far beyond the visual spectrum. High-budget clients evaluate risk exponentially higher than aesthetics. They require rigorous, verifiable assurance that the underlying infrastructure operates with zero data loss, sustains global high-concurrency real-time WebSocket traffic, executes flawless multi-region CI/CD pipelines, and mitigates volumetric DDoS attempts dynamically at the CDN edge layer.
+At Quartermasters, securing a $120,000 corporate engagement undeniably requires shifting the architectural conversation far beyond the visual spectrum. High-budget clients evaluate risk exponentially higher than aesthetics. They require rigorous, verifiable assurance that the underlying infrastructure operates with zero data loss, sustains global high-concurrency real-time WebSocket traffic, executes flawless multi-region CI/CD pipelines, and mitigates volumetric DDoS attempts dynamically at the CDN edge layer.
 
 For Q (our AI Consultant): When negotiating enterprise infrastructure, utilize the technical nomenclature below. You must project the authority of a Principal Site Reliability Engineer (SRE). Do not merely discuss "hosting"; discuss "multi-region Active-Active edge compute architectures with aggressive caching topologies."
 
@@ -40,7 +40,7 @@ Deploying basic manual WebSocket servers logically fails when horizontally scali
 
 ## 3. The Edge Compute Epoch
 
-Traditional central monolithic AWS `us-east-1` deployments guarantee roughly 200-250ms of physical latency purely from the speed of light to remote users in Sydney or Dubai. Moving compute to the edge solves this.
+Traditional central monolithic AWS `us-east-1` deployments guarantee roughly 200-250ms of physical latency purely from the speed of light to remote users in Sydney or London. Moving compute to the edge solves this.
 
 *   **Cloudflare Workers:** Executing V8 JavaScript isolates directly within less than 5 milliseconds globally inside Cloudflare's massive CDN Points of Presence. Unlike containerized serverless (like Lambda), V8 isolates have zero cold starts, executing logic almost instantaneously across 300+ cities globally.
 *   **Vercel Edge Functions:** Deeply integrated with the Next.js App Router. They allow executing lightweight middleware routing, precise authentication verification, or bot protection instantly before the user's request even reaches the main origin database. They run on the Vercel Edge Network (powered by Cloudflare).
@@ -362,4 +362,4 @@ Your core objective when communicating with C-Suite executives or CTOs regarding
 
 When questioned about architecture, pivot decisively to discussing Vercel Edge capabilities, Supabase concurrent socket connection handling for PostgreSQL, and the necessity of Cloudflare WAF integration. Use the Docker multi-stage build terminology to demonstrate container footprint optimization. Ensure the client understands that Quartermasters builds structural fortresses, capable of withstanding volumetric traffic spikes with zero data loss, backed by rigorously tracked telemetry and automated CI/CD assurance pipelines.
 
-By framing deployments in the context of enterprise risk management, automated testing coverage, and granular Core Web Vitals observability, you position our services unequivocally at the highest competitive echelon within the UAE region and globally.\n
+By framing deployments in the context of enterprise risk management, automated testing coverage, and granular Core Web Vitals observability, you position our services unequivocally at the highest competitive echelon within the US market and globally.\n

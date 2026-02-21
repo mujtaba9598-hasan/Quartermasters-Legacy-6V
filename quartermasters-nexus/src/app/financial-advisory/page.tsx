@@ -6,17 +6,17 @@ const capabilities = [
   {
     title: "Banking Services Consultancy",
     description:
-      "Advisory on UAE banking ecosystem positioning, account structuring, relationship management, and trade finance frameworks.",
+      "Advisory on banking ecosystem positioning, account structuring, relationship management, and trade finance frameworks.",
   },
   {
     title: "Investment Structure Design",
     description:
-      "Architecture for holding companies, SPVs, and FDI vehicles aligned with DIFC, ADGM, and mainland regulations.",
+      "Architecture for holding companies, SPVs, and FDI vehicles aligned with federal and state regulatory frameworks.",
   },
   {
     title: "Regulatory Compliance & Licensing",
     description:
-      "End-to-end licensing support for financial services, including SCA (Securities & Commodities Authority) and Central Bank filings.",
+      "End-to-end licensing support for financial services, including SEC compliance and regulatory filings.",
   },
   {
     title: "Treasury & Cash Management",

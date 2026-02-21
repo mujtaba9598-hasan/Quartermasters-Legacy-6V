@@ -48,7 +48,7 @@ export const PRICING_TABLE: Record<string, Record<string, PackageDetails>> = {
             tier: 'express',
             basePrice: 1200,
             description: 'Essential HR compliance check and policy review.',
-            deliverables: ['Employee Handbook Review', 'Basic Contract Templates', 'UAE Labor Law Compliance Check'],
+            deliverables: ['Employee Handbook Review', 'Basic Contract Templates', 'US Labor Law Compliance Check'],
             timeline: '1-2 weeks'
         },
         'standard': {

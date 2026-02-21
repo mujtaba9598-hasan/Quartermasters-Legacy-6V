@@ -1,3 +1,8 @@
+/**
+ * @deprecated Replaced by ScrollStack component.
+ * Kept because GSAP is still used by ChromaGrid.
+ * Do NOT use CardSwap in new code — use ScrollStack instead.
+ */
 'use client';
 
 import React, { Children, cloneElement, forwardRef, isValidElement, useEffect, useMemo, useRef } from 'react';

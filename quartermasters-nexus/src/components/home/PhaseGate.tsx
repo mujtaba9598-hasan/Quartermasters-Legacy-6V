@@ -12,7 +12,7 @@ const phases = [
   {
     step: "01",
     title: "Discovery",
-    description: "Initial assessment and scope definition across all five verticals.",
+    description: "Initial assessment and scope definition across all six verticals.",
     pill: "#Discovery",
   },
   {

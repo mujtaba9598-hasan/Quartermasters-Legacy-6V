@@ -6,10 +6,10 @@ export function JsonLd() {
     url: "https://quartermasters.me", // TODO: Replace with final domain
     logo: "/og-image.jpg",
     description:
-      "Premium strategic consulting across five verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
+      "Premium strategic consulting across six verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, Strategic Management, and IT Services.",
     address: {
       "@type": "PostalAddress",
-      addressRegion: "Ajman Free Zone, UAE",
+      addressRegion: "California",
       addressCountry: "US",
     },
     contactPoint: {
@@ -26,11 +26,11 @@ export function JsonLd() {
     image: "/og-image.jpg",
     address: {
       "@type": "PostalAddress",
-      addressRegion: "Ajman Free Zone, UAE",
+      addressRegion: "California",
       addressCountry: "US",
     },
     description:
-      "Premium consulting firm operating across five integrated verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
+      "Premium consulting firm operating across six integrated verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, Strategic Management, and IT Services.",
     priceRange: "$$$$",
   };
 
@@ -60,6 +60,11 @@ export function JsonLd() {
       description:
         "Digital transformation, technology strategy, R&D advisory, and emerging technology assessment.",
     },
+    {
+      name: "IT Services",
+      description:
+        "Custom software development, web application engineering, SaaS platform architecture, and digital product strategy.",
+    },
   ];
 
   const serviceSchema = services.map((s) => ({
@@ -86,7 +91,7 @@ export function JsonLd() {
         name: "What services does Quartermasters offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Quartermasters provides five integrated consulting services: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
+          text: "Quartermasters provides six integrated consulting services: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, Strategic Management, and IT Services.",
         },
       },
       {
@@ -94,7 +99,7 @@ export function JsonLd() {
         name: "Where is Quartermasters based?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Quartermasters is based in Ajman Free Zone, UAE, serving clients globally.",
+          text: "Quartermasters is based in California, United States, serving clients globally.",
         },
       },
       {

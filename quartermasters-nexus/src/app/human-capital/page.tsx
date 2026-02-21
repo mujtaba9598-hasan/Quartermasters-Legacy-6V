@@ -6,12 +6,12 @@ const capabilities = [
   {
     title: "HR Compliance & Labor Law Advisory",
     description:
-      "UAE labor law alignment, contract structuring, WPS compliance, and Ministry of Labour positioning.",
+      "Federal and state labor law alignment, contract structuring, compliance advisory, and workforce positioning.",
   },
   {
     title: "Workforce Structuring & Hiring",
     description:
-      "Talent acquisition frameworks, visa processing, onboarding systems, and offshore/local workforce optimization.",
+      "Talent acquisition frameworks, onboarding systems, remote workforce strategies, and workforce optimization.",
   },
   {
     title: "Performance Management Systems",
@@ -32,10 +32,10 @@ const capabilities = [
 
 export const metadata: Metadata = {
   title: "Human Capital & Resource Management | Quartermasters",
-  description: "Workforce Infrastructure & Regulatory Compliance. HR systems for the UAE operational landscape.",
+  description: "Workforce Infrastructure & Regulatory Compliance. HR systems for modern enterprises.",
   openGraph: {
     title: "Human Capital & Resource Management | Quartermasters",
-    description: "Workforce Infrastructure & Regulatory Compliance. HR systems for the UAE operational landscape.",
+    description: "Workforce Infrastructure & Regulatory Compliance. HR systems for modern enterprises.",
     url: 'https://quartermasters.me/human-capital',
   }
 };

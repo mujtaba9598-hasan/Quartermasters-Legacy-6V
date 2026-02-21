@@ -1,6 +1,6 @@
 <?php
 /**
- * Quartermasters F.Z.C — Contact Form Handler
+ * Quartermasters — Contact Form Handler
  * Runs on Hostinger shared hosting (PHP native).
  * No third-party dependencies.
  *
@@ -109,7 +109,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Valid services
-$validServices = ['banking', 'hr', 'management', 'events', 'tech', 'general'];
+$validServices = ['banking', 'hr', 'management', 'events', 'tech', 'it', 'general'];
 if (!in_array($service, $validServices)) {
     http_response_code(400);
     echo json_encode(['error' => 'Invalid service selection.']);
@@ -122,6 +122,7 @@ $serviceLabels = [
     'management' => 'Management Consultancies',
     'events'     => 'Organization & Event Management',
     'tech'       => 'Technology Education R&D',
+    'it'         => 'IT Services',
     'general'    => 'General Inquiry',
 ];
 $serviceLabel = $serviceLabels[$service] ?? $service;
@@ -223,7 +224,7 @@ $htmlBody = <<<HTML
         </tr>
         <tr>
           <td style="padding:20px 32px;border-top:1px solid #292524;font-size:11px;color:#78716c;">
-            Quartermasters F.Z.C &mdash; Ajman Free Zone, UAE &bull; License No: 37357
+            Quartermasters &mdash; California, United States
             <br>Ref: $inquiryId
           </td>
         </tr>

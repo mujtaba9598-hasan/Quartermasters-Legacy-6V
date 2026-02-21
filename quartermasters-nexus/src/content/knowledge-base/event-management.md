@@ -44,9 +44,9 @@ High-stakes logistics, venue coordination, and event strategy execution. We spec
 4. **Debrief (Post-Event)**: Impact analysis and financial reconciliation.
 
 ## Regulatory Context
-- Regulated by: Department of Tourism and Commerce Marketing (DTCM).
-- Key Compliance: Event Permits, Health & Safety Regulations.
-- Approvals: Civil Defense, Police Permissions for large gatherings.
+- Regulated by: State and local event permitting authorities.
+- Key Compliance: Event Permits, Health & Safety Regulations, ADA Accessibility.
+- Approvals: Fire Marshal, local police permits for large gatherings.
 
 ## Target Audience
 - Government Ministries hosting delegations.
@@ -56,10 +56,10 @@ High-stakes logistics, venue coordination, and event strategy execution. We spec
 ## FAQ
 
 ### 1. Do you handle permits?
-Yes, we manage the entire permitting process with DTCM and other relevant authorities.
+Yes, we manage the entire permitting process with state and local authorities.
 
 ### 2. Can you suggest venues?
-We have preferred partnerships with all major venues in the UAE and can secure competitive rates.
+We have preferred partnerships with major venues across the United States and can secure competitive rates.
 
 ### 3. Do you provide security?
 We design the security *plan* and contract licensed security firms for execution.

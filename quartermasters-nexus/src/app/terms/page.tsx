@@ -7,13 +7,13 @@ import ClickSpark from "@/components/ui/ClickSpark";
 export const metadata: Metadata = {
   title: "Terms of Service — Quartermasters",
   description:
-    "Terms of Service for Quartermasters, an Ajman Free Zone licensed consultancy. AFZA License No: 37357. Governing law: UAE Federal Law.",
+    "Terms of Service for Quartermasters, a California-based strategic consulting firm. Governing law: California and United States Federal Law.",
   openGraph: {
     title: "Terms of Service — Quartermasters",
     description:
-      "Terms of Service governing use of quartermasters.me and all advisory services provided by Quartermasters under AFZA License 37357.",
+      "Terms of Service governing use of quartermasters.me and all advisory services provided by Quartermasters.",
     type: "website",
-    locale: "en_AE",
+    locale: "en_US",
   },
 };
 
@@ -60,9 +60,9 @@ const sections: Section[] = [
         <p>
           These Terms constitute a legally binding agreement between you
           (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and
-          Quartermasters, a Free Zone Company with Limited Liability,
-          licensed by the Ajman Free Zone Authority (&ldquo;AFZA&rdquo;) under
-          License Number <strong>37357</strong>.
+          Quartermasters, a strategic consulting firm
+          incorporated and operating in the State of California,
+          United States.
         </p>
       </>
     ),
@@ -84,11 +84,10 @@ const sections: Section[] = [
         >
           <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[
-              ["Legal Entity", "Quartermasters (Free Zone Company \u2014 Limited Liability)"],
-              ["Trade License", "AFZA #37357"],
-              ["Regulatory Authority", "Ajman Free Zone Authority (AFZA)"],
-              ["Registered Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
-              ["Email", "ceocli@quartermasters.me"],
+              ["Legal Entity", "Quartermasters"],
+              ["Jurisdiction", "State of California, United States"],
+              ["Registered Address", "California, United States"],
+              ["Email", "hello@quartermasters.me"],
               ["Website", "quartermasters.me"],
             ].map(([label, value]) => (
               <div key={label}>
@@ -124,8 +123,7 @@ const sections: Section[] = [
       <>
         <p>
           Quartermasters is a multi-vertical consultancy firm operating under
-          five (5) licensed activities as authorized by the Ajman Free Zone
-          Authority. Our services are <strong>advisory and consultancy in
+          six (6) core service verticals. Our services are <strong>advisory and consultancy in
             nature</strong> and include:
         </p>
         <ol className="list-decimal pl-6 space-y-2 mt-4">
@@ -178,7 +176,7 @@ const sections: Section[] = [
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
             All services provided by Quartermasters are consultancy and advisory
             in nature. We do not provide regulated financial services, direct
-            employment or labour supply, or accredited educational
+            employment or labor supply, or accredited educational
             certifications. Please refer to Section 4 (Scope Limitations) for
             detailed disclosures.
           </p>
@@ -195,8 +193,8 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          Pursuant to the scope of our AFZA trade license and applicable UAE
-          law, the following limitations apply to our licensed activities. Users
+          Pursuant to the scope of our services and applicable
+          law, the following limitations apply to our service offerings. Users
           and clients must read and understand these limitations before engaging
           our services.
         </p>
@@ -227,10 +225,9 @@ const sections: Section[] = [
             management, or investment management.
           </li>
           <li>
-            Do <strong>not</strong> hold a license from the UAE Central Bank,
-            the Securities and Commodities Authority (SCA), the Dubai
-            Financial Services Authority (DFSA), or the Financial Services
-            Regulatory Authority (FSRA).
+            Do <strong>not</strong> hold a license from the Securities and
+            Exchange Commission (SEC), the Financial Industry Regulatory
+            Authority (FINRA), or any state financial regulatory authority.
           </li>
           <li>
             Do <strong>not</strong> provide insurance, brokerage, or
@@ -256,13 +253,13 @@ const sections: Section[] = [
         </p>
         <ul className="list-disc pl-6 space-y-1 mt-2">
           <li>
-            Do <strong>not</strong> act as a direct employer, labour supplier,
-            or staffing agency unless separately and explicitly authorized by
-            the UAE Ministry of Human Resources and Emiratisation (MOHRE).
+            Do <strong>not</strong> act as a direct employer, labor supplier,
+            or staffing agency unless separately and explicitly authorized
+            under applicable state and federal law.
           </li>
           <li>
-            Do <strong>not</strong> sponsor work visas or employment permits
-            for third-party personnel on behalf of clients.
+            Do <strong>not</strong> sponsor work visas, employment permits,
+            or immigration petitions for third-party personnel on behalf of clients.
           </li>
           <li>
             Do <strong>not</strong> act as a Professional Employer Organization
@@ -273,9 +270,9 @@ const sections: Section[] = [
         <p className="mt-3">
           All HR advisory services — including workforce planning, HR policy
           development, and organizational consulting — are delivered as
-          consultancy engagements. Any direct employment or labour supply
-          activity would require separate MOHRE approval and/or additional
-          licensing.
+          consultancy engagements. Any direct employment or labor supply
+          activity would require separate regulatory approval and/or additional
+          licensing under applicable state and federal law.
         </p>
 
         {/* Education */}
@@ -297,10 +294,9 @@ const sections: Section[] = [
           </li>
           <li>
             Do <strong>not</strong> issue accredited degrees, diplomas,
-            certifications, or professional qualifications recognized by the
-            UAE Knowledge and Human Development Authority (KHDA), the Ministry
-            of Education (MOE), or the Commission for Academic Accreditation
-            (CAA).
+            certifications, or professional qualifications recognized by any
+            state or federal accreditation body, including the U.S. Department
+            of Education or regional accrediting agencies.
           </li>
           <li>
             Do <strong>not</strong> claim equivalency with any accredited
@@ -311,8 +307,8 @@ const sections: Section[] = [
           Any educational content, training materials, workshops, or
           technology education research we provide is delivered solely in a
           consulting and R&amp;D capacity. Persons seeking accredited
-          qualifications must engage institutions licensed by the KHDA, MOE,
-          or relevant authority.
+          qualifications must engage institutions accredited by the appropriate
+          state or federal authority.
         </p>
 
         {/* Events */}
@@ -323,9 +319,9 @@ const sections: Section[] = [
           4.4 Organization &amp; Event Management
         </h4>
         <p>
-          Event management services are provided within the scope of our AFZA
-          license. All events organized or managed by Quartermasters are
-          subject to applicable UAE municipal, health, safety, and security
+          Event management services are provided within the scope of our
+          business operations. All events organized or managed by Quartermasters are
+          subject to applicable state and local health, safety, and security
           regulations. We will obtain or assist in obtaining all necessary
           event permits; however, final approval rests with the relevant
           government authorities.
@@ -379,7 +375,7 @@ const sections: Section[] = [
           <li>
             Immediately notify Quartermasters of any unauthorized use of your
             account or any other breach of security at{" "}
-            <strong>ceocli@quartermasters.me</strong>.
+            <strong>hello@quartermasters.me</strong>.
           </li>
         </ul>
         <p className="mt-3">
@@ -404,7 +400,7 @@ const sections: Section[] = [
           graphics, logos, icons, images, audio clips, digital downloads, data
           compilations, software, design elements, the Quartermasters brand identity, and
           all associated trade marks — is the exclusive property of
-          Quartermasters or its licensors and is protected by UAE
+          Quartermasters or its licensors and is protected by United States
           intellectual property laws and applicable international treaties.
         </p>
         <p className="mt-3">You may <strong>not</strong>:</p>
@@ -456,9 +452,9 @@ const sections: Section[] = [
           7.1 Invoicing &amp; Currency
         </h4>
         <p>
-          All invoices are denominated in United Arab Emirates Dirhams (AED)
+          All invoices are denominated in United States Dollars (USD)
           unless otherwise agreed in writing. Payment may also be accepted in
-          USD or other currencies at the prevailing exchange rate at our
+          other currencies at the prevailing exchange rate at our
           discretion.
         </p>
 
@@ -481,15 +477,13 @@ const sections: Section[] = [
           className="mt-6 mb-2 text-sm font-semibold"
           style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
         >
-          7.3 Value Added Tax (VAT)
+          7.3 Applicable Taxes
         </h4>
         <p>
-          All fees quoted are exclusive of VAT unless otherwise stated. VAT
-          shall be charged at the applicable rate as prescribed by UAE Federal
-          Tax Authority regulations (currently <strong>5%</strong>). A valid
-          Tax Invoice will be provided for all VAT-inclusive transactions.
-          Quartermasters&rsquo; Tax Registration Number (TRN) will be stated on
-          all invoices where applicable.
+          All fees quoted are exclusive of applicable taxes unless otherwise
+          stated. Sales tax, use tax, or other applicable taxes shall be
+          charged at the rate prescribed by the relevant state and local
+          jurisdictions. A valid invoice will be provided for all transactions.
         </p>
 
         <h4
@@ -506,7 +500,7 @@ const sections: Section[] = [
         <ul className="list-disc pl-6 space-y-1 mt-2">
           <li>
             Refund requests must be submitted in writing to{" "}
-            <strong>ceocli@quartermasters.me</strong> within fourteen (14) days
+            <strong>hello@quartermasters.me</strong> within fourteen (14) days
             of the payment date.
           </li>
           <li>
@@ -626,7 +620,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          To the maximum extent permitted by applicable UAE law:
+          To the maximum extent permitted by applicable law:
         </p>
         <ul className="list-disc pl-6 space-y-2 mt-3">
           <li>
@@ -649,7 +643,7 @@ const sections: Section[] = [
             or relating to these Terms or our services shall not exceed the{" "}
             <strong>total fees paid by you to Quartermasters in the twelve
               (12) months preceding the event giving rise to the claim</strong>,
-            or AED 10,000, whichever is greater.
+            or USD $10,000, whichever is greater.
           </li>
           <li>
             Quartermasters does not warrant that the Website will be
@@ -680,9 +674,9 @@ const sections: Section[] = [
       <>
         <p>
           These Terms shall be governed by and construed in accordance with the{" "}
-          <strong>laws of the United Arab Emirates</strong>, including all
-          applicable UAE Federal Laws, Ministerial Decrees, and Cabinet
-          Resolutions, without regard to conflict of law principles.
+          <strong>laws of the State of California</strong> and applicable
+          United States federal laws, without regard to conflict of law
+          principles.
         </p>
 
         <h4
@@ -692,11 +686,9 @@ const sections: Section[] = [
           10.1 Jurisdiction
         </h4>
         <p>
-          As Quartermasters is licensed by and registered within the Ajman Free
-          Zone, any disputes arising out of or in connection with these Terms
-          shall be subject to the <strong>exclusive jurisdiction of the Ajman
-            Free Zone Authority (AFZA)</strong> and its designated dispute
-          resolution mechanisms.
+          Any disputes arising out of or in connection with these Terms
+          shall be subject to the <strong>exclusive jurisdiction of the state
+          and federal courts located in California, United States</strong>.
         </p>
 
         <h4
@@ -709,8 +701,8 @@ const sections: Section[] = [
           The parties shall first attempt to resolve any dispute amicably
           through good-faith negotiation for a period of thirty (30) days from
           the date of written notice of the dispute. If the dispute cannot be
-          resolved amicably, it shall be referred to the competent courts or
-          arbitration tribunals as prescribed by AFZA regulations.
+          resolved amicably, it shall be referred to the competent state or
+          federal courts located in California.
         </p>
 
         <h4
@@ -720,9 +712,9 @@ const sections: Section[] = [
           10.3 Language
         </h4>
         <p>
-          In the event of any conflict between the English and Arabic versions
-          of these Terms, the English version shall prevail to the extent
-          permitted by applicable law.
+          These Terms are provided in English. In the event of any conflict
+          between the English version and any translated version of these
+          Terms, the English version shall prevail.
         </p>
       </>
     ),
@@ -738,16 +730,17 @@ const sections: Section[] = [
         <p>
           Your use of the Website and our services is also governed by our{" "}
           <strong>Privacy Policy</strong>, which describes how we collect, use,
-          store, and protect your personal data in accordance with UAE Federal
-          Decree-Law No. 45 of 2021 on the Protection of Personal Data and
-          any implementing regulations thereof.
+          store, and protect your personal data in accordance with applicable
+          United States federal and state privacy laws, including the
+          California Consumer Privacy Act (CCPA) and other relevant
+          regulations.
         </p>
         <p className="mt-3">
           By using our Website and services, you consent to the collection and
           processing of your personal data as described in our Privacy Policy.
           You may exercise your data rights — including the right to access,
           correct, delete, or restrict processing of your personal data — by
-          contacting us at <strong>ceocli@quartermasters.me</strong>.
+          contacting us at <strong>hello@quartermasters.me</strong>.
         </p>
         <p className="mt-3">
           The Privacy Policy is hereby incorporated into these Terms by
@@ -961,8 +954,8 @@ const sections: Section[] = [
             {[
               ["Entity", "Quartermasters"],
               ["Attention", "Compliance Department"],
-              ["Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
-              ["Email", "ceocli@quartermasters.me"],
+              ["Address", "California, United States"],
+              ["Email", "hello@quartermasters.me"],
               ["Website", "quartermasters.me"],
             ].map(([label, value]) => (
               <div key={label} className="flex flex-col sm:flex-row sm:gap-4">
@@ -1066,7 +1059,7 @@ export default function TermsOfServicePage() {
                     color: "var(--color-gold)",
                   }}
                 >
-                  AFZA License #37357
+                  California, USA
                 </span>
               </div>
             </div>

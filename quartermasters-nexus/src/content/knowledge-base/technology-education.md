@@ -2,13 +2,13 @@
 title: "Technology Education & R&D: Future-Proofing the Enterprise"
 description: "Consultancy on digital transformation, computational strategy, and research-driven innovation."
 date: "2026-02-14"
-author: "Quartermasters F.Z.C"
+author: "Quartermasters"
 ---
 
 # Technology Education and Research Consulting
 
 ## The Digital Imperative
-Technology is no longer a vertical; it is the horizontal layer that underpins every industry. Quartermasters F.Z.C's **Technology Education and Research Consulting** practice is dedicated to helping organizations understand, adopt, and master emerging technologies. We bridge the gap between "hype" and "utility," focusing on R&D that delivers tangible commercial value.
+Technology is no longer a vertical; it is the horizontal layer that underpins every industry. Quartermasters' **Technology Education and Research Consulting** practice is dedicated to helping organizations understand, adopt, and master emerging technologies. We bridge the gap between "hype" and "utility," focusing on R&D that delivers tangible commercial value.
 
 Licensed to provide consultancy in Technology Education and Research, we operate at the intersection of academic rigor and corporate application.
 
@@ -48,6 +48,6 @@ We treat technology projects as scientific experiments with commercial constrain
 - **Governance**: establishing the protocols for maintenance, security, and updates.
 
 ## Why Quartermasters?
-The tech world is noisy. Vendors sell solutions looking for problems. Quartermasters F.Z.C remains vendor-agnostic. Our loyalty is to the client’s objective. We provide the research-backed clarity needed to make expensive technology decisions with confidence.
+The tech world is noisy. Vendors sell solutions looking for problems. Quartermasters remains vendor-agnostic. Our loyalty is to the client’s objective. We provide the research-backed clarity needed to make expensive technology decisions with confidence.
 
 **Innovate or obsolesce. The choice is strategic.**

@@ -111,7 +111,7 @@ export function ChatPanel() {
                             : { x: '100%', opacity: 0.5 }
                         }
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className={`fixed z-50 flex flex-col bg-slate-950/95 backdrop-blur-2xl ${isFullscreen
+                        className={`fixed z-50 flex flex-col bg-slate-950 backdrop-blur-2xl ${isFullscreen
                             ? 'inset-0 w-full h-full'
                             : 'top-0 right-0 h-full w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
                             }`}
@@ -152,7 +152,7 @@ export function ChatPanel() {
                                 <div className="h-full flex flex-col items-center justify-center text-center px-4 opacity-70">
                                     <QAvatar3D chatState="idle" className="w-24 h-24 mb-4" />
                                     <p className="text-slate-300 text-sm max-w-[250px]">
-                                        Engage Quartermasters intelligence. Ask about our 5 licensed verticals, pricing, or methodology.
+                                        Engage Quartermasters intelligence. Ask about our 6 service verticals, pricing, or methodology.
                                     </p>
                                 </div>
                             )}

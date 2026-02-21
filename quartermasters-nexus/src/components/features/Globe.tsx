@@ -76,7 +76,7 @@ const mapNodes = [
   { lat: -37.8, lng: 144.9 }, // Melbourne
 ];
 
-const ajman = { lat: 25.41, lng: 55.44 };
+const headquarters = { lat: 34.05, lng: -118.24 }; // Los Angeles, California
 const GLOBE_RADIUS = 2;
 
 function GlobeWireframe() {
@@ -111,12 +111,12 @@ function ConnectionBeams() {
   });
 
   const curves = useMemo(() => {
-    const ajmanPos = latLngToVector3(ajman.lat, ajman.lng, GLOBE_RADIUS);
+    const hqPos = latLngToVector3(headquarters.lat, headquarters.lng, GLOBE_RADIUS);
     return connections.map((c) => {
       const target = latLngToVector3(c.lat, c.lng, GLOBE_RADIUS);
-      const mid = ajmanPos.clone().add(target).multiplyScalar(0.5);
+      const mid = hqPos.clone().add(target).multiplyScalar(0.5);
       mid.normalize().multiplyScalar(GLOBE_RADIUS * 1.4);
-      const curve = new THREE.QuadraticBezierCurve3(ajmanPos, mid, target);
+      const curve = new THREE.QuadraticBezierCurve3(hqPos, mid, target);
       return { curve, name: c.name };
     });
   }, []);
@@ -142,8 +142,8 @@ function ConnectionBeams() {
 
 function HQPin() {
   const pinRef = useRef<THREE.Group>(null);
-  const ajmanPos = useMemo(
-    () => latLngToVector3(ajman.lat, ajman.lng, GLOBE_RADIUS),
+  const hqPos = useMemo(
+    () => latLngToVector3(headquarters.lat, headquarters.lng, GLOBE_RADIUS),
     []
   );
 
@@ -157,12 +157,12 @@ function HQPin() {
     <group>
       <group ref={pinRef}>
         {/* Pin glow */}
-        <mesh position={ajmanPos}>
+        <mesh position={hqPos}>
           <sphereGeometry args={[0.06, 16, 16]} />
           <meshBasicMaterial color="#C15A2C" />
         </mesh>
         {/* Pulse ring */}
-        <mesh position={ajmanPos}>
+        <mesh position={hqPos}>
           <ringGeometry args={[0.08, 0.12, 32]} />
           <meshBasicMaterial
             color="#C15A2C"
@@ -255,7 +255,7 @@ export function Globe({ className = "" }: GlobeProps) {
               color: "var(--color-accent-gold)",
             }}
           >
-            HQ: UAE
+            HQ: California
           </p>
           <p
             className="text-xs"

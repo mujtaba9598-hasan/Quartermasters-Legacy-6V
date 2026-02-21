@@ -93,7 +93,9 @@ export function useQChat(): UseQChatReturn {
     const handleFormSubmit: (e: any, options?: any) => void = useCallback((e: any, options?: any) => {
         setLastInteractionTime(Date.now());
         setHesitating(false);
-        originalHandleSubmit(e, options);
+        if (typeof originalHandleSubmit === 'function') {
+            originalHandleSubmit(e, options);
+        }
     }, [originalHandleSubmit]);
 
     // 7. Hesitation Timer

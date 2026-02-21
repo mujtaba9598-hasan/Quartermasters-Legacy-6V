@@ -44,7 +44,7 @@ export default function KnowledgeBaseIndex() {
                         <h1 className="heading-1 mb-6">Strategic Intelligence.</h1>
                         <p className="max-w-2xl text-lg text-[var(--text-muted)]">
                             Deep dives into our methodologies, regulatory frameworks, and
-                            operational standards across five key consultancy verticals.
+                            operational standards across six key consultancy verticals.
                         </p>
                     </div>
 

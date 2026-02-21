@@ -61,7 +61,7 @@ export default function CookieConsentBanner() {
                                         {geoMode === 'gdpr'
                                             ? 'We respect your data privacy.'
                                             : geoMode === 'pdpl'
-                                                ? 'UAE PDPL Compliant'
+                                                ? 'Data Protection Compliant'
                                                 : 'Enhancing your experience.'}
                                     </p>
                                 </div>
@@ -144,9 +144,9 @@ export default function CookieConsentBanner() {
                             ) : (
                                 <p>
                                     {geoMode === 'ccpa'
-                                        ? 'Under UAE law, you have the right to opt-out of the sale of your personal information. Click "Manage Preferences" to control your data choices.'
+                                        ? 'Under California law, you have the right to opt-out of the sale of your personal information. Click "Manage Preferences" to control your data choices.'
                                         : geoMode === 'pdpl'
-                                            ? 'We process data in accordance with the UAE Personal Data Protection Law (PDPL). Your data is handled with appropriate safeguards.'
+                                            ? 'We process data in accordance with applicable data protection regulations. Your data is handled with appropriate safeguards.'
                                             : 'We use cookies to analyze traffic and enhance your experience.'}
                                     {geoMode === 'gdpr' ? ' You must opt-in to non-essential cookies.' : geoMode !== 'ccpa' && geoMode !== 'pdpl' ? ' You can adjust your preferences at any time.' : ''}
                                 </p>

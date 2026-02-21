@@ -4,7 +4,7 @@
 
 A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product. It fundamentally changes how digital products are built by creating an interconnected language that spans design, engineering, and product management. Modern design systems are not just visual guidelines; they are comprehensive ecosystems of UI components, design tokens, voice and tone guidelines, accessibility standards, and coded equivalents.
 
-At the enterprise level, a rigorous design system ensures cross-platform consistency, dramatically reduces technical debt, and accelerates time-to-market. When Quartermasters F.Z.C designs for $120,000 enterprise clients, we leverage these concepts to deliver world-class velocity and aesthetic coherence. We do not just build pages; we build scalable platforms.
+At the enterprise level, a rigorous design system ensures cross-platform consistency, dramatically reduces technical debt, and accelerates time-to-market. When Quartermasters designs for $120,000 enterprise clients, we leverage these concepts to deliver world-class velocity and aesthetic coherence. We do not just build pages; we build scalable platforms.
 
 ## 1. Top-Tier Enterprise Design Systems
 The industry has seen the rise of several monolithic design systems created by tech giants. These serve as the gold standard for how to structure, articulate, and enforce design decisions across thousands of developers and designers.

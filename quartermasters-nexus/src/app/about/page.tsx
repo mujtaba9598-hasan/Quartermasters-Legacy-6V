@@ -19,8 +19,8 @@ const milestones = [
   },
   {
     label: "Location",
-    value: "UAE",
-    detail: "United Arab Emirates",
+    value: "CA",
+    detail: "California, United States",
   },
 ];
 
