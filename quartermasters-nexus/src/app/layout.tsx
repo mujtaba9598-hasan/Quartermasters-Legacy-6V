@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { Providers } from "@/components/layout/Providers";
 import CookieConsentBanner from "@/components/compliance/CookieConsentBanner";
 import SilkBackground from "@/components/layout/SilkBackground";
+import { ChatPanel } from "@/components/chat/ChatPanel";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -111,6 +112,7 @@ export default function RootLayout({
             {children}
           </div>
           <CookieConsentBanner />
+          <ChatPanel />
         </Providers>
       </body>
     </html>
