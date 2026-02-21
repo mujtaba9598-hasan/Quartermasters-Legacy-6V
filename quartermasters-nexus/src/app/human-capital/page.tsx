@@ -31,10 +31,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Human Capital & Resource Management | [BRAND]",
+  title: "Human Capital & Resource Management | Quartermasters",
   description: "Workforce Infrastructure & Regulatory Compliance. HR systems for the UAE operational landscape.",
   openGraph: {
-    title: "Human Capital & Resource Management | [BRAND]",
+    title: "Human Capital & Resource Management | Quartermasters",
     description: "Workforce Infrastructure & Regulatory Compliance. HR systems for the UAE operational landscape.",
     url: 'https://example.com/human-capital',
   }

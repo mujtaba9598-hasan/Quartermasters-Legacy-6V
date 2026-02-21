@@ -31,10 +31,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Technology & R&D Services | [BRAND]",
+  title: "Technology & R&D Services | Quartermasters",
   description: "Innovation Infrastructure & Technical Operations. From education technology to R&D frameworks.",
   openGraph: {
-    title: "Technology & R&D Services | [BRAND]",
+    title: "Technology & R&D Services | Quartermasters",
     description: "Innovation Infrastructure & Technical Operations. From education technology to R&D frameworks.",
     url: 'https://example.com/tech-rnd',
   }

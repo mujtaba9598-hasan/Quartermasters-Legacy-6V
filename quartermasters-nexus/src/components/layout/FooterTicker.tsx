@@ -8,7 +8,7 @@ export function FooterTicker() {
     "CLIENT PORTFOLIO: GROWING",
     "CONSULTING NETWORK: GLOBAL",
     "COMPLIANCE: UP TO DATE",
-    "5 SERVICE VERTICALS",
+    "6 SERVICE VERTICALS",
   ]);
   const [isConnected] = useState(false);
 

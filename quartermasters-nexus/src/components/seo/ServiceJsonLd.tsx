@@ -13,7 +13,7 @@ export function ServiceJsonLd({ service }: {
         "description": service.description,
         "provider": {
             "@type": "Organization",
-            "name": "[BRAND]",
+            "name": "Quartermasters",
             "url": "https://example.com" // TODO: Replace with final domain
         },
         "serviceType": service.name,

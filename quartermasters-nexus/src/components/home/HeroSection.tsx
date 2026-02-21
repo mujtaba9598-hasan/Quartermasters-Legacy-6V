@@ -58,7 +58,7 @@ export function HeroSection() {
           >
             {/* 1. Hero Word - Dominant & Centered */}
             <span className="heading-display mb-4 block text-6xl md:text-8xl lg:text-9xl">
-              <TextShimmer className="heading-display">[BRAND]</TextShimmer>
+              <TextShimmer className="heading-display">Quartermasters</TextShimmer>
             </span>
 
             {/* 2. Subtitle - Smaller & Centered */}
@@ -86,9 +86,9 @@ export function HeroSection() {
 
           {/* CTAs */}
           <motion.div variants={staggerItem} className="flex flex-wrap items-center justify-center gap-4">
-            <a href="#services">
+            <a href="#services" className="group">
               <span
-                className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+                className="btn-glow-line group-hover:bg-opacity-90 transition-all duration-300 inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
                 style={{
                   fontFamily: "var(--font-body)",
                   background: "var(--color-gold)",
@@ -100,9 +100,9 @@ export function HeroSection() {
                 Explore Services
               </span>
             </a>
-            <a href="#methodology">
+            <a href="#methodology" className="group">
               <span
-                className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+                className="btn-glow-line group-hover:bg-opacity-10 transition-all duration-300 inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
                 style={{
                   fontFamily: "var(--font-body)",
                   background: "transparent",
@@ -128,7 +128,7 @@ export function HeroSection() {
                 style={{ background: "var(--color-seafoam)", boxShadow: "0 0 8px var(--color-seafoam)" }}
               />
               <span className="text-xs" style={{ color: "var(--text-muted)", fontFamily: "var(--font-body)" }}>
-                5 Service Verticals
+                6 Service Verticals
               </span>
             </div>
           </motion.div>

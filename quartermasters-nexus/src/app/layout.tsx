@@ -3,6 +3,7 @@ import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { Providers } from "@/components/layout/Providers";
 import CookieConsentBanner from "@/components/compliance/CookieConsentBanner";
+import SilkBackground from "@/components/layout/SilkBackground";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Quartermasters F.Z.C"
   },
   description:
-    "Premium consulting across five verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. Ajman Free Zone licensed, globally minded.",
+    "Premium consulting across six verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. Ajman Free Zone licensed, globally minded.",
   applicationName: 'Quartermasters F.Z.C',
   authors: [{ name: 'Quartermasters F.Z.C' }],
   generator: 'Next.js 16',
@@ -37,8 +38,9 @@ export const metadata: Metadata = {
     "technology consulting",
     "event management",
     "management consulting",
+    "IT services consulting",
     "business advisory",
-    "UAE consulting firm",
+    "California consulting firm",
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'Quartermasters F.Z.C',
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Quartermasters F.Z.C',
-    description: 'Premium strategic consulting across five verticals.',
+    description: 'Premium strategic consulting across six verticals.',
     images: ['/og-image.jpg'],
   },
   alternates: {
@@ -103,8 +105,11 @@ export default function RootLayout({
       <body
         className={`${dmSerif.variable} ${dmSans.variable} antialiased`}
       >
+        <SilkBackground />
         <Providers>
-          {children}
+          <div className="relative z-10">
+            {children}
+          </div>
           <CookieConsentBanner />
         </Providers>
       </body>

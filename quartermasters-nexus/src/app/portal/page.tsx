@@ -129,7 +129,7 @@ export default function PortalPage() {
 
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition-all"
+              className="btn-glow-line flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition-all"
               style={{
                 fontFamily: "var(--font-heading)",
                 background: "var(--color-gold)",
@@ -169,7 +169,7 @@ export default function PortalPage() {
             className="mt-6 text-center text-xs"
             style={{ color: "var(--text-light)", opacity: 0.7 }}
           >
-            [BRAND]
+            Quartermasters
           </p>
         </div>
       </motion.div>

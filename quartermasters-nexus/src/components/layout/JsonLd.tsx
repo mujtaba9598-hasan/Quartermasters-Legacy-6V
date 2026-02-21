@@ -2,7 +2,7 @@ export function JsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "[BRAND]",
+    name: "Quartermasters",
     url: "https://example.com", // TODO: Replace with final domain
     logo: "/og-image.jpg",
     description:
@@ -22,7 +22,7 @@ export function JsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "[BRAND]",
+    name: "Quartermasters",
     image: "/og-image.jpg",
     address: {
       "@type": "PostalAddress",
@@ -67,7 +67,7 @@ export function JsonLd() {
     "@type": "Service",
     provider: {
       "@type": "Organization",
-      name: "[BRAND]",
+      name: "Quartermasters",
     },
     name: s.name,
     description: s.description,
@@ -83,26 +83,26 @@ export function JsonLd() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What services does [BRAND] offer?",
+        name: "What services does Quartermasters offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "[BRAND] provides five integrated consulting services: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
+          text: "Quartermasters provides five integrated consulting services: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management.",
         },
       },
       {
         "@type": "Question",
-        name: "Where is [BRAND] based?",
+        name: "Where is Quartermasters based?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "[BRAND] is based in California, United States, serving clients globally.",
+          text: "Quartermasters is based in California, United States, serving clients globally.",
         },
       },
       {
         "@type": "Question",
-        name: "What industries does [BRAND] serve?",
+        name: "What industries does Quartermasters serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "[BRAND] serves a wide range of industries including finance, technology, healthcare, events, and enterprise organizations seeking strategic consulting and advisory services.",
+          text: "Quartermasters serves a wide range of industries including finance, technology, healthcare, events, and enterprise organizations seeking strategic consulting and advisory services.",
         },
       },
     ],

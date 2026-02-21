@@ -355,6 +355,9 @@ export default function ContactPage() {
                           <option value="tech">
                             Technology Education R&D
                           </option>
+                          <option value="it">
+                            IT Services
+                          </option>
                           <option value="general">General Inquiry</option>
                         </select>
                       </div>

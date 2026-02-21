@@ -10,6 +10,7 @@ const footerLinks = {
     { label: "Technology & Innovation", href: "/tech-rnd" },
     { label: "Events & Experiences", href: "/event-logistics" },
     { label: "Strategic Management", href: "/management" },
+    { label: "IT Services", href: "/it-services" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -60,9 +61,9 @@ export function Footer() {
                 className="mt-4 max-w-sm text-sm leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.6)" }}
               >
-                Premium strategic consulting across five verticals:
+                Premium strategic consulting across six verticals:
                 Financial Advisory, Human Capital, Technology &amp; Innovation,
-                Events &amp; Experiences, and Strategic Management.
+                Events &amp; Experiences, Strategic Management, and IT Services.
               </p>
               <div className="mt-6 flex gap-3">
                 <span className="pill-tag pill-tag--financial">#Advisory</span>
@@ -88,14 +89,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm transition-colors"
-                      style={{ color: "rgba(255,255,255,0.5)" }}
-                      onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                        (e.currentTarget.style.color = "rgba(255,255,255,0.9)")
-                      }
-                      onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                        (e.currentTarget.style.color = "rgba(255,255,255,0.5)")
-                      }
+                      className="text-sm transition-colors text-white/50 hover:text-white/90"
                     >
                       {link.label}
                     </Link>
@@ -123,14 +117,7 @@ export function Footer() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm transition-colors"
-                        style={{ color: "rgba(255,255,255,0.5)" }}
-                        onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                          (e.currentTarget.style.color = "rgba(255,255,255,0.9)")
-                        }
-                        onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                          (e.currentTarget.style.color = "rgba(255,255,255,0.5)")
-                        }
+                        className="text-sm transition-colors text-white/50 hover:text-white/90"
                       >
                         {link.label}
                       </Link>
@@ -154,7 +141,7 @@ export function Footer() {
                   color: "rgba(255,255,255,0.8)",
                 }}
               >
-                &copy; {new Date().getFullYear()} [BRAND]. All rights reserved.
+                &copy; {new Date().getFullYear()} Quartermasters. All rights reserved.
               </p>
             </div>
             <div className="text-right">

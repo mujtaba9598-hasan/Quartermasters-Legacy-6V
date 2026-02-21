@@ -31,10 +31,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Financial Advisory & Banking Services | [BRAND]",
+  title: "Financial Advisory & Banking Services | Quartermasters",
   description: "Institutional Financial Architecture & Regulatory Positioning. From banking structures to regulatory compliance.",
   openGraph: {
-    title: "Financial Advisory & Banking Services | [BRAND]",
+    title: "Financial Advisory & Banking Services | Quartermasters",
     description: "Institutional Financial Architecture & Regulatory Positioning. From banking structures to regulatory compliance.",
     url: 'https://example.com/financial-advisory',
   }

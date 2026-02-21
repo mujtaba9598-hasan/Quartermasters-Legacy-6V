@@ -36,10 +36,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Organization & Event Management | [BRAND]",
+  title: "Organization & Event Management | Quartermasters",
   description: "High-Stakes Logistics, Coordination & Operational Deployment. From venue logistics to stakeholder management.",
   openGraph: {
-    title: "Organization & Event Management | [BRAND]",
+    title: "Organization & Event Management | Quartermasters",
     description: "High-Stakes Logistics, Coordination & Operational Deployment. From venue logistics to stakeholder management.",
     url: 'https://example.com/event-logistics',
   }

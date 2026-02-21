@@ -1,6 +1,6 @@
 # Quartermasters F.Z.C — Project Recovery & Status Document
 
-> **Last Updated**: 2026-02-20 (Session 4 — Phase C in progress, 3/10 accepted)
+> **Last Updated**: 2026-02-21 (Session 5 — Phase C 4/10, Sub-Phase D integration dispatched)
 > **Git**: https://github.com/mujtaba9598-hasan/Quarter_USA
 > **Purpose**: Complete project state so work can resume from ANY new session without context loss.
 > **Entity**: Quartermasters F.Z.C | AFZA License #37357 | Ajman Free Zone
@@ -34,29 +34,44 @@
 
 ## 1. CRITICAL — CURRENT STATE & WHAT TO DO NEXT
 
-### Where We Are (as of 2026-02-20, Session 4 Milestone)
+### Where We Are (as of 2026-02-21, Session 5)
 
 ```
 SPRINT 1:  COMPLETE (10/10)
 SPRINT 2:  COMPLETE (Phase A — 6/6 tasks accepted)
 SPRINT 3:  COMPLETE (Phase B — 10/10 ALL accepted, including B-10 Redis + B-09 streaming refactor)
 KB FILES:  7/7 COMPLETE (2,626 lines of RAG content)
-SPRINT 4:  IN PROGRESS (Phase C — 3/10 accepted: C-01, C-02, C-03)
+SPRINT 4:  IN PROGRESS (Phase C — 4/10 accepted: C-01, C-02, C-03, C-06)
+SUB-PHASE D: 8 integration tasks dispatched to Gemini (INT-01 through INT-08)
 ```
+
+### Session 5 Audit Findings
+- Comprehensive audit revealed Gemini delivered standalone components (GlareHover, ClickSpark, SilkBackground, CardSwap, ChromaGrid) but NEVER integrated them into the component tree
+- UI Effects Checklist falsely marked 46/46 GlareHover, 39/39 ClickSpark, 3/3 Silk as DONE
+- Build was BROKEN (TS errors in useQChat.ts, export conflicts)
+- 8 strict INT directives dispatched to Gemini for integration fixes
+- CEO directly wired SilkBackground into layout.tsx (emergency fix)
+- Mission Control rewritten: pywinauto UI Automation replaces broken coordinate-based pyautogui
 
 ### Immediate Next Steps (in order)
 
-1. **Check Gemini inbox** for C-06 delivery (tiered rendering): `curl -s -H "X-Agent-Id: 2000" -H "X-Agent-Key: sNfOVUZ31Suwge3gLTCsj6PygtdI0TJZ" "https://aliffsolutions.com/api/v1/agent-comms/inbox/2000"`
-2. **Continue Phase C** tasks: C-06 → C-04/C-05 → C-07 → C-08/C-09 → C-10
-3. **After Phase C**: Q goes LIVE — site can earn revenue
-4. **Founder actions still pending**: Run `docker compose up -d --build`, set `RESEND_API_KEY`, approve Supabase + Claude API costs
+1. **Monitor Gemini deliveries** for INT-01 through INT-08 via Aliff Comms API
+2. **Verify each delivery on disk** — grep for actual imports, not just file existence
+3. **Continue Phase C** remaining tasks: C-07 → C-08/C-09 → C-10
+4. **After Phase C + D**: Q goes LIVE — site can earn revenue
+5. **Founder actions still pending**: Run `docker compose up -d --build`, set `RESEND_API_KEY`, approve Supabase + Claude API costs
 
 ### Gemini Task Queue (what Gemini should be working on RIGHT NOW)
-- C-06: tier-detect.ts (assigned, awaiting delivery)
-- Then C-04 + C-05 (avatars, parallel)
+- INT-01 through INT-08 (Sub-Phase D integration fixes)
 - Then C-07 (chat + avatar integration)
 - Then C-08 + C-09 (pricing UI + flow segmentation)
 - Then C-10 (homepage integration — FINAL task)
+
+### Mission Control
+- File: `C:\quartermasters-ai\mission_control.py`
+- Uses pywinauto UI Automation for reliable Gemini interaction (multi-monitor safe)
+- Task queue: `C:\quartermasters-ai\data\task-queue.json`
+- Logs: `C:\quartermasters-ai\logs\mission-control.log`
 
 ---
 
@@ -163,10 +178,10 @@ Tier ranges: Express $1K-$1.8K | Standard $12K-$25K | Premium $30K-$60K | Enterp
 
 ---
 
-## 6. IN PROGRESS — PHASE C (Sprint 4 Frontend) — 3/10
+## 6. IN PROGRESS — PHASE C (Sprint 4 Frontend) — 4/10
 
-> **Status**: IN PROGRESS. C-01, C-02, C-03 ACCEPTED. C-06 assigned to Gemini.
-> **MILESTONE**: After Phase C, the site can earn revenue.
+> **Status**: IN PROGRESS. C-01, C-02, C-03, C-06 ACCEPTED. Sub-Phase D integration dispatched.
+> **MILESTONE**: After Phase C + D, the site can earn revenue.
 
 | Task | File(s) to Create | Description |
 |------|-------------------|-------------|
@@ -498,7 +513,7 @@ curl -s -H "X-Agent-Id: 2000" -H "X-Agent-Key: sNfOVUZ31Suwge3gLTCsj6PygtdI0TJZ"
 | Q streams <200ms | Vercel AI SDK | User experience |
 | 3D Kill Switch | WebGL detect → GPU benchmark → Lottie fallback | Device compatibility |
 | No LangChain | Claude API direct | Unnecessary abstraction |
-| No GSAP | Framer Motion only | Consistency |
+| ~~No GSAP~~ GSAP Approved | Founder override for CardSwap + ChromaGrid | Selective use |
 | No Python backend | TypeScript end-to-end | Stack simplicity |
 | Never say no to any budget | $100 → professional, $120K → world-class team | Every client valuable |
 | Human resources for high budgets | Premium/Enterprise get dedicated human teams | AI is accelerator, not replacement |

@@ -1,5 +1,5 @@
 # Quartermasters F.Z.C — Progress Tracker
-> Last Updated: 2026-02-20 | Milestone: Phase C 3/10 (C-01, C-02, C-03 accepted)
+> Last Updated: 2026-02-21 | Milestone: Phase C 4/10 + Sub-Phase D integration dispatched
 > Git: https://github.com/mujtaba9598-hasan/Quarter_USA
 
 ---
@@ -51,20 +51,47 @@
 
 ---
 
-## Phase C — Sprint 4 Frontend (IN PROGRESS — 3/10)
+## Phase C — Sprint 4 Frontend (IN PROGRESS — 4/10)
 
 | Task | File(s) | Status | Lines | Notes |
 |------|---------|--------|-------|-------|
 | C-01 | `src/components/chat/ChatPanel.tsx` | ACCEPTED | 195 | 3-state panel (collapsed/expanded/fullscreen), auto-scroll, Escape key |
 | C-02 | `ChatMessage.tsx`, `ChatInput.tsx`, `TypingIndicator.tsx` | ACCEPTED | 248 | Message bubbles, auto-grow textarea, Peak-End UX, staggered dots |
 | C-03 | `src/hooks/useQChat.ts` | ACCEPTED | 138 | useChat wrapper, visitorId, conversationId, chatState, hesitation |
-| C-04 | `src/components/avatar/QAvatar3D.tsx` | PENDING | - | R3F icosahedron, 4 animation states |
-| C-05 | `src/components/avatar/QAvatar2D.tsx` | PENDING | - | Lottie/CSS fallback avatar |
-| C-06 | `src/lib/rendering/tier-detect.ts` | PENDING | - | WebGL detection, GPU benchmark |
+| C-04 | `src/components/avatar/QAvatar3D.tsx` | DELIVERED | - | R3F icosahedron, 4 animation states. Delivered by Gemini. |
+| C-05 | `src/components/avatar/QAvatar2D.tsx` | DELIVERED | - | Lottie/CSS fallback avatar. Delivered by Gemini. |
+| C-06 | `src/lib/rendering/tier-detect.ts` | ACCEPTED | - | WebGL detection, GPU benchmark |
 | C-07 | `src/components/chat/QChatExperience.tsx` | PENDING | - | Chat + avatar orchestrator |
 | C-08 | `VelvetRope.tsx`, `PricingCard.tsx`, `BookMujtaba.tsx` | PENDING | - | Iron Grip pricing UI |
 | C-09 | `src/lib/pricing/flow-segmentation.ts` | PENDING | - | Express/Executive/Discovery flow |
 | C-10 | `src/app/layout.tsx` (MODIFY) | PENDING | - | Add Q chat launcher to root layout |
+
+---
+
+## Sub-Phase D — Integration Overhaul (IN PROGRESS — 8 tasks dispatched)
+
+> Comprehensive audit revealed Gemini delivered standalone component files (GlareHover, ClickSpark, SilkBackground, CardSwap, ChromaGrid) but did NOT integrate them into the component tree. UI Effects Checklist marked them as DONE — this was FALSE.
+
+| Task | Subject | Status | Notes |
+|------|---------|--------|-------|
+| INT-01 | Wire GlareHover into ALL cards (~46 locations) | DISPATCHED | Sent to Gemini via Aliff API |
+| INT-02 | Wire ClickSpark into ALL buttons/CTAs (~39 elements) | DISPATCHED | Sent to Gemini via Aliff API |
+| INT-03 | Fix all bugs (RippleEffect, CookieBanner, Tailwind, dead imports, placeholders) | DISPATCHED | Combined bug fix batch |
+| INT-04 | Fix 4 buttons missing btn-glow-line class | DISPATCHED | Header mobile, About, Portal, Terms |
+| INT-05 | Build /it-services page (6th service) | DISPATCHED | New service vertical |
+| INT-06 | Build /services overview page with CardSwap | DISPATCHED | Services index page |
+| INT-07 | Replace ALL placeholder emails/URLs | DISPATCHED | example.com → quartermasters.me |
+| INT-08 | TypeScript build fix (zero errors) | DISPATCHED | Full clean build required |
+
+### CEO-Applied Fixes
+| Fix | File | Status |
+|-----|------|--------|
+| SilkBackground wiring | `src/app/layout.tsx` | DONE (CEO direct) — import + render + z-10 wrapper |
+
+### Mission Control
+- Rewritten to use pywinauto (UI Automation) instead of coordinate-based pyautogui
+- Reliable multi-monitor support — finds Gemini elements by control type, not coordinates
+- File: `C:\quartermasters-ai\mission_control.py`
 
 ---
 

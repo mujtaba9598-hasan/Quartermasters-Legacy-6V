@@ -13,7 +13,7 @@ import {
 const milestones = [
   {
     label: "Licensed Activities",
-    value: "5",
+    value: "6",
     detail: "Banking, HR, Management, Events, Tech Education",
   },
   {
@@ -38,7 +38,7 @@ export default function AboutPage() {
               className="max-w-3xl"
             >
               <motion.p variants={staggerItem} className="text-overline mb-4">
-                About [BRAND]
+                About Quartermasters
               </motion.p>
               <motion.h1 variants={staggerItem} className="heading-1 mb-6">
                 Built on Regulated Authority.
@@ -52,8 +52,7 @@ export default function AboutPage() {
                 className="max-w-2xl text-lg leading-relaxed"
                 style={{ color: "var(--text-muted)" }}
               >
-                [BRAND] is a California-based strategic consulting firm
-                operating across five integrated verticals: Banking Services
+                operating across six integrated verticals: Banking Services
                 Consultancy, Human Resources Consultancy, Management Consultancies,
                 Organization & Event Management, and Consulting & R&D in
                 Technology Education. We deliver integrated advisory that connects
@@ -119,7 +118,7 @@ export default function AboutPage() {
               className="text-center text-lg italic"
               style={{ color: "var(--text-muted)" }}
             >
-              Led by experienced professionals across five licensed verticals.
+              Led by experienced professionals across six licensed verticals.
             </motion.p>
           </div>
         </section>
@@ -150,7 +149,7 @@ export default function AboutPage() {
               </p>
               <a
                 href="/contact"
-                className="inline-block rounded-lg px-10 py-4 text-sm font-semibold"
+                className="btn-glow-line inline-block rounded-lg px-10 py-4 text-sm font-semibold"
                 style={{
                   fontFamily: "var(--font-heading)",
                   background: "var(--color-gold)",

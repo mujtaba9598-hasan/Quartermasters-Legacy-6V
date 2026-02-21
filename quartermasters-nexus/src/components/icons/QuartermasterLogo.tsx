@@ -48,7 +48,7 @@ export function QuartermasterLogo({
             className="text-lg font-medium tracking-wide leading-tight"
             style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
           >
-            [BRAND]
+            Quartermasters
           </span>
         </div>
       )}

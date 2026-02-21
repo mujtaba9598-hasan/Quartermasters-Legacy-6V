@@ -31,10 +31,10 @@ const capabilities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Strategic Management Consultancy | [BRAND]",
+  title: "Strategic Management Consultancy | Quartermasters",
   description: "Strategic Operations & Organizational Infrastructure for complex regulatory landscapes.",
   openGraph: {
-    title: "Strategic Management Consultancy | [BRAND]",
+    title: "Strategic Management Consultancy | Quartermasters",
     description: "Strategic Operations & Organizational Infrastructure for complex regulatory landscapes.",
     url: 'https://example.com/management',
   }

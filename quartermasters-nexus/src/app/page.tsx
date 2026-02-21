@@ -12,7 +12,7 @@ import { HomePageClient } from "@/components/home/HomePageClient";
 
 export const metadata: Metadata = {
   title:
-    "[BRAND] — Strategic Consulting & Advisory",
+    "Quartermasters — Strategic Consulting & Advisory",
   description:
     "Premium consulting across Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, and Strategic Management. California-based, globally minded.",
   keywords: [
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "California consulting firm",
     "premium consulting",
   ],
-  authors: [{ name: "[BRAND]" }],
+  authors: [{ name: "Quartermasters" }],
   openGraph: {
-    title: "[BRAND] — Strategic Consulting & Advisory",
+    title: "Quartermasters — Strategic Consulting & Advisory",
     description:
-      "Premium consulting across five integrated verticals. California-based, globally minded.",
+      "Premium consulting across six integrated verticals. California-based, globally minded.",
     type: "website",
     locale: "en_US",
   },
@@ -50,14 +50,14 @@ export default function HomePage() {
         {/* SEO-critical static content — sr-only for crawlers */}
         <section className="sr-only" aria-label="Company overview">
           <h1>
-            [BRAND] — Strategic Consulting & Advisory
+            Quartermasters — Strategic Consulting & Advisory
           </h1>
           <p>
             Premium consulting firm delivering integrated advisory across
             Financial Advisory, Human Capital, Technology & Innovation,
             Events & Experiences, and Strategic Management.
           </p>
-          <h2>Our Five Service Verticals</h2>
+          <h2>Our Six Service Verticals</h2>
           <ul>
             <li>
               Financial Advisory — Strategic advisory on financial planning,
@@ -78,6 +78,10 @@ export default function HomePage() {
             <li>
               Strategic Management — Organizational design, governance
               frameworks, and executive decision-making.
+            </li>
+            <li>
+              IT Services — Software development, web applications,
+              and technology infrastructure solutions.
             </li>
           </ul>
           <h2>Our Approach</h2>

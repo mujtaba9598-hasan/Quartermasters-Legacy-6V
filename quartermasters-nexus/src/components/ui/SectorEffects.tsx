@@ -19,7 +19,7 @@ export function VaultEffect({ children }: { children: React.ReactNode }) {
         borderColor: "var(--sector-financial)",
         boxShadow: "0 4px 30px rgba(200, 135, 46, 0.15), inset 0 0 20px rgba(200, 135, 46, 0.03)",
       }}
-      transition={{ duration: 0.36, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
@@ -69,7 +69,7 @@ export function GlitchEffect({ children }: { children: React.ReactNode }) {
         boxShadow: "0 4px 25px rgba(59, 130, 196, 0.15)",
         y: -2,
       }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
     >
       {children}
     </motion.div>
@@ -93,7 +93,7 @@ export function RippleEffect({ children }: { children: React.ReactNode }) {
         borderColor: "var(--sector-events)",
         boxShadow: "0 4px 25px rgba(212, 118, 60, 0.12)",
       }}
-      transition={{ duration: 0.36, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
       <div
@@ -136,7 +136,7 @@ export function PanoramicEffect({ children }: { children: React.ReactNode }) {
         borderColor: "var(--sector-mgmt)",
         boxShadow: "0 4px 40px rgba(27, 58, 75, 0.1)",
       }}
-      transition={{ duration: 0.48, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>

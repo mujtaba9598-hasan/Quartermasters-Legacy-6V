@@ -22,23 +22,24 @@
   --color-mist: #EDE9E1;
 
   /* --- Semantic: Background --- */
-  --bg-page: var(--color-sand);
+  --bg-page: #002147;
   --bg-card: var(--color-white);
   --bg-elevated: var(--color-cream);
-  --bg-nav: rgba(255, 255, 255, 0.85);
+  --bg-nav: rgba(0, 33, 71, 0.85);
 
   /* --- Semantic: Text --- */
-  --text-primary: var(--color-ocean);
-  --text-body: var(--color-ink);
-  --text-muted: var(--color-driftwood);
-  --text-light: var(--color-slate);
-  --text-inverse: var(--color-white);
+  --text-primary: #FFFFFF;
+  --text-body: #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --text-light: rgba(255, 255, 255, 0.5);
+  --text-dim: rgba(255, 255, 255, 0.3);
+  --text-inverse: var(--color-ocean);
 
-  /* --- Glassmorphism (Light Mode) --- */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-bg-hover: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(27, 58, 75, 0.08);
-  --glass-border-hover: rgba(27, 58, 75, 0.15);
+  /* --- Glassmorphism (Dark Mode) --- */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-border-hover: rgba(255, 255, 255, 0.20);
   --glass-blur: 20px;
 
   /* --- Sector Accent Tokens --- */
@@ -276,8 +277,8 @@ body::after {
 }
 
 .glass-hover {
-  transition: background var(--duration-base) var(--ease-in-out),
-    border-color var(--duration-base) var(--ease-in-out);
+  transition: background 0.8s var(--ease-in-out),
+    border-color 0.8s var(--ease-in-out);
 }
 
 .glass-hover:hover {
@@ -369,7 +370,7 @@ body::after {
    Card Effects
    ============================================================ */
 .card-hover-glow {
-  transition: all var(--duration-base) var(--ease-out-expo);
+  transition: all 1.0s var(--ease-out-expo);
 }
 
 .card-hover-glow:hover {

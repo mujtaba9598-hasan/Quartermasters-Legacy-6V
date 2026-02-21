@@ -4,13 +4,13 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — [BRAND]",
+  title: "Terms of Service — Quartermasters",
   description:
-    "Terms of Service for [BRAND], an Ajman Free Zone licensed consultancy. AFZA License No: 37357. Governing law: UAE Federal Law.",
+    "Terms of Service for Quartermasters, an Ajman Free Zone licensed consultancy. AFZA License No: 37357. Governing law: UAE Federal Law.",
   openGraph: {
-    title: "Terms of Service — [BRAND]",
+    title: "Terms of Service — Quartermasters",
     description:
-      "Terms of Service governing use of example.com and all advisory services provided by [BRAND] under AFZA License 37357.",
+      "Terms of Service governing use of example.com and all advisory services provided by Quartermasters under AFZA License 37357.",
     type: "website",
     locale: "en_AE",
   },
@@ -44,8 +44,8 @@ const sections: Section[] = [
           By accessing or using the website located at{" "}
           <strong>example.com</strong> (the &ldquo;Website&rdquo;), any
           sub-domains thereof, or any services provided by{" "}
-          <strong>[BRAND]</strong> (referred to herein as
-          &ldquo;[BRAND],&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+          <strong>Quartermasters</strong> (referred to herein as
+          &ldquo;Quartermasters,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
           &ldquo;our&rdquo;), you acknowledge that you have read, understood,
           and agree to be bound by these Terms of Service
           (&ldquo;Terms&rdquo;).
@@ -59,7 +59,7 @@ const sections: Section[] = [
         <p>
           These Terms constitute a legally binding agreement between you
           (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and
-          [BRAND], a Free Zone Company with Limited Liability,
+          Quartermasters, a Free Zone Company with Limited Liability,
           licensed by the Ajman Free Zone Authority (&ldquo;AFZA&rdquo;) under
           License Number <strong>37357</strong>.
         </p>
@@ -83,7 +83,7 @@ const sections: Section[] = [
         >
           <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[
-              ["Legal Entity", "[BRAND] (Free Zone Company \u2014 Limited Liability)"],
+              ["Legal Entity", "Quartermasters (Free Zone Company \u2014 Limited Liability)"],
               ["Trade License", "AFZA #37357"],
               ["Regulatory Authority", "Ajman Free Zone Authority (AFZA)"],
               ["Registered Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
@@ -122,7 +122,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          [BRAND] is a multi-vertical consultancy firm operating under
+          Quartermasters is a multi-vertical consultancy firm operating under
           five (5) licensed activities as authorized by the Ajman Free Zone
           Authority. Our services are <strong>advisory and consultancy in
             nature</strong> and include:
@@ -175,7 +175,7 @@ const sections: Section[] = [
             Important Notice
           </p>
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            All services provided by [BRAND] are consultancy and advisory
+            All services provided by Quartermasters are consultancy and advisory
             in nature. We do not provide regulated financial services, direct
             employment or labour supply, or accredited educational
             certifications. Please refer to Section 4 (Scope Limitations) for
@@ -208,7 +208,7 @@ const sections: Section[] = [
           4.1 Banking Services Consultancy
         </h4>
         <p>
-          [BRAND] provides <strong>advisory and consulting services
+          Quartermasters provides <strong>advisory and consulting services
             only</strong> in relation to banking and financial matters. We
           expressly confirm that we:
         </p>
@@ -323,7 +323,7 @@ const sections: Section[] = [
         </h4>
         <p>
           Event management services are provided within the scope of our AFZA
-          license. All events organized or managed by [BRAND] are
+          license. All events organized or managed by Quartermasters are
           subject to applicable UAE municipal, health, safety, and security
           regulations. We will obtain or assist in obtaining all necessary
           event permits; however, final approval rests with the relevant
@@ -339,7 +339,7 @@ const sections: Section[] = [
         </h4>
         <p>
           Management consultancy services are advisory in nature.
-          [BRAND] does not assume management control, fiduciary duty,
+          Quartermasters does not assume management control, fiduciary duty,
           or board-level authority over client entities unless explicitly
           contracted and agreed upon in a separate written engagement. All
           strategic recommendations remain the client&rsquo;s responsibility
@@ -357,7 +357,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          [BRAND] may, at its discretion, offer registered user accounts
+          Quartermasters may, at its discretion, offer registered user accounts
           or a client portal (&ldquo;Portal&rdquo;) for the purpose of
           facilitating service delivery, document exchange, project tracking,
           and communications.
@@ -376,13 +376,13 @@ const sections: Section[] = [
             responsibility for all activities that occur under your account.
           </li>
           <li>
-            Immediately notify [BRAND] of any unauthorized use of your
+            Immediately notify Quartermasters of any unauthorized use of your
             account or any other breach of security at{" "}
             <strong>hello@example.com</strong>.
           </li>
         </ul>
         <p className="mt-3">
-          [BRAND] reserves the right to suspend or terminate accounts
+          Quartermasters reserves the right to suspend or terminate accounts
           that violate these Terms, contain fraudulent information, or are
           inactive for an extended period, upon reasonable notice where
           practicable.
@@ -401,9 +401,9 @@ const sections: Section[] = [
         <p>
           All content on the Website — including but not limited to text,
           graphics, logos, icons, images, audio clips, digital downloads, data
-          compilations, software, design elements, the [BRAND] brand identity, and
+          compilations, software, design elements, the Quartermasters brand identity, and
           all associated trade marks — is the exclusive property of
-          [BRAND] or its licensors and is protected by UAE
+          Quartermasters or its licensors and is protected by UAE
           intellectual property laws and applicable international treaties.
         </p>
         <p className="mt-3">You may <strong>not</strong>:</p>
@@ -413,7 +413,7 @@ const sections: Section[] = [
             of the Website without our express written permission.
           </li>
           <li>
-            Use the [BRAND] name, logo, or branding in any manner that
+            Use the Quartermasters name, logo, or branding in any manner that
             suggests endorsement, affiliation, or sponsorship without prior
             written consent.
           </li>
@@ -430,7 +430,7 @@ const sections: Section[] = [
           Deliverables produced under client engagements are governed by the
           applicable service agreement. Unless otherwise agreed in writing,
           methodologies, frameworks, templates, and proprietary tools remain
-          the intellectual property of [BRAND].
+          the intellectual property of Quartermasters.
         </p>
       </>
     ),
@@ -444,7 +444,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          Where [BRAND] provides paid services, the following payment
+          Where Quartermasters provides paid services, the following payment
           terms apply:
         </p>
 
@@ -468,11 +468,11 @@ const sections: Section[] = [
           7.2 Payment Methods
         </h4>
         <p>
-          [BRAND] may accept payments via bank transfer, online payment
+          Quartermasters may accept payments via bank transfer, online payment
           gateways (including but not limited to Stripe and PayTabs), or such
           other methods as we may make available. All online payment processing
           is handled by PCI-DSS compliant third-party payment processors.
-          [BRAND] does not directly store your complete payment card
+          Quartermasters does not directly store your complete payment card
           details.
         </p>
 
@@ -487,7 +487,7 @@ const sections: Section[] = [
           shall be charged at the applicable rate as prescribed by UAE Federal
           Tax Authority regulations (currently <strong>5%</strong>). A valid
           Tax Invoice will be provided for all VAT-inclusive transactions.
-          [BRAND]&rsquo; Tax Registration Number (TRN) will be stated on
+          Quartermasters&rsquo; Tax Registration Number (TRN) will be stated on
           all invoices where applicable.
         </p>
 
@@ -533,7 +533,7 @@ const sections: Section[] = [
           thirty (30) days from the invoice date). Late payments may be subject
           to a late fee of 1.5% per month on the outstanding balance, or the
           maximum rate permitted by applicable law, whichever is lower.
-          [BRAND] reserves the right to suspend services for accounts
+          Quartermasters reserves the right to suspend services for accounts
           with outstanding balances exceeding sixty (60) days.
         </p>
       </>
@@ -571,7 +571,7 @@ const sections: Section[] = [
         </div>
 
         <p>
-          [BRAND] may deploy an AI-powered assistant known as
+          Quartermasters may deploy an AI-powered assistant known as
           &ldquo;Q&rdquo; or other AI tools on its Website or within its
           services. By interacting with Q or any AI feature, you acknowledge
           and agree that:
@@ -587,7 +587,7 @@ const sections: Section[] = [
             <strong>No professional relationship:</strong> Interaction with Q
             does not create a professional-client, attorney-client,
             advisor-client, or any other professional relationship between you
-            and [BRAND].
+            and Quartermasters.
           </li>
           <li>
             <strong>No guarantee of accuracy:</strong> While we strive for
@@ -609,7 +609,7 @@ const sections: Section[] = [
           </li>
         </ul>
         <p className="mt-3">
-          [BRAND] expressly disclaims all liability for any decisions
+          Quartermasters expressly disclaims all liability for any decisions
           made, actions taken, or outcomes resulting from reliance on
           AI-generated content.
         </p>
@@ -629,13 +629,13 @@ const sections: Section[] = [
         </p>
         <ul className="list-disc pl-6 space-y-2 mt-3">
           <li>
-            All services provided by [BRAND] are{" "}
+            All services provided by Quartermasters are{" "}
             <strong>advisory in nature</strong>. We do not guarantee specific
             outcomes, results, returns on investment, regulatory approvals, or
             business performance arising from our advisory services.
           </li>
           <li>
-            [BRAND], its shareholders, managers, officers, employees,
+            Quartermasters, its shareholders, managers, officers, employees,
             agents, and affiliates shall not be liable for any{" "}
             <strong>indirect, incidental, special, consequential, or
               punitive damages</strong>, including but not limited to loss of
@@ -646,12 +646,12 @@ const sections: Section[] = [
           <li>
             Our total aggregate liability to you for any claim arising out of
             or relating to these Terms or our services shall not exceed the{" "}
-            <strong>total fees paid by you to [BRAND] in the twelve
+            <strong>total fees paid by you to Quartermasters in the twelve
               (12) months preceding the event giving rise to the claim</strong>,
             or AED 10,000, whichever is greater.
           </li>
           <li>
-            [BRAND] does not warrant that the Website will be
+            Quartermasters does not warrant that the Website will be
             uninterrupted, error-free, secure, or free from viruses or other
             harmful components. The Website and its content are provided on an{" "}
             <strong>&ldquo;as is&rdquo;</strong> and{" "}
@@ -660,7 +660,7 @@ const sections: Section[] = [
           </li>
           <li>
             The implementation of any advice, recommendations, or strategies
-            provided by [BRAND] is solely at the client&rsquo;s own
+            provided by Quartermasters is solely at the client&rsquo;s own
             risk and discretion. Clients are responsible for conducting their
             own due diligence and obtaining independent professional opinions
             as necessary.
@@ -691,7 +691,7 @@ const sections: Section[] = [
           10.1 Jurisdiction
         </h4>
         <p>
-          As [BRAND] is licensed by and registered within the Ajman Free
+          As Quartermasters is licensed by and registered within the Ajman Free
           Zone, any disputes arising out of or in connection with these Terms
           shall be subject to the <strong>exclusive jurisdiction of the Ajman
             Free Zone Authority (AFZA)</strong> and its designated dispute
@@ -766,7 +766,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          [BRAND] reserves the right to modify, amend, or replace these
+          Quartermasters reserves the right to modify, amend, or replace these
           Terms at any time at its sole discretion. When we make material
           changes:
         </p>
@@ -803,7 +803,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          [BRAND] reserves the right to suspend or terminate your access
+          Quartermasters reserves the right to suspend or terminate your access
           to the Website and/or services, in whole or in part, at any time and
           for any reason, including but not limited to:
         </p>
@@ -819,7 +819,7 @@ const sections: Section[] = [
           </li>
           <li>
             Conduct that we reasonably determine to be harmful to
-            [BRAND], other users, or third parties.
+            Quartermasters, other users, or third parties.
           </li>
           <li>
             Requests by law enforcement, judicial authorities, or regulatory
@@ -827,7 +827,7 @@ const sections: Section[] = [
           </li>
         </ul>
         <p className="mt-3">
-          Where practicable, [BRAND] will provide reasonable notice of
+          Where practicable, Quartermasters will provide reasonable notice of
           termination and an explanation of the grounds. Termination does not
           relieve you of any obligation to pay outstanding fees or comply with
           surviving provisions of these Terms.
@@ -850,7 +850,7 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          [BRAND] shall not be liable for any failure or delay in
+          Quartermasters shall not be liable for any failure or delay in
           performance of its obligations under these Terms where such failure
           or delay results from circumstances beyond its reasonable control,
           including but not limited to:
@@ -879,7 +879,7 @@ const sections: Section[] = [
           </li>
         </ul>
         <p className="mt-3">
-          In the event of a force majeure, [BRAND] will make reasonable
+          In the event of a force majeure, Quartermasters will make reasonable
           efforts to notify affected parties promptly and resume performance as
           soon as practicable. If a force majeure event continues for more
           than ninety (90) consecutive days, either party may terminate the
@@ -923,16 +923,16 @@ const sections: Section[] = [
         <p>
           These Terms, together with our Privacy Policy and any applicable
           service agreements, constitute the entire agreement between you and
-          [BRAND] regarding your use of the Website and our services,
+          Quartermasters regarding your use of the Website and our services,
           and supersede all prior agreements, understandings, representations,
           and warranties, whether written or oral.
         </p>
         <p className="mt-3">
-          The failure of [BRAND] to exercise or enforce any right or
+          The failure of Quartermasters to exercise or enforce any right or
           provision of these Terms shall not constitute a waiver of such right
           or provision. Any waiver of any provision of these Terms shall be
           effective only if in writing and signed by an authorized
-          representative of [BRAND].
+          representative of Quartermasters.
         </p>
       </>
     ),
@@ -958,7 +958,7 @@ const sections: Section[] = [
         >
           <dl className="space-y-3">
             {[
-              ["Entity", "[BRAND]"],
+              ["Entity", "Quartermasters"],
               ["Attention", "Compliance Department"],
               ["Address", "Office C1-1F-SF2097, Ajman Free Zone C1 Building, Ajman, UAE"],
               ["Email", "hello@example.com"],
@@ -1028,7 +1028,7 @@ export default function TermsOfServicePage() {
               >
                 These Terms of Service govern your access to and use of the
                 website, platforms, and advisory services operated by
-                [BRAND]. Please read them carefully before
+                Quartermasters. Please read them carefully before
                 engaging with our services.
               </p>
 
@@ -1186,14 +1186,14 @@ export default function TermsOfServicePage() {
                     style={{ color: "var(--text-muted)" }}
                   >
                     By continuing to use example.com and/or engaging
-                    [BRAND] for advisory services, you confirm that
+                    Quartermasters for advisory services, you confirm that
                     you have read, understood, and agreed to these Terms of
                     Service in their entirety.
                   </p>
                   <div className="mt-6 flex flex-wrap justify-center gap-3">
                     <Link
                       href="/contact"
-                      className="inline-block rounded-lg px-8 py-3 text-sm font-semibold transition-all"
+                      className="btn-glow-line inline-block rounded-lg px-8 py-3 text-sm font-semibold transition-all"
                       style={{
                         fontFamily: "var(--font-heading)",
                         background: "var(--color-gold)",
