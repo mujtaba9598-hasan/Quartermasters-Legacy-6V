@@ -241,6 +241,149 @@ export type Database = {
                     created_at?: string
                 }
             }
+            bookings: {
+                Row: {
+                    id: string
+                    cal_booking_id: string | null
+                    cal_event_type: string | null
+                    attendee_name: string
+                    attendee_email: string
+                    attendee_timezone: string | null
+                    start_time: string
+                    end_time: string
+                    status: string | null
+                    service_interest: string | null
+                    notes: string | null
+                    conversation_id: string | null
+                    created_at: string | null
+                    updated_at: string | null
+                }
+                Insert: {
+                    id?: string
+                    cal_booking_id?: string | null
+                    cal_event_type?: string | null
+                    attendee_name: string
+                    attendee_email: string
+                    attendee_timezone?: string | null
+                    start_time: string
+                    end_time: string
+                    status?: string | null
+                    service_interest?: string | null
+                    notes?: string | null
+                    conversation_id?: string | null
+                    created_at?: string | null
+                    updated_at?: string | null
+                }
+                Update: {
+                    id?: string
+                    cal_booking_id?: string | null
+                    cal_event_type?: string | null
+                    attendee_name?: string
+                    attendee_email?: string
+                    attendee_timezone?: string | null
+                    start_time?: string
+                    end_time?: string
+                    status?: string | null
+                    service_interest?: string | null
+                    notes?: string | null
+                    conversation_id?: string | null
+                    created_at?: string | null
+                    updated_at?: string | null
+                }
+            }
+            contacts: {
+                Row: {
+                    id: string
+                    email: string
+                    name: string | null
+                    company: string | null
+                    phone: string | null
+                    source: string | null
+                    first_seen_at: string | null
+                    last_seen_at: string | null
+                    metadata: Record<string, unknown> | null
+                }
+                Insert: {
+                    id?: string
+                    email: string
+                    name?: string | null
+                    company?: string | null
+                    phone?: string | null
+                    source?: string | null
+                    first_seen_at?: string | null
+                    last_seen_at?: string | null
+                    metadata?: Record<string, unknown> | null
+                }
+                Update: {
+                    id?: string
+                    email?: string
+                    name?: string | null
+                    company?: string | null
+                    phone?: string | null
+                    source?: string | null
+                    first_seen_at?: string | null
+                    last_seen_at?: string | null
+                    metadata?: Record<string, unknown> | null
+                }
+            }
+            interactions: {
+                Row: {
+                    id: string
+                    contact_id: string | null
+                    type: string
+                    summary: string | null
+                    metadata: Record<string, unknown> | null
+                    created_at: string | null
+                }
+                Insert: {
+                    id?: string
+                    contact_id?: string | null
+                    type: string
+                    summary?: string | null
+                    metadata?: Record<string, unknown> | null
+                    created_at?: string | null
+                }
+                Update: {
+                    id?: string
+                    contact_id?: string | null
+                    type?: string
+                    summary?: string | null
+                    metadata?: Record<string, unknown> | null
+                    created_at?: string | null
+                }
+            }
+            lead_scores: {
+                Row: {
+                    id: string
+                    contact_id: string | null
+                    score: number | null
+                    qualification: string | null
+                    budget_range: string | null
+                    service_interest: string | null
+                    urgency: string | null
+                    updated_at: string | null
+                }
+                Insert: {
+                    id?: string
+                    contact_id?: string | null
+                    score?: number | null
+                    qualification?: string | null
+                    budget_range?: string | null
+                    service_interest?: string | null
+                    urgency?: string | null
+                    updated_at?: string | null
+                }
+                Update: {
+                    id?: string
+                    contact_id?: string | null
+                    score?: number | null
+                    qualification?: string | null
+                    budget_range?: string | null
+                    service_interest?: string | null
+                    urgency?: string | null
+                    updated_at?: string | null
+                }
+            }
         }
         Views: Record<string, never>
         Functions: Record<string, never>

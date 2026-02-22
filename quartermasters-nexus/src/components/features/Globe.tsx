@@ -197,7 +197,7 @@ function CityMarkers() {
   return (
     <group ref={groupRef}>
       {markers.map((m, i) => (
-        <group key={i} position={m.pos}>
+        <group key={i} position={m.pos as unknown as [number, number, number]}>
           <mesh>
             <sphereGeometry args={[0.07, 16, 16]} />
             <meshBasicMaterial color={m.color} />
@@ -228,15 +228,15 @@ function HQPin() {
   return (
     <group>
       <group ref={pinRef}>
-        <mesh position={hqPos}>
+        <mesh position={hqPos as unknown as [number, number, number]}>
           <sphereGeometry args={[0.09, 16, 16]} />
           <meshBasicMaterial color="#C15A2C" />
         </mesh>
-        <mesh position={hqPos}>
+        <mesh position={hqPos as unknown as [number, number, number]}>
           <ringGeometry args={[0.11, 0.16, 32]} />
           <meshBasicMaterial color="#C15A2C" transparent opacity={0.5} side={THREE.DoubleSide} />
         </mesh>
-        <mesh position={hqPos}>
+        <mesh position={hqPos as unknown as [number, number, number]}>
           <ringGeometry args={[0.18, 0.22, 32]} />
           <meshBasicMaterial color="#C15A2C" transparent opacity={0.2} side={THREE.DoubleSide} />
         </mesh>
@@ -272,7 +272,7 @@ function NodePoints() {
   return (
     <group ref={groupRef}>
       {nodes.map((n, i) => (
-        <mesh key={i} position={n.pos}>
+        <mesh key={i} position={n.pos as unknown as [number, number, number]}>
           <sphereGeometry args={[0.035, 8, 8]} />
           <meshBasicMaterial color={n.color} transparent opacity={0.85} />
         </mesh>
