@@ -65,11 +65,13 @@ export function Footer() {
                 Financial Advisory, Human Capital, Technology &amp; Innovation,
                 Events &amp; Experiences, Strategic Management, and IT Services.
               </p>
-              <div className="mt-6 flex gap-3">
-                <span className="pill-tag pill-tag--financial">#Advisory</span>
-                <span className="pill-tag pill-tag--hr">#Talent</span>
-                <span className="pill-tag pill-tag--tech">#Innovation</span>
-                <span className="pill-tag pill-tag--mgmt">#Strategy</span>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <span className="pill-tag pill-tag--financial">#FinancialAdvisory</span>
+                <span className="pill-tag pill-tag--hr">#HumanCapital</span>
+                <span className="pill-tag pill-tag--tech">#TechInnovation</span>
+                <span className="pill-tag pill-tag--events">#EventLogistics</span>
+                <span className="pill-tag pill-tag--mgmt">#Management</span>
+                <span className="pill-tag pill-tag--it">#ITServices</span>
               </div>
             </div>
 

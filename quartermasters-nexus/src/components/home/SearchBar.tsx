@@ -9,7 +9,7 @@ const suggestions = [
   "How can you help with HR compliance?",
   "What banking advisory services do you offer?",
   "Tell me about event management capabilities",
-  "What R&D consulting do you provide?",
+  "Can you build a custom web application for us?",
 ];
 
 export function SearchBar() {
@@ -131,7 +131,7 @@ export function SearchBar() {
                 onBlur={() => setFocused(false)}
                 onKeyDown={handleKeyDown}
                 placeholder="How can we help your organization?"
-                className="flex-1 bg-transparent text-sm outline-none text-white placeholder:text-white/60"
+                className="flex-1 bg-transparent text-sm outline-none text-white placeholder:text-white/70"
                 style={{
                   fontFamily: "var(--font-body)",
                 }}
@@ -162,7 +162,7 @@ export function SearchBar() {
               <button
                 key={s}
                 onClick={() => setQuery(s)}
-                className="pill-tag transition-all text-white/70 hover:text-white"
+                className="pill-tag transition-all bg-white/10 text-white/80 hover:text-white"
                 style={{ cursor: "pointer", fontSize: "0.75rem", color: "inherit" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "var(--color-gold)";

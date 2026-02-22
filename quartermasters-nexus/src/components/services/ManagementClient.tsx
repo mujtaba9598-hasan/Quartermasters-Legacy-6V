@@ -34,6 +34,7 @@ export function ManagementClient({ capabilities }: ManagementClientProps) {
             CardWrapper={Wrapper}
             backgroundPattern={<GridPattern />}
             sectorKey="management"
+            visualType="management"
         />
     );
 }

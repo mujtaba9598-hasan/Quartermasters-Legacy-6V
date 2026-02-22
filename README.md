@@ -1,6 +1,6 @@
 # Quartermasters F.Z.C — Project Recovery & Status Document
 
-> **Last Updated**: 2026-02-21 (Session 7 — Phase C COMPLETE 10/10, Sub-Phase D COMPLETE, Build Clean)
+> **Last Updated**: 2026-02-22 (Session 8 — Hero Redesign + Service Visuals + GlassSurface + Logo Generation)
 > **Git**: https://github.com/mujtaba9598-hasan/Quarter_USA
 > **Purpose**: Complete project state so work can resume from ANY new session without context loss.
 > **Entity**: Quartermasters F.Z.C | AFZA License #37357 | Ajman Free Zone
@@ -34,7 +34,7 @@
 
 ## 1. CRITICAL — CURRENT STATE & WHAT TO DO NEXT
 
-### Where We Are (as of 2026-02-21, Session 6)
+### Where We Are (as of 2026-02-22, Session 8)
 
 ```
 SPRINT 1:  COMPLETE (10/10)
@@ -43,30 +43,31 @@ SPRINT 3:  COMPLETE (Phase B — 10/10)
 KB FILES:  COMPLETE (7/7 — 2,626 lines)
 SPRINT 4:  COMPLETE (Phase C — 10/10: C-01 through C-10)
 SUB-PHASE D: COMPLETE (all 8 INT tasks resolved)
-BUILD:     CLEAN (0 TS errors, 21 pages generated)
+VISUAL OVERHAUL: COMPLETE (Hero redesign, GlassSurface, Service Visuals, Hero Visuals)
+BUILD:     CLEAN (0 TS errors)
+LOGO:      PENDING (3 concepts ordered from Gemini)
 ```
 
-### Session 7 Accomplishments
-- C-10 COMPLETE: ChatPanel wired into root layout.tsx — Q chat launcher is global
-- Phase C CLOSED at 10/10
-- Gemini notified of C-10 closure
-- CEO emergency rule updated: CEO cannot self-declare emergencies, founder must approve
-
-### Session 6 Accomplishments
-- ClickSpark wired into 9 files (12 CTA buttons)
-- All TS errors fixed: Supabase v2.97, AI SDK v6, Framer Motion, React 19
-- C-07 ACCEPTED: AI SDK v6 migration (useQChat + ChatPanel rewritten)
-- C-08 ACCEPTED: VelvetRope pricing UI (glassmorphism, hesitation nudge, ClickSpark CTAs)
-- C-09 ACCEPTED: VelvetRope integrated into ChatPanel
-- Sub-Phase D fully resolved (GlareHover, ClickSpark, SilkBackground, example.com, /it-services, /services)
-- Mission Control REMOVED (founder directive)
-- Build passes: `npx next build` — 21 pages, 0 errors
+### Session 8 Accomplishments
+- Hero section fully redesigned (AlcOS-inspired 2-column layout, Tech Stack Constellation, 6 sector pills)
+- GlassSurface component built (react-bits SVG displacement filter), replaced broken ScrollStack on /services
+- Footer pills updated: 6 service vertical hashtags with flex-wrap
+- Testimonials expanded: 3→6 cards covering all verticals
+- ServiceVisual.tsx: 6 unique animated SVG thumbnails for /services card grid (200x100)
+- ServiceHeroVisual.tsx: 6 unique hero-level animated SVGs for service detail pages (400x300) — Vault, Helm, Observatory, Harbor, Compass, Forge
+- ServicePageLayout.tsx: 2-column hero grid with ServiceHeroVisual (500x350 container)
+- All 6 client components wired with visualType prop
+- Logo generation directive sent (3 concepts: Compass Rose, Monogram Q, Quartermaster's Mark)
+- California scrub: 42 files, all UAE refs replaced with US/California
+- TypeScript: 0 errors throughout
 
 ### Immediate Next Steps
 
-1. **Deploy to Vercel** — full-stack (SSR + API routes + Q live)
-2. **Sprint 5**: Booking (Cal.com), CRM, email automation
-3. **Founder actions pending**: Vercel account, Supabase + Claude API costs, RESEND_API_KEY
+1. **Logo selection** — awaiting 3 concepts from Gemini
+2. **Visual review** — founder to review all visual changes on localhost
+3. **Deploy to Vercel** — full-stack (SSR + API routes + Q live)
+4. **Sprint 5**: Booking (Cal.com), CRM, email automation
+5. **Founder actions pending**: Vercel account, Supabase + Claude API costs, RESEND_API_KEY
 
 ---
 
@@ -78,7 +79,8 @@ Full plan lives at: `.claude/organization/SPRINT_2_3_4_PLAN.md`
 PHASE A ── Sprint 2 Finish (Foundation)     ── 6/6 tasks           ── COMPLETE
 PHASE B ── Sprint 3 Backend (Q AI Engine)   ── 10/10 tasks         ── COMPLETE (incl. Redis + streaming)
   KB    ── Knowledge Base Expansion          ── 7/7 files           ── COMPLETE (2,626 lines)
-PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 3/10 tasks          ── IN PROGRESS
+PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 10/10 tasks         ── COMPLETE
+VISUAL  ── Hero + Service Visuals + Glass   ── ALL ACCEPTED        ── COMPLETE
 ```
 
 ### Delivery Protocol (ENFORCED — do not change)

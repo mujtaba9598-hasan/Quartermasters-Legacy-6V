@@ -34,6 +34,7 @@ export function TechRndClient({ capabilities }: TechRndClientProps) {
             CardWrapper={Wrapper}
             backgroundPattern={<WireframePattern />}
             sectorKey="tech"
+            visualType="tech"
         />
     );
 }

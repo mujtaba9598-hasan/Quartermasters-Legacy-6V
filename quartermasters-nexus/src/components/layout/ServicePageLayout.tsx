@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import ServiceHeroVisual from "@/components/ui/ServiceHeroVisual";
 import {
   fadeInUp,
   staggerContainer,
@@ -34,6 +35,7 @@ interface ServicePageProps {
   CardWrapper?: React.ComponentType<{ children: React.ReactNode }>;
   backgroundPattern?: React.ReactNode;
   sectorKey?: SectorKey;
+  visualType?: 'financial' | 'management' | 'tech' | 'hr' | 'events' | 'it';
 }
 
 export function ServicePageLayout({
@@ -50,6 +52,7 @@ export function ServicePageLayout({
   CardWrapper,
   backgroundPattern,
   sectorKey,
+  visualType,
 }: ServicePageProps) {
   const { setActiveSector } = useSector();
 
@@ -82,80 +85,99 @@ export function ServicePageLayout({
             </div>
           )}
           <div className="mx-auto max-w-7xl px-6">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
-              className="max-w-3xl"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column: Text Content */}
               <motion.div
-                variants={staggerItem}
-                className="mb-6 flex items-center gap-4"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
               >
-                <div
-                  className="flex h-14 w-14 items-center justify-center rounded-xl"
-                  style={{ background: glow, color: accent }}
+                <motion.div
+                  variants={staggerItem}
+                  className="mb-6 flex items-center gap-4"
                 >
-                  <Icon size={28} />
-                </div>
-                <span
-                  className="text-xs font-medium uppercase tracking-widest"
-                  style={{ fontFamily: "var(--font-body)", color: accent, opacity: 0.7 }}
-                >
-                  {metaphor}
-                </span>
-              </motion.div>
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-xl"
+                    style={{ background: glow, color: accent }}
+                  >
+                    <Icon size={28} />
+                  </div>
+                  <span
+                    className="text-xs font-medium uppercase tracking-widest"
+                    style={{ fontFamily: "var(--font-body)", color: accent, opacity: 0.7 }}
+                  >
+                    {metaphor}
+                  </span>
+                </motion.div>
 
-              <motion.p variants={staggerItem} className="text-overline mb-4" style={{ color: accent }}>
-                {overline}
-              </motion.p>
+                <motion.p variants={staggerItem} className="text-overline mb-4" style={{ color: accent }}>
+                  {overline}
+                </motion.p>
 
-              <motion.h1 variants={staggerItem} className="heading-1 mb-4">
-                {title}
-              </motion.h1>
+                <motion.h1 variants={staggerItem} className="heading-1 mb-4">
+                  {title}
+                </motion.h1>
 
-              <motion.p
-                variants={staggerItem}
-                className="heading-4 mb-6"
-                style={{ color: "var(--text-muted)" }}
-              >
-                {subtitle}
-              </motion.p>
-
-              <motion.p
-                variants={staggerItem}
-                className="max-w-2xl text-base leading-relaxed"
-                style={{ color: "var(--text-muted)" }}
-              >
-                {description}
-              </motion.p>
-
-              {disclaimer && (
                 <motion.p
                   variants={staggerItem}
-                  className="mt-6 text-xs"
-                  style={{ color: "var(--text-light)", opacity: 0.7 }}
+                  className="heading-4 mb-6"
+                  style={{ color: "var(--text-muted)" }}
                 >
-                  {disclaimer}
+                  {subtitle}
                 </motion.p>
-              )}
 
-              <motion.div variants={staggerItem} className="mt-10">
-                <ClickSpark sparkColor={accent}>
-                  <a
-                    href="/contact"
-                    className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
-                    style={{
-                      fontFamily: "var(--font-body)",
-                      background: accent,
-                      color: "var(--color-white)",
-                    }}
+                <motion.p
+                  variants={staggerItem}
+                  className="max-w-2xl text-base leading-relaxed"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  {description}
+                </motion.p>
+
+                {disclaimer && (
+                  <motion.p
+                    variants={staggerItem}
+                    className="mt-6 text-xs"
+                    style={{ color: "var(--text-light)", opacity: 0.7 }}
                   >
-                    Get Started
-                  </a>
-                </ClickSpark>
+                    {disclaimer}
+                  </motion.p>
+                )}
+
+                <motion.div variants={staggerItem} className="mt-10">
+                  <ClickSpark sparkColor={accent}>
+                    <a
+                      href="/contact"
+                      className="btn-glow-line inline-block rounded-lg px-8 py-3.5 text-sm font-semibold"
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        background: accent,
+                        color: "var(--color-white)",
+                      }}
+                    >
+                      Get Started
+                    </a>
+                  </ClickSpark>
+                </motion.div>
               </motion.div>
-            </motion.div>
+
+              {/* Right Column: Animated Visual */}
+              {visualType && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="hidden lg:flex items-center justify-center"
+                >
+                  <div className="w-full max-w-[500px] h-[350px] relative">
+                    <div className="absolute inset-0 rounded-2xl" style={{ background: glow, filter: 'blur(40px)' }} />
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <ServiceHeroVisual type={visualType} accent={accent} />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </div>
         </section>
 

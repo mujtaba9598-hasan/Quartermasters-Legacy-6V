@@ -34,6 +34,7 @@ export function FinancialClient({ capabilities }: FinancialClientProps) {
             CardWrapper={Wrapper}
             backgroundPattern={<HexagonalPattern />}
             sectorKey="financial"
+            visualType="financial"
         />
     );
 }

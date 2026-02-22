@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Users, Calendar } from "lucide-react";
+import { Target, Users, Calendar, Lightbulb, Briefcase, Code } from "lucide-react";
 import {
   staggerContainer,
   staggerItem,
@@ -47,6 +47,30 @@ const expectations = [
     icon: Calendar,
     accent: "var(--sector-events)",
   },
+  {
+    headline: "Technology Roadmapping",
+    description:
+      "Our technology team partners with CTOs and engineering leaders to evaluate stack decisions, architect scalable infrastructure, and de-risk digital transformation initiatives.",
+    sector: "Technology and R&D",
+    icon: Lightbulb,
+    accent: "var(--sector-tech)",
+  },
+  {
+    headline: "Operational Excellence",
+    description:
+      "We work with executive teams to redesign operating models, streamline decision-making frameworks, and implement governance structures that scale with your ambitions.",
+    sector: "Strategic Management",
+    icon: Briefcase,
+    accent: "var(--sector-mgmt)",
+  },
+  {
+    headline: "Digital Product Delivery",
+    description:
+      "From web applications to enterprise platforms, our engineering team delivers production-grade software using modern frameworks, CI/CD pipelines, and test-driven development.",
+    sector: "IT Services",
+    icon: Code,
+    accent: "var(--sector-it)",
+  },
 ];
 
 export function Testimonials() {
@@ -72,7 +96,7 @@ export function Testimonials() {
 
           <motion.div
             variants={staggerContainer}
-            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {expectations.map((item, i) => {
               const Icon = item.icon;

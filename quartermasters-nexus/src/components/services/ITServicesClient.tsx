@@ -35,6 +35,7 @@ export function ITServicesClient({ capabilities }: ITServicesClientProps) {
             capabilities={capabilities}
             CardWrapper={Wrapper}
             sectorKey="it"
+            visualType="it"
         />
     );
 }

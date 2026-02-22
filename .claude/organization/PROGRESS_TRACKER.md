@@ -1,5 +1,5 @@
 # Quartermasters — Progress Tracker
-> Last Updated: 2026-02-22 | Milestone: Post-Deploy Fixes + California Scrub + ScrollStack (react-bits)
+> Last Updated: 2026-02-22 | Milestone: Hero Redesign + Service Visuals + GlassSurface + Logo Generation
 > Git: https://github.com/mujtaba9598-hasan/Quarter_USA
 
 ---
@@ -136,6 +136,44 @@
 | Footer | `Footer.tsx` | DONE | California, United States |
 | Knowledge base | 13 .md files | DONE | All F.Z.C → Quartermasters, UAE → US market |
 
+## Visual Overhaul (2026-02-22) — Gemini Delivered, CEO Verified
+
+### Hero Section Redesign (AlcOS-inspired)
+| Task | File(s) | Status | Notes |
+|------|---------|--------|-------|
+| Hero layout | `HeroSection.tsx` | ACCEPTED | AlcOS 2-column layout, transparent bg, hex mesh overlay |
+| Content fix | `HeroSection.tsx` | ACCEPTED | Copper colors, consulting copy, 6 sector pills |
+| Tech Stack Constellation | `HeroSection.tsx` | ACCEPTED | 8 glassmorphic nodes (Re/Nx/TS/Tw/No/Cl/AI/DB), SVG lines, animateMotion pulses |
+| Testimonials expansion | `Testimonials.tsx` | ACCEPTED | 3→6 cards (all verticals), 3-column grid |
+| Hex mesh + IT pill | `HeroSection.tsx`, `SearchBar.tsx` | ACCEPTED | Hex mesh at 3% opacity, IT Services search suggestion |
+
+### GlassSurface + Footer Fix
+| Task | File(s) | Status | Notes |
+|------|---------|--------|-------|
+| GlassSurface component | `GlassSurface.tsx`, `GlassSurface.css` | ACCEPTED | SVG displacement filter, dark-only variant |
+| /services page rebuild | `services/page.tsx` | ACCEPTED | GlassSurface grid cards replacing broken ScrollStack |
+| Footer pill-tags | `Footer.tsx` | ACCEPTED | 6 service hashtags with flex-wrap |
+
+### Animated SVG Service Visuals (Card-Level — /services page)
+| Task | File(s) | Status | Notes |
+|------|---------|--------|-------|
+| ServiceVisual component | `ServiceVisual.tsx`, `ServiceVisual.css` | ACCEPTED | 6 unique 200x100 SVG animations (Capital Flow, Decision Matrix, Circuit Board, Orbital, Timeline, Deploy Pipeline) |
+| Integration into cards | `services/page.tsx` | ACCEPTED | ServiceVisual rendered inside GlassSurface cards |
+
+### Animated SVG Hero Visuals (Hero-Level — Service Detail Pages)
+| Task | File(s) | Status | Notes |
+|------|---------|--------|-------|
+| ServiceHeroVisual component | `ServiceHeroVisual.tsx`, `ServiceHeroVisual.css` | ACCEPTED | 6 unique 400x300 SVG animations (Vault, Helm, Observatory, Harbor, Compass, Forge) |
+| ServicePageLayout update | `ServicePageLayout.tsx` | ACCEPTED | Swapped ServiceVisual→ServiceHeroVisual, 500x350 container, no scale hack |
+| 6 client components | All 6 *Client.tsx files | ACCEPTED | visualType prop wired |
+
+### Logo Generation (PENDING)
+| Task | Status | Notes |
+|------|--------|-------|
+| 3 logo concepts (Compass Rose, Monogram Q, Quartermaster's Mark) | PENDING | Directive sent to Gemini, awaiting delivery |
+
+---
+
 ### 5→6 Verticals Fix
 | File | Status |
 |------|--------|
@@ -173,4 +211,5 @@
 2. Set RESEND_API_KEY environment variable
 3. Approve Supabase + Claude API costs (ZERO spend authority — CEO cannot approve)
 4. Run Supabase migrations (001 + 002) when database provisioned
-5. Review ScrollStack on /services localhost
+5. Visual review: Hero section, service visuals, GlassSurface cards on localhost
+6. Select logo concept (3 options from Gemini — pending delivery)

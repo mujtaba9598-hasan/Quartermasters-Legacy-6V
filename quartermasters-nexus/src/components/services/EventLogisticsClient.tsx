@@ -34,6 +34,7 @@ export function EventLogisticsClient({ capabilities }: EventLogisticsClientProps
             CardWrapper={Wrapper}
             backgroundPattern={<RadarPattern />}
             sectorKey="events"
+            visualType="events"
         />
     );
 }

@@ -224,28 +224,26 @@ export default function ScrollStack({
 
   const setupLenis = useCallback(() => {
     if (useWindowScroll) {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        touchMultiplier: 2,
-        infinite: false,
-        wheelMultiplier: 1,
-        lerp: 0.1,
-        syncTouch: true,
-        syncTouchLerp: 0.075,
-      });
-
-      lenis.on('scroll', handleScroll);
+      // In useWindowScroll mode, we rely on the parent/root Lenis instance.
+      // We just need to hook into the window scroll event manually or let requestAnimationFrame handle it.
+      // A simple exact wrapper:
+      const handleWindowScroll = () => {
+        handleScroll();
+      };
+      window.addEventListener('scroll', handleWindowScroll, { passive: true });
 
       const raf = (time: number) => {
-        lenis.raf(time);
+        // Optional: keep an raf loop for smooth transform calculation if window scroll isn't enough
+        handleScroll();
         animationFrameRef.current = requestAnimationFrame(raf);
       };
+
+      // We still use RAF to ensure buttery smooth transforms even if scroll event is throttled
       animationFrameRef.current = requestAnimationFrame(raf);
 
-      lenisRef.current = lenis;
-      return lenis;
+      return () => {
+        window.removeEventListener('scroll', handleWindowScroll);
+      };
     } else {
       const scroller = scrollerRef.current;
       if (!scroller) return;
@@ -303,10 +301,13 @@ export default function ScrollStack({
       (card.style as any).webkitPerspective = '1000px';
     });
 
-    setupLenis();
+    const cleanupWindowScroll = setupLenis();
     updateCardTransforms();
 
     return () => {
+      if (typeof cleanupWindowScroll === 'function') {
+        cleanupWindowScroll();
+      }
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }

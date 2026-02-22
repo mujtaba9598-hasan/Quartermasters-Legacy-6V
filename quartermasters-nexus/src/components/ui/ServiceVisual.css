@@ -1,0 +1,207 @@
+/* ServiceVisual Animations */
+
+@keyframes pulse-core {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-hex {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes breathe-circle {
+
+    0%,
+    100% {
+        r: 12;
+    }
+
+    50% {
+        r: 13;
+    }
+}
+
+@keyframes flowRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes blink-line {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes ping-ring {
+    0% {
+        transform: scale(0.2);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes dash-orbit {
+    0% {
+        stroke-dasharray: 2, 20;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 2, 20;
+        stroke-dashoffset: -40;
+    }
+}
+
+@keyframes matrix-flash {
+
+    0%,
+    100% {
+        opacity: 0.08;
+    }
+
+    10%,
+    90% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes matrix-objective {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes event-compress {
+
+    0%,
+    30%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    45%,
+    85% {
+        transform: scaleX(0.1);
+    }
+}
+
+/* Base utility classes for easier assignment */
+.sv-pulse {
+    animation: pulse-core 2.5s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.sv-breathe {
+    animation: breathe-circle 3s infinite ease-in-out;
+}
+
+.sv-rotate-8s {
+    animation: rotate-slow 8s linear infinite;
+    transform-origin: center;
+}
+
+.sv-rotate-12s {
+    animation: rotate-slow 12s linear infinite reverse;
+    transform-origin: center;
+}
+
+.sv-rotate-16s {
+    animation: rotate-slow 16s linear infinite;
+    transform-origin: center;
+}
+
+.sv-dash-orbit {
+    animation: dash-orbit 4s linear infinite;
+}
+
+.sv-rotate-hex {
+    animation: rotate-hex 8s linear infinite;
+    transform-origin: center;
+}
+
+/* Event bars setup (transform origin left) */
+.sv-event-bar {
+    transform-origin: left center;
+}

@@ -34,6 +34,7 @@ export function HumanCapitalClient({ capabilities }: HumanCapitalClientProps) {
             CardWrapper={Wrapper}
             backgroundPattern={<NetworkPattern />}
             sectorKey="hr"
+            visualType="hr"
         />
     );
 }

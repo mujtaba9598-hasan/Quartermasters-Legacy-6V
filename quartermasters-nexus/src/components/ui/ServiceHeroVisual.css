@@ -1,0 +1,297 @@
+/* ServiceHeroVisual Animations */
+
+@keyframes shv-rotate-cw-12s {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shv-rotate-ccw-18s {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes shv-rotate-cw-30s {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shv-pulse-glow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes shv-beam-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shv-slide-up {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shv-float-up {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+}
+
+@keyframes shv-wheel-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shv-march {
+    0% {
+        stroke-dashoffset: 6;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes shv-pendulum {
+
+    0%,
+    100% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes shv-bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes shv-wobble {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes shv-radar-sweep {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shv-ring-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@keyframes shv-milestone-light {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes shv-hammer-strike {
+
+    0%,
+    100% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes shv-spark-burst {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes shv-code-rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+}
+
+@keyframes shv-flow {
+    0% {
+        stroke-dashoffset: 20;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes shv-wave-shift {
+
+    0%,
+    100% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+}
+
+/* Utility classes */
+.shv-rotate-cw-12s {
+    animation: shv-rotate-cw-12s 12s linear infinite;
+    transform-origin: center;
+}
+
+.shv-rotate-ccw-18s {
+    animation: shv-rotate-ccw-18s 18s linear infinite;
+    transform-origin: center;
+}
+
+.shv-rotate-cw-30s {
+    animation: shv-rotate-cw-30s 30s linear infinite;
+    transform-origin: center;
+}
+
+.shv-pulse-glow {
+    animation: shv-pulse-glow 2s ease-in-out infinite;
+}
+
+.shv-beam-rotate {
+    animation: shv-beam-rotate 8s linear infinite;
+    transform-origin: center;
+}
+
+.shv-wheel-rotate {
+    animation: shv-wheel-rotate 20s linear infinite;
+    transform-origin: center;
+}
+
+.shv-march {
+    animation: shv-march 1s linear infinite;
+}
+
+.shv-pendulum {
+    animation: shv-pendulum 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.shv-bob {
+    animation: shv-bob 4s ease-in-out infinite;
+}
+
+.shv-wobble {
+    animation: shv-wobble 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.shv-radar-sweep {
+    animation: shv-radar-sweep 4s linear infinite;
+    transform-origin: center;
+}
+
+.shv-hammer-strike {
+    animation: shv-hammer-strike 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.shv-flow {
+    animation: shv-flow 2s linear infinite;
+}
+
+.shv-wave-shift {
+    animation: shv-wave-shift 12s ease-in-out infinite;
+}
