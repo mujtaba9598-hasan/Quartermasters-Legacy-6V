@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { QuartermasterLogo } from "@/components/icons/QuartermasterLogo";
+import Image from "next/image";
 import { FooterTicker } from "@/components/layout/FooterTicker";
 import { CookiePreferencesButton } from "@/components/layout/CookiePreferencesButton";
 
@@ -55,7 +55,11 @@ export function Footer() {
             {/* Brand */}
             <div className="md:col-span-2">
               <Link href="/" aria-label="Back to Homepage" className="inline-block transition-opacity hover:opacity-80">
-                <QuartermasterLogo size={44} variant="full" />
+                <img
+                  src="/quartermasters-logo-monogram.png"
+                  alt="Quartermasters"
+                  className="h-[32px] w-[32px] rounded-sm object-contain"
+                />
               </Link>
               <p
                 className="mt-4 max-w-sm text-sm leading-relaxed"

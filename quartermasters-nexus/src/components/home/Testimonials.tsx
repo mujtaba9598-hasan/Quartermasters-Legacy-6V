@@ -104,24 +104,25 @@ export function Testimonials() {
                 <motion.div
                   key={i}
                   variants={staggerItem}
-                  className="glass glass-hover relative rounded-xl p-8"
+                  className="glass glass-hover relative rounded-xl p-8 overflow-hidden"
+                  style={{ borderLeft: `2px solid ${item.accent}40` }}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.36, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <Icon
-                    size={24}
-                    style={{ color: item.accent, opacity: 0.6 }}
+                    size={28}
+                    style={{ color: item.accent }}
                     className="mb-4"
                   />
                   <h3
                     className="mb-3 text-base font-semibold"
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
                   >
                     {item.headline}
                   </h3>
                   <p
                     className="mb-6 text-sm leading-relaxed"
-                    style={{ color: "var(--text-muted)" }}
+                    style={{ color: "rgba(255, 255, 255, 0.85)" }}
                   >
                     {item.description}
                   </p>
@@ -136,9 +137,15 @@ export function Testimonials() {
                       {item.sector}
                     </p>
                   </div>
+                  {/* Accent left border */}
+                  <div
+                    className="absolute top-0 left-0 h-full w-1 rounded-l-xl"
+                    style={{ background: item.accent, opacity: 0.7 }}
+                  />
+                  {/* Accent top bar */}
                   <div
                     className="absolute top-0 left-0 h-0.5 w-full rounded-t-xl"
-                    style={{ background: item.accent, opacity: 0.3 }}
+                    style={{ background: item.accent, opacity: 0.6 }}
                   />
                 </motion.div>
               );

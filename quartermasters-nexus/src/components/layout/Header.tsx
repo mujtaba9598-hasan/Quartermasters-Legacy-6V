@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { QuartermasterLogo } from "@/components/icons/QuartermasterLogo";
+import Image from "next/image";
 import { playTick, playClick } from "@/lib/sounds";
 import ClickSpark from "@/components/ui/ClickSpark";
 
@@ -31,7 +31,11 @@ export function Header() {
           {/* Brand Block (Left Aligned) */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
-              <QuartermasterLogo size={40} variant="icon" />
+              <img
+                src="/quartermasters-logo-monogram.png"
+                alt="Quartermasters Logo"
+                className="h-[32px] w-[32px] md:h-[40px] md:w-[40px] rounded-sm object-contain"
+              />
               <span
                 className="text-lg font-medium tracking-wide leading-tight whitespace-nowrap"
                 style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}

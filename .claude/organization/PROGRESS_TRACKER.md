@@ -173,13 +173,24 @@
 | 3 logo concepts generated | DONE | Compass Rose, Monogram Q, Quartermaster's Mark — all 3 delivered |
 | Founder selection | DONE | **Monogram Q with compass** approved (logo_monogram_q_1771732473722.png) |
 | Logo placed | DONE | Copied to `public/quartermasters-logo-monogram.png` |
-| Logo integration (Header + Footer) | PENDING | Directive sent to Gemini (msg 123d5687) |
+| Logo integration (Header + Footer) | DONE | Gemini delivered (0ac7d191), verified: Header 32/40px, Footer 32px, OG meta tags |
 
-### Globe Redesign (PENDING)
+### Globe Redesign (V1 REJECTED → V2 PENDING)
 | Task | Status | Notes |
 |------|--------|-------|
-| GlobeSection visual enhancement | PENDING | Directive sent to Gemini (msg 123d5687) — glow ring, glass container, legend |
-| Heading color fix | PENDING | "Globally Connected." → copper #C15A2C |
+| V1: Glow ring + glass container + 2-dot legend | DONE (REJECTED) | Founder: "it only added two legends. thats not how you are supposed to show our global presence" |
+| V1: Heading color fix | DONE | "Globally Connected." → copper #C15A2C |
+| V2: COMPLETE redesign directive | PENDING | Region-colored nodes, city-to-city arcs, atmosphere glow, 4-region legend grid, stats row |
+
+### Testimonials Card Brightness Fix (CEO-Applied)
+| Fix | Status | Notes |
+|-----|--------|-------|
+| Icon opacity 0.6 → 1.0, size 24 → 28 | DONE | Full sector color, larger icons |
+| Description text 0.7 → 0.85 opacity | DONE | Brighter white text |
+| Headline explicit #FFFFFF | DONE | Was inheriting dim color |
+| Top accent bar 0.3 → 0.6 opacity | DONE | More visible |
+| Added left accent border (w-1, 0.7 opacity) | DONE | Sector-colored vertical stripe |
+| Added borderLeft tint per sector | DONE | Subtle color hint on card edge |
 
 ---
 
@@ -221,4 +232,5 @@
 3. Approve Supabase + Claude API costs (ZERO spend authority — CEO cannot approve)
 4. Run Supabase migrations (001 + 002) when database provisioned
 5. Visual review: Hero, service visuals, GlassSurface, globe, logo integration on localhost
-6. Logo approved: Monogram Q with compass — awaiting Header/Footer integration from Gemini
+6. Logo integrated: Monogram Q in Header, Footer, OG meta — DONE
+7. Globe V2 redesign: Awaiting Gemini delivery (directive written, not yet sent)

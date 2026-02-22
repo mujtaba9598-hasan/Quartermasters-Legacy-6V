@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'Quartermasters',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/quartermasters-logo-monogram.png',
         width: 1200,
         height: 630,
         alt: 'Quartermasters — Strategic Consulting',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Quartermasters',
     description: 'Premium strategic consulting across six verticals.',
-    images: ['/og-image.jpg'],
+    images: ['/quartermasters-logo-monogram.png'],
   },
   alternates: {
     canonical: 'https://quartermasters.me', // TODO: Replace with final domain
