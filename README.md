@@ -46,7 +46,7 @@ SUB-PHASE D: COMPLETE (all 8 INT tasks resolved)
 VISUAL OVERHAUL: COMPLETE (Hero redesign, GlassSurface, Service Visuals, Hero Visuals)
 LOGO:      DONE (Monogram Q approved, integrated in Header/Footer/OG)
 CARDS:     DONE (Testimonials brightness fix — CEO-applied)
-GLOBE V2:  PENDING (V1 rejected by founder, V2 directive written — not yet sent)
+GLOBE V2:  DONE (Region colors, cross-connections, 4-region legend, stats row — Gemini delivered)
 BUILD:     CLEAN (0 TS errors)
 ```
 

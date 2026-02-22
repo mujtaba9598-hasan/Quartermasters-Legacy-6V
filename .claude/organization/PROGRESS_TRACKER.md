@@ -180,7 +180,7 @@
 |------|--------|-------|
 | V1: Glow ring + glass container + 2-dot legend | DONE (REJECTED) | Founder: "it only added two legends. thats not how you are supposed to show our global presence" |
 | V1: Heading color fix | DONE | "Globally Connected." → copper #C15A2C |
-| V2: COMPLETE redesign directive | PENDING | Region-colored nodes, city-to-city arcs, atmosphere glow, 4-region legend grid, stats row |
+| V2: COMPLETE redesign directive | DONE | Sent (e493c2c5), Gemini delivered. Region-colored nodes, cross-connections, 4-region legend, stats row. tsc: 0 errors |
 
 ### Testimonials Card Brightness Fix (CEO-Applied)
 | Fix | Status | Notes |
@@ -233,4 +233,5 @@
 4. Run Supabase migrations (001 + 002) when database provisioned
 5. Visual review: Hero, service visuals, GlassSurface, globe, logo integration on localhost
 6. Logo integrated: Monogram Q in Header, Footer, OG meta — DONE
-7. Globe V2 redesign: Awaiting Gemini delivery (directive written, not yet sent)
+7. Globe V2 redesign: DELIVERED by Gemini, verified (0 TS errors). Founder visual review needed.
+8. Silk.tsx: Founder-assigned directly to Gemini — confirmed working on hero + globally

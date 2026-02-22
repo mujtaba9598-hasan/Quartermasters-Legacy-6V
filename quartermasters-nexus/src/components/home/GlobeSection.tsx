@@ -65,6 +65,77 @@ export function GlobeSection() {
                 commercial hubs. Hover the globe to explore our operational
                 footprint.
               </motion.p>
+
+              {/* 4-Region Legend */}
+              <motion.div variants={staggerItem} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+                {/* Americas */}
+                <div className="glass rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#60A5FA]"></span>
+                    <span className="text-sm font-semibold text-white">Americas</span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    &bull; Los Angeles <span className="text-[#C15A2C]">★</span><br />
+                    &bull; New York<br />
+                    <span className="text-white/40 italic">+ 7 more</span>
+                  </p>
+                </div>
+
+                {/* Europe */}
+                <div className="glass rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#A78BFA]"></span>
+                    <span className="text-sm font-semibold text-white">Europe</span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    &bull; London<br />
+                    &bull; Zurich<br />
+                    <span className="text-white/40 italic">+ 8 more</span>
+                  </p>
+                </div>
+
+                {/* Middle East */}
+                <div className="glass rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#FBBF24]"></span>
+                    <span className="text-sm font-semibold text-white">Middle East</span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    &bull; Dubai<br />
+                    &bull; Riyadh<br />
+                    <span className="text-white/40 italic">+ 8 more</span>
+                  </p>
+                </div>
+
+                {/* Asia-Pacific */}
+                <div className="glass rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#34D399]"></span>
+                    <span className="text-sm font-semibold text-white">Asia-Pacific</span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    &bull; Singapore<br />
+                    &bull; Tokyo<br />
+                    <span className="text-white/40 italic">+ 7 more</span>
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Stats Row */}
+              <motion.div variants={staggerItem} className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <div className="text-2xl font-bold text-[#C15A2C]" style={{ fontFamily: "var(--font-heading)" }}>4</div>
+                  <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Continents</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#C15A2C]" style={{ fontFamily: "var(--font-heading)" }}>7</div>
+                  <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Strategic Hubs</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#C15A2C]" style={{ fontFamily: "var(--font-heading)" }}>30+</div>
+                  <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Connected Cities</div>
+                </div>
+              </motion.div>
             </div>
 
             {/* Globe Visual Area */}
@@ -83,7 +154,7 @@ export function GlobeSection() {
 
               {/* Glassmorphic Container */}
               <div className="glass relative rounded-[2rem] p-6 md:p-8 flex flex-col items-center justify-center border border-white/5">
-                <div className="w-full aspect-square max-w-[280px] md:max-w-md mx-auto relative cursor-pointer">
+                <div className="w-full aspect-square max-w-lg mx-auto relative cursor-pointer">
                   <motion.div
                     onViewportEnter={() => setShouldLoad(true)}
                     viewport={{ once: true, margin: "200px" }}
@@ -103,18 +174,6 @@ export function GlobeSection() {
                       </div>
                     )}
                   </motion.div>
-                </div>
-
-                {/* Legend */}
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full" style={{ background: "#C15A2C", boxShadow: "0 0 10px rgba(193, 90, 44, 0.5)" }}></span>
-                    <span className="text-white/80">Global HQ</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full" style={{ background: "#7FDBCA", boxShadow: "0 0 10px rgba(127, 219, 202, 0.5)" }}></span>
-                    <span className="text-white/80">Network Hub</span>
-                  </div>
                 </div>
               </div>
             </motion.div>

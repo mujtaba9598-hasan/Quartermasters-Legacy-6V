@@ -18,66 +18,91 @@ function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector
   );
 }
 
+const REGION_COLORS = {
+  americas: "#60A5FA",
+  europe: "#A78BFA",
+  middleEast: "#FBBF24",
+  asia: "#34D399",
+};
+
 const connections = [
-  { name: "London", lat: 51.5, lng: -0.12 },
-  { name: "Singapore", lat: 1.35, lng: 103.8 },
-  { name: "New York", lat: 40.71, lng: -74.0 },
-  { name: "Dubai", lat: 25.2, lng: 55.27 },
-  { name: "Riyadh", lat: 24.7, lng: 46.7 },
-  { name: "Tokyo", lat: 35.6, lng: 139.6 },
-  { name: "Zurich", lat: 47.3, lng: 8.5 },
+  { name: "London", lat: 51.5, lng: -0.12, region: "europe" as const },
+  { name: "Singapore", lat: 1.35, lng: 103.8, region: "asia" as const },
+  { name: "New York", lat: 40.71, lng: -74.0, region: "americas" as const },
+  { name: "Dubai", lat: 25.2, lng: 55.27, region: "middleEast" as const },
+  { name: "Riyadh", lat: 24.7, lng: 46.7, region: "middleEast" as const },
+  { name: "Tokyo", lat: 35.6, lng: 139.6, region: "asia" as const },
+  { name: "Zurich", lat: 47.3, lng: 8.5, region: "europe" as const },
+];
+
+const crossConnections = [
+  { from: "London", to: "Zurich", color: REGION_COLORS.europe },
+  { from: "Dubai", to: "Riyadh", color: REGION_COLORS.middleEast },
+  { from: "Singapore", to: "Tokyo", color: REGION_COLORS.asia },
+  { from: "New York", to: "London", color: REGION_COLORS.europe },
 ];
 
 const mapNodes = [
   // Middle East (Dense)
-  { lat: 25.2, lng: 55.3 }, // Dubai
-  { lat: 24.7, lng: 46.7 }, // Riyadh
-  { lat: 24.4, lng: 54.3 }, // Abu Dhabi
-  { lat: 25.3, lng: 51.5 }, // Doha
-  { lat: 29.3, lng: 47.9 }, // Kuwait
-  { lat: 26.0, lng: 50.5 }, // Manama
-  { lat: 23.6, lng: 58.5 }, // Muscat
-  { lat: 21.5, lng: 39.1 }, // Jeddah
-  { lat: 30.0, lng: 31.2 }, // Cairo
-  { lat: 31.9, lng: 35.9 }, // Amman
+  ...[
+    { lat: 25.2, lng: 55.3 }, { lat: 24.7, lng: 46.7 }, { lat: 24.4, lng: 54.3 },
+    { lat: 25.3, lng: 51.5 }, { lat: 29.3, lng: 47.9 }, { lat: 26.0, lng: 50.5 },
+    { lat: 23.6, lng: 58.5 }, { lat: 21.5, lng: 39.1 }, { lat: 30.0, lng: 31.2 },
+    { lat: 31.9, lng: 35.9 }
+  ].map(n => ({ ...n, region: "middleEast" as const })),
 
   // Europe (Hubs)
-  { lat: 51.5, lng: -0.1 }, // London
-  { lat: 48.8, lng: 2.3 },  // Paris
-  { lat: 52.5, lng: 13.4 }, // Berlin
-  { lat: 40.4, lng: -3.7 }, // Madrid
-  { lat: 41.9, lng: 12.5 }, // Rome
-  { lat: 52.3, lng: 4.9 },  // Amsterdam
-  { lat: 47.3, lng: 8.5 },  // Zurich
-  { lat: 48.2, lng: 16.3 }, // Vienna
-  { lat: 59.3, lng: 18.0 }, // Stockholm
-  { lat: 53.3, lng: -6.2 }, // Dublin
+  ...[
+    { lat: 51.5, lng: -0.1 }, { lat: 48.8, lng: 2.3 }, { lat: 52.5, lng: 13.4 },
+    { lat: 40.4, lng: -3.7 }, { lat: 41.9, lng: 12.5 }, { lat: 52.3, lng: 4.9 },
+    { lat: 47.3, lng: 8.5 }, { lat: 48.2, lng: 16.3 }, { lat: 59.3, lng: 18.0 },
+    { lat: 53.3, lng: -6.2 }
+  ].map(n => ({ ...n, region: "europe" as const })),
 
   // North America (Key Cities)
-  { lat: 40.7, lng: -74.0 }, // NYC
-  { lat: 34.0, lng: -118.2 }, // LA
-  { lat: 41.8, lng: -87.6 }, // Chicago
-  { lat: 29.7, lng: -95.3 }, // Houston
-  { lat: 43.6, lng: -79.3 }, // Toronto
-  { lat: 37.7, lng: -122.4 }, // SF
-  { lat: 25.7, lng: -80.1 }, // Miami
-  { lat: 47.6, lng: -122.3 }, // Seattle
-  { lat: 38.9, lng: -77.0 }, // DC
+  ...[
+    { lat: 40.7, lng: -74.0 }, { lat: 34.0, lng: -118.2 }, { lat: 41.8, lng: -87.6 },
+    { lat: 29.7, lng: -95.3 }, { lat: 43.6, lng: -79.3 }, { lat: 37.7, lng: -122.4 },
+    { lat: 25.7, lng: -80.1 }, { lat: 47.6, lng: -122.3 }, { lat: 38.9, lng: -77.0 }
+  ].map(n => ({ ...n, region: "americas" as const })),
 
   // Asia-Pacific (Excl. China)
-  { lat: 1.35, lng: 103.8 }, // Singapore
-  { lat: 35.6, lng: 139.6 }, // Tokyo
-  { lat: 37.5, lng: 126.9 }, // Seoul
-  { lat: 19.0, lng: 72.8 },  // Mumbai
-  { lat: 28.6, lng: 77.2 },  // New Delhi
-  { lat: 13.7, lng: 100.5 }, // Bangkok
-  { lat: -6.2, lng: 106.8 }, // Jakarta
-  { lat: -33.8, lng: 151.2 }, // Sydney
-  { lat: -37.8, lng: 144.9 }, // Melbourne
+  ...[
+    { lat: 1.35, lng: 103.8 }, { lat: 35.6, lng: 139.6 }, { lat: 37.5, lng: 126.9 },
+    { lat: 19.0, lng: 72.8 }, { lat: 28.6, lng: 77.2 }, { lat: 13.7, lng: 100.5 },
+    { lat: -6.2, lng: 106.8 }, { lat: -33.8, lng: 151.2 }, { lat: -37.8, lng: 144.9 }
+  ].map(n => ({ ...n, region: "asia" as const })),
 ];
 
 const headquarters = { lat: 34.05, lng: -118.24 }; // Los Angeles, California
 const GLOBE_RADIUS = 2;
+
+function GlobeAtmosphere() {
+  const meshRef = useRef<THREE.Group>(null);
+  useFrame((_state, delta) => {
+    if (meshRef.current) meshRef.current.rotation.y += delta * 0.06;
+  });
+
+  return (
+    <group ref={meshRef}>
+      {/* Secondary subtle wireframe */}
+      <mesh>
+        <sphereGeometry args={[GLOBE_RADIUS - 0.01, 48, 48]} />
+        <meshBasicMaterial color="#C15A2C" wireframe transparent opacity={0.04} />
+      </mesh>
+      {/* Inner atmosphere */}
+      <mesh>
+        <sphereGeometry args={[GLOBE_RADIUS + 0.02, 48, 48]} />
+        <meshBasicMaterial color="#1B3A4B" transparent opacity={0.08} side={THREE.BackSide} />
+      </mesh>
+      {/* Outer atmosphere glow */}
+      <mesh>
+        <sphereGeometry args={[GLOBE_RADIUS + 0.15, 48, 48]} />
+        <meshBasicMaterial color="#3B82C4" transparent opacity={0.04} side={THREE.BackSide} />
+      </mesh>
+    </group>
+  );
+}
 
 function GlobeWireframe() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -92,10 +117,10 @@ function GlobeWireframe() {
     <mesh ref={meshRef}>
       <sphereGeometry args={[GLOBE_RADIUS, 48, 48]} />
       <meshBasicMaterial
-        color="#2d4a40"
+        color="#1E5A7E"
         wireframe
         transparent
-        opacity={0.15}
+        opacity={0.2}
       />
     </mesh>
   );
@@ -112,13 +137,29 @@ function ConnectionBeams() {
 
   const curves = useMemo(() => {
     const hqPos = latLngToVector3(headquarters.lat, headquarters.lng, GLOBE_RADIUS);
-    return connections.map((c) => {
+
+    // HQ to Hubs
+    const hqArcs = connections.map((c) => {
       const target = latLngToVector3(c.lat, c.lng, GLOBE_RADIUS);
       const mid = hqPos.clone().add(target).multiplyScalar(0.5);
       mid.normalize().multiplyScalar(GLOBE_RADIUS * 1.4);
       const curve = new THREE.QuadraticBezierCurve3(hqPos, mid, target);
-      return { curve, name: c.name };
+      return { curve, color: REGION_COLORS[c.region] };
     });
+
+    // Cross Hubs
+    const crossArcs = crossConnections.map((cross) => {
+      const p1 = connections.find(c => c.name === cross.from)!;
+      const p2 = connections.find(c => c.name === cross.to)!;
+      const v1 = latLngToVector3(p1.lat, p1.lng, GLOBE_RADIUS);
+      const v2 = latLngToVector3(p2.lat, p2.lng, GLOBE_RADIUS);
+      const mid = v1.clone().add(v2).multiplyScalar(0.5);
+      mid.normalize().multiplyScalar(GLOBE_RADIUS * 1.2); // Flatter arc
+      const curve = new THREE.QuadraticBezierCurve3(v1, mid, v2);
+      return { curve, color: cross.color };
+    });
+
+    return [...hqArcs, ...crossArcs];
   }, []);
 
   return (
@@ -129,13 +170,44 @@ function ConnectionBeams() {
           <Line
             key={i}
             points={points}
-            color="#C15A2C"
-            lineWidth={1}
+            color={c.color}
+            lineWidth={1.5}
             transparent
-            opacity={0.5}
+            opacity={0.7}
           />
         );
       })}
+    </group>
+  );
+}
+
+function CityMarkers() {
+  const groupRef = useRef<THREE.Group>(null);
+  useFrame((_state, delta) => {
+    if (groupRef.current) groupRef.current.rotation.y += delta * 0.06;
+  });
+
+  const markers = useMemo(() => {
+    return connections.map(c => ({
+      pos: latLngToVector3(c.lat, c.lng, GLOBE_RADIUS),
+      color: REGION_COLORS[c.region],
+    }));
+  }, []);
+
+  return (
+    <group ref={groupRef}>
+      {markers.map((m, i) => (
+        <group key={i} position={m.pos}>
+          <mesh>
+            <sphereGeometry args={[0.07, 16, 16]} />
+            <meshBasicMaterial color={m.color} />
+          </mesh>
+          <mesh>
+            <ringGeometry args={[0.09, 0.14, 32]} />
+            <meshBasicMaterial color={m.color} transparent opacity={0.4} side={THREE.DoubleSide} />
+          </mesh>
+        </group>
+      ))}
     </group>
   );
 }
@@ -156,20 +228,17 @@ function HQPin() {
   return (
     <group>
       <group ref={pinRef}>
-        {/* Pin glow */}
         <mesh position={hqPos}>
-          <sphereGeometry args={[0.06, 16, 16]} />
+          <sphereGeometry args={[0.09, 16, 16]} />
           <meshBasicMaterial color="#C15A2C" />
         </mesh>
-        {/* Pulse ring */}
         <mesh position={hqPos}>
-          <ringGeometry args={[0.08, 0.12, 32]} />
-          <meshBasicMaterial
-            color="#C15A2C"
-            transparent
-            opacity={0.3}
-            side={THREE.DoubleSide}
-          />
+          <ringGeometry args={[0.11, 0.16, 32]} />
+          <meshBasicMaterial color="#C15A2C" transparent opacity={0.5} side={THREE.DoubleSide} />
+        </mesh>
+        <mesh position={hqPos}>
+          <ringGeometry args={[0.18, 0.22, 32]} />
+          <meshBasicMaterial color="#C15A2C" transparent opacity={0.2} side={THREE.DoubleSide} />
         </mesh>
       </group>
     </group>
@@ -179,23 +248,33 @@ function HQPin() {
 function NodePoints() {
   const groupRef = useRef<THREE.Group>(null);
 
-  useFrame((_state, delta) => {
+  useFrame((state, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.06;
+
+      const time = state.clock.getElapsedTime();
+      // oscillate between 1.0 and 1.3 over 2s
+      const scale = 1.0 + (Math.sin(time * Math.PI) * 0.5 + 0.5) * 0.3;
+      groupRef.current.children.forEach(child => {
+        child.scale.setScalar(scale);
+      });
     }
   });
 
-  const positions = useMemo(
-    () => mapNodes.map((c) => latLngToVector3(c.lat, c.lng, GLOBE_RADIUS)),
+  const nodes = useMemo(
+    () => mapNodes.map((c) => ({
+      pos: latLngToVector3(c.lat, c.lng, GLOBE_RADIUS),
+      color: REGION_COLORS[c.region],
+    })),
     []
   );
 
   return (
     <group ref={groupRef}>
-      {positions.map((pos, i) => (
-        <mesh key={i} position={pos}>
-          <sphereGeometry args={[0.02, 8, 8]} />
-          <meshBasicMaterial color="#8B9E94" transparent opacity={0.6} />
+      {nodes.map((n, i) => (
+        <mesh key={i} position={n.pos}>
+          <sphereGeometry args={[0.035, 8, 8]} />
+          <meshBasicMaterial color={n.color} transparent opacity={0.85} />
         </mesh>
       ))}
     </group>
@@ -206,8 +285,10 @@ function GlobeScene() {
   return (
     <>
       <ambientLight intensity={0.3} />
+      <GlobeAtmosphere />
       <GlobeWireframe />
       <ConnectionBeams />
+      <CityMarkers />
       <HQPin />
       <NodePoints />
       <OrbitControls
@@ -245,23 +326,23 @@ export function Globe({ className = "" }: GlobeProps) {
       {/* HQ Data Card on hover */}
       {hovered && (
         <div
-          className="glass pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg px-5 py-3"
-          style={{ borderColor: "var(--color-accent-gold)" }}
+          className="glass pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg px-5 py-3 border"
+          style={{ borderColor: "rgba(193,90,44,0.3)" }}
         >
           <p
-            className="text-xs font-semibold"
+            className="text-xs font-semibold whitespace-nowrap"
             style={{
               fontFamily: "var(--font-heading)",
               color: "var(--color-accent-gold)",
             }}
           >
-            HQ: California
+            Global HQ: California, USA
           </p>
           <p
-            className="text-xs"
+            className="text-xs mt-1"
             style={{ color: "var(--color-text-dim)" }}
           >
-            Active Projects: 12
+            7 Strategic Hubs | 4 Continents | 30+ Cities
           </p>
         </div>
       )}
