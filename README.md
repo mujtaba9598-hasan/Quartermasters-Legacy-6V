@@ -57,7 +57,9 @@ LOGO:      PENDING (3 concepts ordered from Gemini)
 - ServiceHeroVisual.tsx: 6 unique hero-level animated SVGs for service detail pages (400x300) — Vault, Helm, Observatory, Harbor, Compass, Forge
 - ServicePageLayout.tsx: 2-column hero grid with ServiceHeroVisual (500x350 container)
 - All 6 client components wired with visualType prop
-- Logo generation directive sent (3 concepts: Compass Rose, Monogram Q, Quartermaster's Mark)
+- Logo: 3 concepts generated, Monogram Q approved by founder, placed in public/
+- Globe + Logo integration directive sent (GlobeSection enhancement + Header/Footer logo)
+- CEO-Gemini Workflow SOP written to Project_Comms/CEO_GEMINI_WORKFLOW_SOP.md
 - California scrub: 42 files, all UAE refs replaced with US/California
 - TypeScript: 0 errors throughout
 

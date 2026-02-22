@@ -167,10 +167,19 @@
 | ServicePageLayout update | `ServicePageLayout.tsx` | ACCEPTED | Swapped ServiceVisual→ServiceHeroVisual, 500x350 container, no scale hack |
 | 6 client components | All 6 *Client.tsx files | ACCEPTED | visualType prop wired |
 
-### Logo Generation (PENDING)
+### Logo Generation (COMPLETE — Monogram Q Approved)
 | Task | Status | Notes |
 |------|--------|-------|
-| 3 logo concepts (Compass Rose, Monogram Q, Quartermaster's Mark) | PENDING | Directive sent to Gemini, awaiting delivery |
+| 3 logo concepts generated | DONE | Compass Rose, Monogram Q, Quartermaster's Mark — all 3 delivered |
+| Founder selection | DONE | **Monogram Q with compass** approved (logo_monogram_q_1771732473722.png) |
+| Logo placed | DONE | Copied to `public/quartermasters-logo-monogram.png` |
+| Logo integration (Header + Footer) | PENDING | Directive sent to Gemini (msg 123d5687) |
+
+### Globe Redesign (PENDING)
+| Task | Status | Notes |
+|------|--------|-------|
+| GlobeSection visual enhancement | PENDING | Directive sent to Gemini (msg 123d5687) — glow ring, glass container, legend |
+| Heading color fix | PENDING | "Globally Connected." → copper #C15A2C |
 
 ---
 
@@ -211,5 +220,5 @@
 2. Set RESEND_API_KEY environment variable
 3. Approve Supabase + Claude API costs (ZERO spend authority — CEO cannot approve)
 4. Run Supabase migrations (001 + 002) when database provisioned
-5. Visual review: Hero section, service visuals, GlassSurface cards on localhost
-6. Select logo concept (3 options from Gemini — pending delivery)
+5. Visual review: Hero, service visuals, GlassSurface, globe, logo integration on localhost
+6. Logo approved: Monogram Q with compass — awaiting Header/Footer integration from Gemini
