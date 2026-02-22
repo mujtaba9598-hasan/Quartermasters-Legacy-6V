@@ -15,6 +15,7 @@ const footerLinks = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Schedule Consultation", href: "/booking" },
     { label: "Client Portal", href: "/portal" },
     { label: "Knowledge Base", href: "/knowledge-base" },
     { label: "Cookie Preferences", href: "#", onclick: "deleteCookiePreferences" },
