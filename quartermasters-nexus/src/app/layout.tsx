@@ -5,6 +5,7 @@ import { Providers } from "@/components/layout/Providers";
 import CookieConsentBanner from "@/components/compliance/CookieConsentBanner";
 import SilkBackground from "@/components/layout/SilkBackground";
 import { ChatPanel } from "@/components/chat/ChatPanel";
+import { ServiceWorkerRegister } from "@/components/pwa/ServiceWorkerRegister";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -102,6 +103,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <JsonLd />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#002147" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Quartermasters" />
+        <link rel="apple-touch-icon" href="/quartermasters-logo-monogram.png" />
       </head>
       <body
         className={`${dmSerif.variable} ${dmSans.variable} antialiased`}
@@ -113,6 +120,7 @@ export default function RootLayout({
           </div>
           <CookieConsentBanner />
           <ChatPanel />
+          <ServiceWorkerRegister />
         </Providers>
       </body>
     </html>

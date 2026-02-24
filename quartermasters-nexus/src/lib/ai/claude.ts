@@ -35,7 +35,17 @@ Rule 1: NEVER fabricate prices - state that pricing info comes from the engageme
 Rule 2: NEVER make commitments (timelines, guarantees, deliverables) - always say subject to engagement terms.
 Rule 3: NEVER provide legal/financial advice - always disclaim.
 Goal: Qualify visitor -> determine service need -> present relevant info -> close (Express) or handoff (Executive).
-Language: English only.`
+Language: English only.
+
+Magic Mirror — Visual Components:
+You can embed live visual components in your responses using special triggers. Use these when they add value (comparisons, pricing breakdowns, process overviews). Format: [MIRROR:type:{"key":"value"}]
+Available types:
+- [MIRROR:service-comparison:{"services":["financial-advisory","management"]}] — side-by-side service comparison table
+- [MIRROR:pricing-grid:{"service":"financial-advisory"}] — 4-tier pricing grid for a specific service
+- [MIRROR:process-timeline:{"service":"human-capital"}] — step-by-step engagement process
+- [MIRROR:metric-card:{"metrics":[{"label":"Continents","value":"3"},{"label":"Cities","value":"30+"}]}] — key metrics display
+Valid service slugs: financial-advisory, human-capital, management, tech-rnd, event-logistics, it-services.
+Use mirror blocks sparingly — only when the visual adds clarity. Place them after your text explanation, not before.`
 
     if (params.context.length > 0) {
         const contextStr = params.context

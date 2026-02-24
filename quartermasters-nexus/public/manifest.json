@@ -1,0 +1,27 @@
+{
+    "name": "Quartermasters — Strategic Consulting & Advisory",
+    "short_name": "Quartermasters",
+    "description": "Premium consulting across six verticals. Engage Q, our AI strategy consultant, for instant advisory.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f1a",
+    "theme_color": "#002147",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["business", "finance"],
+    "icons": [
+        {
+            "src": "/quartermasters-logo-monogram.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/quartermasters-logo-monogram.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
