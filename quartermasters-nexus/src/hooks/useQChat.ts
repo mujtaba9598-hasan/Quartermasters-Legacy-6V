@@ -48,9 +48,15 @@ export function useQChat(): UseQChatReturn {
         chatId: conversationId || undefined,
         fetch: async (url: any, options: any) => {
             const parsedBody = options?.body ? JSON.parse(options.body as string) : {};
+            // useChat sends { messages: [...] } — extract the last user message
+            const msgs = parsedBody.messages || [];
+            const lastUserMsg = [...msgs].reverse().find((m: any) => m.role === 'user');
+            const message = lastUserMsg?.content || '';
+
             const response = await fetch('/api/chat', {
-                ...options,
-                body: JSON.stringify({ ...parsedBody, visitorId, conversationId })
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message, visitorId, conversationId })
             });
             const returnedConvId = response.headers.get('X-Conversation-Id');
             if (returnedConvId && !conversationId) {
@@ -65,6 +71,8 @@ export function useQChat(): UseQChatReturn {
 
     const {
         messages,
+        input: chatInput,
+        setInput: setChatInput,
         status,
         error,
         handleSubmit: originalHandleSubmit
@@ -88,7 +96,9 @@ export function useQChat(): UseQChatReturn {
         setLastInteractionTime(Date.now());
         setHesitating(false);
         setInput(value);
-    }, []);
+        // Sync with useChat's internal input so handleSubmit sends the actual message
+        setChatInput(value);
+    }, [setChatInput]);
 
     const handleFormSubmit: (e: any, options?: any) => void = useCallback((e: any, options?: any) => {
         setLastInteractionTime(Date.now());
@@ -96,6 +106,8 @@ export function useQChat(): UseQChatReturn {
         if (typeof originalHandleSubmit === 'function') {
             originalHandleSubmit(e, options);
         }
+        // Clear custom input after useChat picks it up
+        setInput('');
     }, [originalHandleSubmit]);
 
     // 7. Hesitation Timer
