@@ -32,9 +32,10 @@ export async function POST(req: Request) {
         // Periodically clear massive map caches (garbage collection hedge)
         if (rateLimitCache.size > 10000) rateLimitCache.clear();
 
-        // ----------------------------------------------------
-        // Insert Analytics Event into Supabase natively via PostgREST
-        // ----------------------------------------------------
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         const { error } = await supabase
             .from('ab_events')
             .insert({
@@ -77,7 +78,9 @@ export async function GET(req: Request) {
             return NextResponse.json({ error: 'Experiment ID filter required' }, { status: 400 });
         }
 
-        // Aggregate query using standard Supabase builder or direct RPC
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
         // Doing a multi-step builder for standard reporting: Total Impressions vs Clicks/Conversions
 
         const { data: impressions } = await supabase

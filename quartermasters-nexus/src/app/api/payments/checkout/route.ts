@@ -5,6 +5,10 @@ import { PRICING_TABLE } from '@/lib/pricing/packages';
 
 export async function POST(req: Request) {
     try {
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         // 1. Verify Authentication
         const authHeader = req.headers.get('Authorization') || req.headers.get('cookie');
 

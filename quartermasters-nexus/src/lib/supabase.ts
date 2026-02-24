@@ -720,8 +720,8 @@ const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
 // Server-side singleton with service role (for admin operations)
-// Lazy init: avoids crash during static export build when env vars are absent
-export const supabase = supabaseUrl
+// Lazy init: avoids crash during Vercel build when env vars are absent
+export const supabase = (supabaseUrl && supabaseServiceRoleKey)
     ? createClient(supabaseUrl, supabaseServiceRoleKey)
     : (null as unknown as ReturnType<typeof createClient>)
 

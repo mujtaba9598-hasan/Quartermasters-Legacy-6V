@@ -14,6 +14,10 @@ export async function POST(req: NextRequest) {
         const payload = await req.json();
         const { triggerEvent, payload: data } = payload;
 
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         if (triggerEvent === "BOOKING_CREATED") {
             // Upsert contact
             const { data: contact } = await supabase

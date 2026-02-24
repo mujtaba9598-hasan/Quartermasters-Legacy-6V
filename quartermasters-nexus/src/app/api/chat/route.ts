@@ -25,6 +25,10 @@ export async function POST(req: Request) {
             })
         }
 
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 })
+        }
+
         let currentConversationId = conversationId
 
         // a. If conversationId provided, fetch it. Otherwise create new one.

@@ -11,6 +11,10 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Invalid subscription object' }, { status: 400 });
         }
 
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         let targetUserId = userId;
 
         // If no strict userId passed, try to infer from session

@@ -12,6 +12,10 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: "clientId is required" }, { status: 400 });
     }
 
+    if (!supabase) {
+        return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+    }
+
     let query = supabase
         .from("client_documents")
         .select("*")
@@ -41,6 +45,10 @@ export async function POST(req: NextRequest) {
 
         if (!file || !clientId) {
             return NextResponse.json({ error: "file and clientId are required" }, { status: 400 });
+        }
+
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
         }
 
         const MAX_SIZE = 10 * 1024 * 1024;
@@ -102,6 +110,10 @@ export async function DELETE(req: NextRequest) {
 
     if (!id || !clientId) {
         return NextResponse.json({ error: "id and clientId are required" }, { status: 400 });
+    }
+
+    if (!supabase) {
+        return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
     }
 
     const { data: doc, error: fetchError } = await supabase

@@ -15,6 +15,10 @@ export async function GET(
         const { searchParams } = new URL(request.url);
         const format = searchParams.get("format");
 
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         const { data: invoice, error } = await getInvoiceById(id);
         if (error || !invoice) {
             return NextResponse.json({ error: "Invoice not found" }, { status: 404 });

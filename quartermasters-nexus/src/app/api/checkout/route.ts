@@ -17,6 +17,10 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing required configuration or contact fields.' }, { status: 400 });
         }
 
+        if (!supabase) {
+            return NextResponse.json({ error: 'Service unavailable' }, { status: 503 });
+        }
+
         const pkg = PRICING_TABLE[service]?.[tier];
         if (!pkg) {
             return NextResponse.json({ error: 'Invalid package selection.' }, { status: 400 });
