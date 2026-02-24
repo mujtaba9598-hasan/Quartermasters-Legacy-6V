@@ -6,6 +6,8 @@ import {
     sendBookingReschedule,
     sendInternalNotification,
 } from "@/lib/email/booking-emails";
+import { sendPushNotification } from "@/lib/notifications/push-service";
+import { NOTIFICATION_TEMPLATES } from "@/lib/notifications/notification-types";
 
 export async function POST(req: NextRequest) {
     try {
@@ -66,6 +68,13 @@ export async function POST(req: NextRequest) {
                 ]);
             } catch (emailErr) {
                 console.error("Email send failed:", emailErr);
+            }
+
+            // Trigger Push Notification if contact has an associated user ID logged (assume best effort based on email matching later, but for now just log it or pass a dummy ID for the demo if user auth isn't mapped perfectly yet in the webhook payload)
+            // In a production scenario, we'd lookup `user_id` from `profiles` matching `email`
+            const { data: userProfile } = await supabase.from('profiles').select('id').eq('email', data.attendees[0].email).single();
+            if (userProfile?.id) {
+                sendPushNotification(userProfile.id, NOTIFICATION_TEMPLATES.BOOKING_CONFIRMED(data.startTime)).catch(err => console.error("Push notification failed", err));
             }
         }
 

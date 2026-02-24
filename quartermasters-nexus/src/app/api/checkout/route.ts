@@ -5,6 +5,8 @@ import { PRICING_TABLE } from '@/lib/pricing/packages';
 import { createInvoice } from '@/lib/invoices/invoice-service';
 import { getPriceInCurrency, SupportedCurrency } from '@/lib/pricing/currency';
 import { calculateSalesTax, isValidUSState } from '@/lib/tax/us-sales-tax';
+import { sendBroadcast } from '@/lib/notifications/push-service';
+import { NOTIFICATION_TEMPLATES } from '@/lib/notifications/notification-types';
 
 export async function POST(req: Request) {
     try {
@@ -79,6 +81,11 @@ export async function POST(req: Request) {
         if (!paymentIntent.client_secret) {
             throw new Error("Failed to generate Stripe client secret");
         }
+
+        // Fire & Forget: Broadcast lead alert to admins
+        sendBroadcast(NOTIFICATION_TEMPLATES.NEW_LEAD_ALERT(name, company, service)).catch(err => {
+            console.error('Failed to broadcast new lead alert:', err);
+        });
 
         // 4. Create Draft Invoice
         const { invoice, error: invoiceError } = await createInvoice({

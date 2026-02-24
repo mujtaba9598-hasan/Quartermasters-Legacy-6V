@@ -6,6 +6,7 @@ import CookieConsentBanner from "@/components/compliance/CookieConsentBanner";
 import SilkBackground from "@/components/layout/SilkBackground";
 import { ChatPanel } from "@/components/chat/ChatPanel";
 import { ServiceWorkerRegister } from "@/components/pwa/ServiceWorkerRegister";
+import { PushPermissionPrompt } from "@/components/pwa/PushPermissionPrompt";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -121,6 +122,7 @@ export default function RootLayout({
           <CookieConsentBanner />
           <ChatPanel />
           <ServiceWorkerRegister />
+          <PushPermissionPrompt />
         </Providers>
       </body>
     </html>
