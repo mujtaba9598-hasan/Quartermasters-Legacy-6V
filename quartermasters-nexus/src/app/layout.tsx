@@ -7,6 +7,8 @@ import SilkBackground from "@/components/layout/SilkBackground";
 import { ChatPanel } from "@/components/chat/ChatPanel";
 import { ServiceWorkerRegister } from "@/components/pwa/ServiceWorkerRegister";
 import { PushPermissionPrompt } from "@/components/pwa/PushPermissionPrompt";
+import { MorphingBackgroundProvider } from "@/lib/contexts/MorphingBackgroundContext";
+import { MorphingBackground } from "@/components/layout/MorphingBackground";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -106,24 +108,33 @@ export default function RootLayout({
         <JsonLd />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#002147" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Quartermasters" />
         <link rel="apple-touch-icon" href="/quartermasters-logo-monogram.png" />
       </head>
       <body
-        className={`${dmSerif.variable} ${dmSans.variable} antialiased`}
+        className={`${dmSans.variable} ${dmSerif.variable} font-sans bg-[#0a0f1a] text-white min-h-screen relative selection:bg-[#C15A2C]/30 selection:text-white flex flex-col`}
       >
-        <SilkBackground />
-        <Providers>
-          <div className="relative z-10">
-            {children}
+        <MorphingBackgroundProvider>
+          <div className="fixed inset-0 z-0 pointer-events-none">
+            <SilkBackground />
+            <MorphingBackground />
           </div>
-          <CookieConsentBanner />
-          <ChatPanel />
-          <ServiceWorkerRegister />
-          <PushPermissionPrompt />
-        </Providers>
+
+          <div className="relative z-10 flex flex-col min-h-screen">
+            <Providers>
+              <main className="flex-1 overflow-hidden" style={{ perspective: '1000px' }}>
+                {children}
+                <CookieConsentBanner />
+                <ChatPanel />
+                <ServiceWorkerRegister />
+                <PushPermissionPrompt />
+              </main>
+            </Providers>
+          </div>
+        </MorphingBackgroundProvider>
       </body>
     </html>
   );

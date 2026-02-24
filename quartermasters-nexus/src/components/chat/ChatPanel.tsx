@@ -14,6 +14,8 @@ import { parseMirrorBlocks, MirrorBlock } from './mirror/MirrorRegistry';
 import { MirrorRenderer } from './mirror/MirrorRenderer';
 import { SplitScreenLayout } from './SplitScreenLayout';
 import { CanvasPanel } from './CanvasPanel';
+import { useConversationContext } from '@/hooks/useConversationContext';
+import { useMorphingBackground } from '@/lib/contexts/MorphingBackgroundContext';
 
 type PanelState = 'collapsed' | 'expanded' | 'fullscreen';
 
@@ -21,9 +23,34 @@ export function ChatPanel() {
     const [panelState, setPanelState] = useState<PanelState>('collapsed');
     const [splitScreen, setSplitScreen] = useState(false);
     const [latestBlocks, setLatestBlocks] = useState<MirrorBlock[]>([]);
+    const [isMobile, setIsMobile] = useState(false);
     const { messages, input, setInput, handleSubmit, isLoading, chatState } = useQChat();
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // Track active theme
+    const latestAsstMsg = messages.length > 0 && messages[messages.length - 1].role === 'assistant'
+        ? messages[messages.length - 1].parts?.[0]?.text || ''
+        : '';
+
+    const { activeService, confidence } = useConversationContext(latestAsstMsg);
+    const { setActiveTheme } = useMorphingBackground();
+
+    useEffect(() => {
+        if (confidence >= 0.5) {
+            setActiveTheme(activeService);
+        } else {
+            setActiveTheme('idle');
+        }
+    }, [activeService, confidence, setActiveTheme]);
+
+    // Detect mobile viewport
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 640);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
+    }, []);
 
     // Auto-enter split screen for new Mirror blocks
     useEffect(() => {
@@ -82,17 +109,21 @@ export function ChatPanel() {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [panelState]);
 
-    // Handle body scroll locking
+    // Handle body scroll locking + mobile viewport height
     useEffect(() => {
-        if (panelState === 'fullscreen') {
+        if (panelState === 'fullscreen' || (isMobile && panelState === 'expanded')) {
             document.body.style.overflow = 'hidden';
+            // Fix mobile keyboard viewport: use dvh if supported
+            document.documentElement.style.setProperty('--qm-chat-h', '100dvh');
         } else {
             document.body.style.overflow = 'unset';
+            document.documentElement.style.removeProperty('--qm-chat-h');
         }
         return () => {
             document.body.style.overflow = 'unset';
+            document.documentElement.style.removeProperty('--qm-chat-h');
         };
-    }, [panelState]);
+    }, [panelState, isMobile]);
 
     const toggleFullscreen = () => {
         setPanelState(prev => prev === 'fullscreen' ? 'expanded' : 'fullscreen');
@@ -119,8 +150,8 @@ export function ChatPanel() {
                             boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                             opacity: { duration: 0.2 }
                         }}
-                        onClick={() => setPanelState('expanded')}
-                        className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-105 transition-transform"
+                        onClick={() => setPanelState(isMobile ? 'fullscreen' : 'expanded')}
+                        className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-105 active:scale-95 transition-transform"
                         style={{ background: 'transparent' }}
                         aria-label="Open Quartermasters Chat"
                     >
@@ -152,11 +183,12 @@ export function ChatPanel() {
                             }
                             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
                             className={`fixed z-50 flex flex-col bg-slate-950 backdrop-blur-2xl ${isFullscreen && !splitScreen
-                                ? 'inset-0 w-full h-full'
+                                ? 'inset-0 w-full h-[var(--qm-chat-h,100vh)]'
                                 : splitScreen
                                     ? 'relative w-full h-full border-r border-white/10'
-                                    : 'top-0 right-0 h-full w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
+                                    : 'top-0 right-0 h-[var(--qm-chat-h,100vh)] w-full sm:w-[400px] border-l border-white/10 shadow-2xl'
                                 }`}
+                            style={{ paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)' }}
                         >
                             {/* Header */}
                             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0 bg-white/5">

@@ -49,7 +49,7 @@ export function ChatMessage({ role, content, isStreaming }: ChatMessageProps) {
             className={`flex w-full ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
         >
             <div
-                className={`max-w-[85%] sm:max-w-[75%] px-5 py-3.5 text-[0.95rem] leading-relaxed shadow-sm ${isUser
+                className={`max-w-[90%] sm:max-w-[75%] px-4 sm:px-5 py-3 sm:py-3.5 text-[0.9rem] sm:text-[0.95rem] leading-relaxed shadow-sm ${isUser
                         ? 'bg-[#C15A2C]/90 text-white rounded-2xl rounded-tr-sm'
                         : 'bg-white/5 backdrop-blur-xl border border-white/5 text-slate-200 rounded-2xl rounded-tl-sm'
                     }`}

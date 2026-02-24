@@ -70,13 +70,15 @@ export function ChatInput({ input, setInput, onSubmit, isLoading }: ChatInputPro
                 placeholder="Ask Quartermasters anything..."
                 disabled={isLoading}
                 rows={1}
-                className="w-full max-h-[96px] bg-transparent border-none text-slate-200 placeholder:text-slate-500 focus:ring-0 resize-none px-3 py-2.5 text-base overflow-y-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                enterKeyHint="send"
+                autoComplete="off"
+                className="w-full max-h-[96px] bg-transparent border-none text-slate-200 placeholder:text-slate-500 focus:ring-0 focus:outline-none resize-none px-3 py-2.5 text-base sm:text-base text-[16px] overflow-y-auto disabled:opacity-50 disabled:cursor-not-allowed"
             />
 
             <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className={`flex-shrink-0 ml-2 h-[44px] w-[44px] flex items-center justify-center rounded-xl transition-all duration-300 ${showSuccess
+                className={`flex-shrink-0 ml-2 h-[48px] w-[48px] sm:h-[44px] sm:w-[44px] flex items-center justify-center rounded-xl transition-all duration-300 ${showSuccess
                         ? 'bg-green-500 text-white'
                         : input.trim() && !isLoading
                             ? 'bg-[#C15A2C] text-white hover:bg-[#A04A24] active:scale-95'
