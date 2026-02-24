@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — Consultoria Estratégica e Assessoria",
+    "description": "Consultoria premium em seis verticais: Assessoria Financeira, Capital Humano, Tecnologia e Inovação, Eventos e Experiências, Serviços de TI e Gestão Estratégica."
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre",
+    "contact": "Contato",
+    "booking": "Agendar Chamada",
+    "portal": "Portal do Cliente",
+    "login": "Entrar"
+  },
+  "hero": {
+    "tagline": "Consultoria Estratégica e Assessoria",
+    "headline": "Sua Vantagem Estratégica Começa Aqui",
+    "subheadline": "Seis verticais. Uma missão. Acelerando seu crescimento com consultoria de precisão da Califórnia para o mundo.",
+    "cta_primary": "Iniciar uma Conversa",
+    "cta_secondary": "Explorar Serviços"
+  },
+  "services": {
+    "title": "Nossas Verticais de Serviço",
+    "subtitle": "Seis práticas especializadas. Uma estratégia unificada.",
+    "financial_advisory": {
+      "name": "Assessoria Financeira",
+      "tagline": "Navegar a complexidade com clareza",
+      "description": "Consultoria em serviços bancários, conformidade regulatória, estratégia de investimento e reestruturação financeira para organizações que buscam excelência fiscal."
+    },
+    "human_capital": {
+      "name": "Capital Humano",
+      "tagline": "Suas pessoas, sua vantagem",
+      "description": "Consultoria de RH, estratégia de talentos, design organizacional e planejamento de força de trabalho para construir equipes de alto desempenho."
+    },
+    "management": {
+      "name": "Gestão Estratégica",
+      "tagline": "Da visão à execução",
+      "description": "Consultoria de gestão, excelência operacional, estratégia de crescimento e transformação empresarial para organizações ambiciosas."
+    },
+    "tech_rnd": {
+      "name": "Tecnologia e P&D",
+      "tagline": "Inovar com propósito",
+      "description": "Consultoria e P&D em educação tecnológica, transformação digital, estratégia de tecnologias emergentes e programas de inovação."
+    },
+    "event_logistics": {
+      "name": "Eventos e Experiências",
+      "tagline": "Momentos memoráveis, execução impecável",
+      "description": "Organização e gestão de eventos, logística, estratégia de locais e design de experiências para eventos corporativos impactantes."
+    },
+    "it_services": {
+      "name": "Serviços de TI",
+      "tagline": "Construir. Entregar. Escalar.",
+      "description": "Desenvolvimento de software, aplicações web, plataformas SaaS, arquitetura em nuvem e serviços de implementação técnica."
+    },
+    "learn_more": "Saiba Mais",
+    "get_started": "Começar"
+  },
+  "pricing": {
+    "title": "Investimento",
+    "subtitle": "Preços transparentes. Sem surpresas.",
+    "express": "Pacote Express",
+    "standard": "Standard",
+    "premium": "Premium",
+    "enterprise": "Enterprise",
+    "starting_at": "A partir de",
+    "per_engagement": "por projeto",
+    "includes": "Inclui",
+    "book_consultation": "Agendar Consulta",
+    "self_checkout": "Compra Online",
+    "contact_us": "Fale Conosco"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "Consultor Sênior de Estratégia",
+    "placeholder": "Pergunte sobre nossos serviços, preços ou metodologia...",
+    "empty_state": "Ative a inteligência Quartermasters. Pergunte sobre nossas 6 verticais de serviço, preços ou metodologia.",
+    "send": "Enviar",
+    "typing": "Q está pensando..."
+  },
+  "booking": {
+    "title": "Agendar uma Consulta",
+    "subtitle": "Agende uma chamada com nossa equipe de estratégia",
+    "discovery": "Chamada de Descoberta",
+    "discovery_desc": "Chamada introdutória de 15 minutos para entender suas necessidades",
+    "express_consult": "Consulta Express",
+    "express_desc": "Sessão focada de 15 minutos sobre uma questão específica",
+    "strategy_session": "Sessão de Estratégia",
+    "strategy_desc": "Imersão de 30 minutos nos seus desafios",
+    "executive_briefing": "Briefing Executivo",
+    "executive_desc": "Revisão estratégica abrangente de 60 minutos"
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "subtitle": "Vamos iniciar uma conversa sobre suas necessidades estratégicas",
+    "name": "Nome Completo",
+    "email": "Endereço de Email",
+    "company": "Empresa",
+    "message": "Mensagem",
+    "submit": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso. Entraremos em contato em breve.",
+    "error": "Falha ao enviar mensagem. Por favor, tente novamente."
+  },
+  "footer": {
+    "tagline": "Consultoria estratégica da Califórnia para o mundo.",
+    "services": "Serviços",
+    "company": "Empresa",
+    "legal": "Jurídico",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "cookies": "Preferências de Cookies",
+    "copyright": "© {year} Quartermasters. Todos os direitos reservados."
+  },
+  "cookie_banner": {
+    "gdpr_title": "Configurações de Privacidade",
+    "ccpa_title": "Não Vender Minhas Informações Pessoais",
+    "default_title": "Aviso de Cookies",
+    "gdpr_body": "Respeitamos sua privacidade de dados. Você deve optar pelos cookies não essenciais.",
+    "ccpa_body": "De acordo com a lei da Califórnia, você tem o direito de optar por não vender suas informações pessoais.",
+    "default_body": "Usamos cookies para analisar o tráfego e melhorar sua experiência.",
+    "essential": "Essencial",
+    "essential_desc": "Necessário para segurança e funcionamento do site.",
+    "analytics": "Análises",
+    "analytics_desc": "Dados anônimos de uso para melhorar a UX.",
+    "preferences": "Preferências",
+    "preferences_desc": "Personalização e configurações do site.",
+    "marketing": "Marketing",
+    "marketing_desc": "Relevância de conteúdo personalizado.",
+    "accept_all": "Aceitar Tudo",
+    "reject_all": "Rejeitar Tudo",
+    "save_preferences": "Salvar Preferências",
+    "manage": "Gerenciar Preferências"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar Novamente",
+    "back": "Voltar",
+    "next": "Próximo",
+    "close": "Fechar",
+    "open": "Abrir",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "or": "ou"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — 战略咨询与顾问",
+    "description": "六大垂直领域的优质咨询：金融顾问、人力资本、科技与创新、活动与体验、IT服务和战略管理。"
+  },
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "booking": "预约通话",
+    "portal": "客户门户",
+    "login": "登录"
+  },
+  "hero": {
+    "tagline": "战略咨询与顾问",
+    "headline": "您的战略优势从这里开始",
+    "subheadline": "六大垂直领域。一个使命。以精准咨询加速您的增长，从加利福尼亚走向世界。",
+    "cta_primary": "开始对话",
+    "cta_secondary": "探索服务"
+  },
+  "services": {
+    "title": "我们的服务领域",
+    "subtitle": "六大专业实践。一个统一战略。",
+    "financial_advisory": {
+      "name": "金融顾问",
+      "tagline": "以清晰的视角应对复杂局面",
+      "description": "银行服务咨询、合规监管、投资策略和财务重组，为追求卓越财务的组织服务。"
+    },
+    "human_capital": {
+      "name": "人力资本",
+      "tagline": "人才是您的竞争优势",
+      "description": "人力资源咨询、人才战略、组织设计和劳动力规划，打造高绩效团队。"
+    },
+    "management": {
+      "name": "战略管理",
+      "tagline": "从愿景到执行",
+      "description": "管理咨询、运营卓越、增长战略和业务转型，服务于有雄心的组织。"
+    },
+    "tech_rnd": {
+      "name": "科技与研发",
+      "tagline": "有目标的创新",
+      "description": "技术教育咨询与研发、数字化转型、新兴技术战略和创新项目。"
+    },
+    "event_logistics": {
+      "name": "活动与体验",
+      "tagline": "难忘时刻，完美执行",
+      "description": "活动组织与管理、物流、场地策略和体验设计，打造有影响力的企业活动。"
+    },
+    "it_services": {
+      "name": "IT服务",
+      "tagline": "构建。交付。扩展。",
+      "description": "软件开发、Web应用、SaaS平台、云架构和技术实施服务。"
+    },
+    "learn_more": "了解更多",
+    "get_started": "立即开始"
+  },
+  "pricing": {
+    "title": "投资",
+    "subtitle": "透明定价。没有意外。",
+    "express": "快速套餐",
+    "standard": "标准",
+    "premium": "高级",
+    "enterprise": "企业",
+    "starting_at": "起价",
+    "per_engagement": "每项目",
+    "includes": "包含",
+    "book_consultation": "预约咨询",
+    "self_checkout": "在线购买",
+    "contact_us": "联系我们"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "高级战略顾问",
+    "placeholder": "询问我们的服务、定价或方法论...",
+    "empty_state": "启动Quartermasters智能。询问我们的6大服务领域、定价或方法论。",
+    "send": "发送",
+    "typing": "Q正在思考..."
+  },
+  "booking": {
+    "title": "预约咨询",
+    "subtitle": "与我们的战略团队安排通话",
+    "discovery": "探索通话",
+    "discovery_desc": "15分钟介绍性通话，了解您的需求",
+    "express_consult": "快速咨询",
+    "express_desc": "15分钟针对特定问题的集中会议",
+    "strategy_session": "战略会议",
+    "strategy_desc": "30分钟深入探讨您的挑战",
+    "executive_briefing": "高管简报",
+    "executive_desc": "60分钟全面战略评估"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "让我们就您的战略需求开始对话",
+    "name": "姓名",
+    "email": "电子邮箱",
+    "company": "公司",
+    "message": "留言",
+    "submit": "发送消息",
+    "success": "消息发送成功。我们将尽快与您联系。",
+    "error": "消息发送失败。请重试。"
+  },
+  "footer": {
+    "tagline": "从加利福尼亚到世界的战略咨询。",
+    "services": "服务",
+    "company": "公司",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie偏好",
+    "copyright": "© {year} Quartermasters. 保留所有权利。"
+  },
+  "cookie_banner": {
+    "gdpr_title": "隐私设置",
+    "ccpa_title": "不要出售我的个人信息",
+    "default_title": "Cookie通知",
+    "gdpr_body": "我们尊重您的数据隐私。您必须选择加入非必要Cookie。",
+    "ccpa_body": "根据加州法律，您有权选择不出售您的个人信息。",
+    "default_body": "我们使用Cookie来分析流量并提升您的体验。",
+    "essential": "必要",
+    "essential_desc": "网站安全和功能所需。",
+    "analytics": "分析",
+    "analytics_desc": "匿名使用数据以改善用户体验。",
+    "preferences": "偏好",
+    "preferences_desc": "网站自定义和设置。",
+    "marketing": "营销",
+    "marketing_desc": "个性化内容相关性。",
+    "accept_all": "全部接受",
+    "reject_all": "全部拒绝",
+    "save_preferences": "保存偏好",
+    "manage": "管理偏好"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出了点问题",
+    "retry": "重试",
+    "back": "返回",
+    "next": "下一步",
+    "close": "关闭",
+    "open": "打开",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "or": "或"
+  }
+}

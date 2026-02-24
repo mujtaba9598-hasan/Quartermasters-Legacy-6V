@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — Strategic Consulting & Advisory",
+    "description": "Premium consulting across six verticals: Financial Advisory, Human Capital, Technology & Innovation, Events & Experiences, IT Services, and Strategic Management."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "booking": "Book a Call",
+    "portal": "Client Portal",
+    "login": "Sign In"
+  },
+  "hero": {
+    "tagline": "Strategic Consulting & Advisory",
+    "headline": "Your Strategic Advantage Starts Here",
+    "subheadline": "Six verticals. One mission. Accelerating your growth with precision consulting from California to the world.",
+    "cta_primary": "Start a Conversation",
+    "cta_secondary": "Explore Services"
+  },
+  "services": {
+    "title": "Our Service Verticals",
+    "subtitle": "Six specialized practices. One unified strategy.",
+    "financial_advisory": {
+      "name": "Financial Advisory",
+      "tagline": "Navigate complexity with clarity",
+      "description": "Banking services consultancy, regulatory compliance, investment strategy, and financial restructuring for organizations seeking fiscal excellence."
+    },
+    "human_capital": {
+      "name": "Human Capital",
+      "tagline": "Your people, your edge",
+      "description": "HR consultancy, talent strategy, organizational design, and workforce planning to build high-performing teams."
+    },
+    "management": {
+      "name": "Strategic Management",
+      "tagline": "From vision to execution",
+      "description": "Management consultancy, operational excellence, growth strategy, and business transformation for ambitious organizations."
+    },
+    "tech_rnd": {
+      "name": "Technology & R&D",
+      "tagline": "Innovate with purpose",
+      "description": "Consulting and R&D in technology education, digital transformation, emerging tech strategy, and innovation programs."
+    },
+    "event_logistics": {
+      "name": "Events & Experiences",
+      "tagline": "Memorable moments, flawless execution",
+      "description": "Organization and event management, logistics, venue strategy, and experience design for impactful corporate events."
+    },
+    "it_services": {
+      "name": "IT Services",
+      "tagline": "Build. Ship. Scale.",
+      "description": "Software development, web applications, SaaS platforms, cloud architecture, and technical implementation services."
+    },
+    "learn_more": "Learn More",
+    "get_started": "Get Started"
+  },
+  "pricing": {
+    "title": "Investment",
+    "subtitle": "Transparent pricing. No surprises.",
+    "express": "Express Package",
+    "standard": "Standard",
+    "premium": "Premium",
+    "enterprise": "Enterprise",
+    "starting_at": "Starting at",
+    "per_engagement": "per engagement",
+    "includes": "Includes",
+    "book_consultation": "Book a Consultation",
+    "self_checkout": "Self-Service Checkout",
+    "contact_us": "Contact Us"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "Senior Strategy Consultant",
+    "placeholder": "Ask about our services, pricing, or methodology...",
+    "empty_state": "Engage Quartermasters intelligence. Ask about our 6 service verticals, pricing, or methodology.",
+    "send": "Send",
+    "typing": "Q is thinking..."
+  },
+  "booking": {
+    "title": "Book a Consultation",
+    "subtitle": "Schedule a call with our strategy team",
+    "discovery": "Discovery Call",
+    "discovery_desc": "15-minute introductory call to understand your needs",
+    "express_consult": "Express Consultation",
+    "express_desc": "15-minute focused session on a specific question",
+    "strategy_session": "Strategy Session",
+    "strategy_desc": "30-minute deep dive into your challenges",
+    "executive_briefing": "Executive Briefing",
+    "executive_desc": "60-minute comprehensive strategic review"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's start a conversation about your strategic needs",
+    "name": "Full Name",
+    "email": "Email Address",
+    "company": "Company",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Message sent successfully. We'll be in touch shortly.",
+    "error": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "tagline": "Strategic consulting from California to the world.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Preferences",
+    "copyright": "© {year} Quartermasters. All rights reserved."
+  },
+  "cookie_banner": {
+    "gdpr_title": "Privacy Settings",
+    "ccpa_title": "Do Not Sell My Personal Information",
+    "default_title": "Cookie Notice",
+    "gdpr_body": "We respect your data privacy. You must opt-in to non-essential cookies.",
+    "ccpa_body": "Under California law, you have the right to opt-out of the sale of your personal information.",
+    "default_body": "We use cookies to analyze traffic and enhance your experience.",
+    "essential": "Essential",
+    "essential_desc": "Required for site security & function.",
+    "analytics": "Analytics",
+    "analytics_desc": "Anonymous usage data to improve UX.",
+    "preferences": "Preferences",
+    "preferences_desc": "Site customization and settings.",
+    "marketing": "Marketing",
+    "marketing_desc": "Personalized content relevance.",
+    "accept_all": "Accept All",
+    "reject_all": "Reject All",
+    "save_preferences": "Save Preferences",
+    "manage": "Manage Preferences"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "or": "or"
+  }
+}

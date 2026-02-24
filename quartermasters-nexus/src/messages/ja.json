@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — 戦略コンサルティング＆アドバイザリー",
+    "description": "6つの専門分野にわたるプレミアムコンサルティング：財務アドバイザリー、人的資本、テクノロジー＆イノベーション、イベント＆エクスペリエンス、ITサービス、戦略マネジメント。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "booking": "通話を予約",
+    "portal": "クライアントポータル",
+    "login": "ログイン"
+  },
+  "hero": {
+    "tagline": "戦略コンサルティング＆アドバイザリー",
+    "headline": "あなたの戦略的優位性はここから始まる",
+    "subheadline": "6つの専門分野。1つのミッション。カリフォルニアから世界へ、精密なコンサルティングで成長を加速。",
+    "cta_primary": "対話を始める",
+    "cta_secondary": "サービスを探る"
+  },
+  "services": {
+    "title": "サービス分野",
+    "subtitle": "6つの専門プラクティス。1つの統合戦略。",
+    "financial_advisory": {
+      "name": "財務アドバイザリー",
+      "tagline": "明確さをもって複雑さをナビゲート",
+      "description": "銀行サービスコンサルティング、規制コンプライアンス、投資戦略、財務リストラクチャリング。"
+    },
+    "human_capital": {
+      "name": "人的資本",
+      "tagline": "人材こそ競争力",
+      "description": "HRコンサルティング、人材戦略、組織設計、ワークフォースプランニングで高パフォーマンスチームを構築。"
+    },
+    "management": {
+      "name": "戦略マネジメント",
+      "tagline": "ビジョンから実行へ",
+      "description": "マネジメントコンサルティング、オペレーショナルエクセレンス、成長戦略、ビジネストランスフォーメーション。"
+    },
+    "tech_rnd": {
+      "name": "テクノロジー＆R&D",
+      "tagline": "目的を持ったイノベーション",
+      "description": "テクノロジー教育のコンサルティング＆R&D、デジタルトランスフォーメーション、新興技術戦略、イノベーションプログラム。"
+    },
+    "event_logistics": {
+      "name": "イベント＆エクスペリエンス",
+      "tagline": "記憶に残る瞬間、完璧な実行",
+      "description": "イベント企画・運営、ロジスティクス、会場戦略、インパクトのある企業イベントのエクスペリエンスデザイン。"
+    },
+    "it_services": {
+      "name": "ITサービス",
+      "tagline": "構築。出荷。拡張。",
+      "description": "ソフトウェア開発、Webアプリケーション、SaaSプラットフォーム、クラウドアーキテクチャ、技術実装サービス。"
+    },
+    "learn_more": "詳しく見る",
+    "get_started": "始める"
+  },
+  "pricing": {
+    "title": "投資",
+    "subtitle": "透明な料金体系。サプライズなし。",
+    "express": "エクスプレスパッケージ",
+    "standard": "スタンダード",
+    "premium": "プレミアム",
+    "enterprise": "エンタープライズ",
+    "starting_at": "〜から",
+    "per_engagement": "案件あたり",
+    "includes": "含まれるもの",
+    "book_consultation": "相談を予約",
+    "self_checkout": "オンライン購入",
+    "contact_us": "お問い合わせ"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "シニア戦略コンサルタント",
+    "placeholder": "サービス、料金、方法論について質問...",
+    "empty_state": "Quartermastersインテリジェンスを起動。6つのサービス分野、料金、方法論についてお問い合わせください。",
+    "send": "送信",
+    "typing": "Qが考えています..."
+  },
+  "booking": {
+    "title": "相談を予約",
+    "subtitle": "戦略チームとの通話をスケジュール",
+    "discovery": "ディスカバリーコール",
+    "discovery_desc": "15分の導入通話でニーズを理解",
+    "express_consult": "エクスプレス相談",
+    "express_desc": "特定の質問に焦点を当てた15分セッション",
+    "strategy_session": "戦略セッション",
+    "strategy_desc": "課題を30分で深掘り",
+    "executive_briefing": "エグゼクティブブリーフィング",
+    "executive_desc": "60分の包括的な戦略レビュー"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "戦略的なニーズについて対話を始めましょう",
+    "name": "氏名",
+    "email": "メールアドレス",
+    "company": "会社名",
+    "message": "メッセージ",
+    "submit": "メッセージを送信",
+    "success": "メッセージが正常に送信されました。まもなくご連絡いたします。",
+    "error": "メッセージの送信に失敗しました。もう一度お試しください。"
+  },
+  "footer": {
+    "tagline": "カリフォルニアから世界への戦略コンサルティング。",
+    "services": "サービス",
+    "company": "会社",
+    "legal": "法的事項",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "cookies": "Cookie設定",
+    "copyright": "© {year} Quartermasters. All rights reserved."
+  },
+  "cookie_banner": {
+    "gdpr_title": "プライバシー設定",
+    "ccpa_title": "個人情報を販売しないでください",
+    "default_title": "Cookieに関する通知",
+    "gdpr_body": "データプライバシーを尊重しています。非必須Cookieへのオプトインが必要です。",
+    "ccpa_body": "カリフォルニア州法に基づき、個人情報の販売をオプトアウトする権利があります。",
+    "default_body": "トラフィック分析と体験向上のためにCookieを使用しています。",
+    "essential": "必須",
+    "essential_desc": "サイトのセキュリティと機能に必要。",
+    "analytics": "分析",
+    "analytics_desc": "UX改善のための匿名利用データ。",
+    "preferences": "設定",
+    "preferences_desc": "サイトのカスタマイズと設定。",
+    "marketing": "マーケティング",
+    "marketing_desc": "パーソナライズされたコンテンツの関連性。",
+    "accept_all": "すべて受け入れる",
+    "reject_all": "すべて拒否",
+    "save_preferences": "設定を保存",
+    "manage": "設定を管理"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "問題が発生しました",
+    "retry": "再試行",
+    "back": "戻る",
+    "next": "次へ",
+    "close": "閉じる",
+    "open": "開く",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "or": "または"
+  }
+}

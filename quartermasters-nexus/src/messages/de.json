@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — Strategische Beratung & Consulting",
+    "description": "Premium-Beratung in sechs Bereichen: Finanzberatung, Personalwesen, Technologie & Innovation, Events & Erlebnisse, IT-Services und Strategisches Management."
+  },
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "booking": "Termin Buchen",
+    "portal": "Kundenportal",
+    "login": "Anmelden"
+  },
+  "hero": {
+    "tagline": "Strategische Beratung & Consulting",
+    "headline": "Ihr Strategischer Vorteil Beginnt Hier",
+    "subheadline": "Sechs Bereiche. Eine Mission. Ihr Wachstum beschleunigen mit Präzisionsberatung von Kalifornien in die Welt.",
+    "cta_primary": "Gespräch Starten",
+    "cta_secondary": "Leistungen Entdecken"
+  },
+  "services": {
+    "title": "Unsere Leistungsbereiche",
+    "subtitle": "Sechs spezialisierte Bereiche. Eine einheitliche Strategie.",
+    "financial_advisory": {
+      "name": "Finanzberatung",
+      "tagline": "Komplexität mit Klarheit navigieren",
+      "description": "Bankdienstleistungsberatung, regulatorische Compliance, Investitionsstrategie und finanzielle Restrukturierung für Organisationen, die fiskalische Exzellenz anstreben."
+    },
+    "human_capital": {
+      "name": "Personalwesen",
+      "tagline": "Ihre Mitarbeiter, Ihr Vorteil",
+      "description": "HR-Beratung, Talentstrategie, Organisationsdesign und Personalplanung für den Aufbau leistungsstarker Teams."
+    },
+    "management": {
+      "name": "Strategisches Management",
+      "tagline": "Von der Vision zur Umsetzung",
+      "description": "Managementberatung, operative Exzellenz, Wachstumsstrategie und Unternehmenstransformation für ambitionierte Organisationen."
+    },
+    "tech_rnd": {
+      "name": "Technologie & F&E",
+      "tagline": "Zielgerichtet innovieren",
+      "description": "Beratung und F&E in technologischer Bildung, digitaler Transformation, Strategie für aufkommende Technologien und Innovationsprogramme."
+    },
+    "event_logistics": {
+      "name": "Events & Erlebnisse",
+      "tagline": "Unvergessliche Momente, makellose Umsetzung",
+      "description": "Organisation und Eventmanagement, Logistik, Veranstaltungsstrategie und Erlebnisdesign für wirkungsvolle Firmenveranstaltungen."
+    },
+    "it_services": {
+      "name": "IT-Services",
+      "tagline": "Entwickeln. Ausliefern. Skalieren.",
+      "description": "Softwareentwicklung, Webanwendungen, SaaS-Plattformen, Cloud-Architektur und technische Implementierungsservices."
+    },
+    "learn_more": "Mehr Erfahren",
+    "get_started": "Jetzt Starten"
+  },
+  "pricing": {
+    "title": "Investition",
+    "subtitle": "Transparente Preise. Keine Überraschungen.",
+    "express": "Express-Paket",
+    "standard": "Standard",
+    "premium": "Premium",
+    "enterprise": "Enterprise",
+    "starting_at": "Ab",
+    "per_engagement": "pro Auftrag",
+    "includes": "Enthält",
+    "book_consultation": "Beratung Buchen",
+    "self_checkout": "Online-Kauf",
+    "contact_us": "Kontaktieren Sie Uns"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "Senior Strategieberater",
+    "placeholder": "Fragen Sie nach unseren Leistungen, Preisen oder Methodik...",
+    "empty_state": "Aktivieren Sie die Quartermasters-Intelligenz. Fragen Sie nach unseren 6 Leistungsbereichen, Preisen oder Methodik.",
+    "send": "Senden",
+    "typing": "Q denkt nach..."
+  },
+  "booking": {
+    "title": "Beratung Buchen",
+    "subtitle": "Vereinbaren Sie einen Termin mit unserem Strategieteam",
+    "discovery": "Kennenlerngespräch",
+    "discovery_desc": "15-minütiges Einführungsgespräch zum Verständnis Ihrer Anforderungen",
+    "express_consult": "Express-Beratung",
+    "express_desc": "15-minütige fokussierte Sitzung zu einer bestimmten Frage",
+    "strategy_session": "Strategiesitzung",
+    "strategy_desc": "30-minütiger Deep-Dive in Ihre Herausforderungen",
+    "executive_briefing": "Executive-Briefing",
+    "executive_desc": "60-minütige umfassende strategische Überprüfung"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns über Ihre strategischen Anforderungen sprechen",
+    "name": "Vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "company": "Unternehmen",
+    "message": "Nachricht",
+    "submit": "Nachricht Senden",
+    "success": "Nachricht erfolgreich gesendet. Wir melden uns in Kürze.",
+    "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "tagline": "Strategische Beratung von Kalifornien in die Welt.",
+    "services": "Leistungen",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Einstellungen",
+    "copyright": "© {year} Quartermasters. Alle Rechte vorbehalten."
+  },
+  "cookie_banner": {
+    "gdpr_title": "Datenschutz-Einstellungen",
+    "ccpa_title": "Meine persönlichen Daten nicht verkaufen",
+    "default_title": "Cookie-Hinweis",
+    "gdpr_body": "Wir respektieren Ihre Datenprivatsphäre. Sie müssen nicht-essentiellen Cookies zustimmen.",
+    "ccpa_body": "Nach kalifornischem Recht haben Sie das Recht, dem Verkauf Ihrer persönlichen Daten zu widersprechen.",
+    "default_body": "Wir verwenden Cookies zur Analyse des Datenverkehrs und zur Verbesserung Ihrer Erfahrung.",
+    "essential": "Essenziell",
+    "essential_desc": "Erforderlich für Sicherheit und Funktion der Website.",
+    "analytics": "Analytik",
+    "analytics_desc": "Anonyme Nutzungsdaten zur UX-Verbesserung.",
+    "preferences": "Präferenzen",
+    "preferences_desc": "Website-Anpassung und Einstellungen.",
+    "marketing": "Marketing",
+    "marketing_desc": "Personalisierte Inhaltsrelevanz.",
+    "accept_all": "Alle Akzeptieren",
+    "reject_all": "Alle Ablehnen",
+    "save_preferences": "Einstellungen Speichern",
+    "manage": "Einstellungen Verwalten"
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Etwas ist schiefgelaufen",
+    "retry": "Erneut Versuchen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "close": "Schließen",
+    "open": "Öffnen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "or": "oder"
+  }
+}

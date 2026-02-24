@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Quartermasters — Conseil Stratégique et Accompagnement",
+    "description": "Conseil premium sur six verticales : Conseil Financier, Capital Humain, Technologie et Innovation, Événements et Expériences, Services IT et Management Stratégique."
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "booking": "Prendre Rendez-vous",
+    "portal": "Espace Client",
+    "login": "Connexion"
+  },
+  "hero": {
+    "tagline": "Conseil Stratégique et Accompagnement",
+    "headline": "Votre Avantage Stratégique Commence Ici",
+    "subheadline": "Six verticales. Une mission. Accélérer votre croissance avec un conseil de précision, de la Californie au monde entier.",
+    "cta_primary": "Démarrer une Conversation",
+    "cta_secondary": "Explorer les Services"
+  },
+  "services": {
+    "title": "Nos Verticales de Service",
+    "subtitle": "Six pratiques spécialisées. Une stratégie unifiée.",
+    "financial_advisory": {
+      "name": "Conseil Financier",
+      "tagline": "Naviguer la complexité avec clarté",
+      "description": "Conseil en services bancaires, conformité réglementaire, stratégie d'investissement et restructuration financière pour les organisations visant l'excellence fiscale."
+    },
+    "human_capital": {
+      "name": "Capital Humain",
+      "tagline": "Vos talents, votre atout",
+      "description": "Conseil RH, stratégie de talents, design organisationnel et planification des effectifs pour construire des équipes performantes."
+    },
+    "management": {
+      "name": "Management Stratégique",
+      "tagline": "De la vision à l'exécution",
+      "description": "Conseil en management, excellence opérationnelle, stratégie de croissance et transformation d'entreprise pour les organisations ambitieuses."
+    },
+    "tech_rnd": {
+      "name": "Technologie et R&D",
+      "tagline": "Innover avec sens",
+      "description": "Conseil et R&D en éducation technologique, transformation numérique, stratégie des technologies émergentes et programmes d'innovation."
+    },
+    "event_logistics": {
+      "name": "Événements et Expériences",
+      "tagline": "Moments mémorables, exécution parfaite",
+      "description": "Organisation et gestion d'événements, logistique, stratégie de lieux et conception d'expériences pour des événements d'entreprise marquants."
+    },
+    "it_services": {
+      "name": "Services IT",
+      "tagline": "Construire. Livrer. Évoluer.",
+      "description": "Développement logiciel, applications web, plateformes SaaS, architecture cloud et services d'implémentation technique."
+    },
+    "learn_more": "En Savoir Plus",
+    "get_started": "Commencer"
+  },
+  "pricing": {
+    "title": "Investissement",
+    "subtitle": "Tarification transparente. Sans surprises.",
+    "express": "Pack Express",
+    "standard": "Standard",
+    "premium": "Premium",
+    "enterprise": "Entreprise",
+    "starting_at": "À partir de",
+    "per_engagement": "par mission",
+    "includes": "Inclut",
+    "book_consultation": "Prendre Rendez-vous",
+    "self_checkout": "Achat en Ligne",
+    "contact_us": "Nous Contacter"
+  },
+  "chat": {
+    "title": "Q",
+    "subtitle": "Consultant Senior en Stratégie",
+    "placeholder": "Posez vos questions sur nos services, tarifs ou méthodologie...",
+    "empty_state": "Activez l'intelligence Quartermasters. Interrogez nos 6 verticales de service, nos tarifs ou notre méthodologie.",
+    "send": "Envoyer",
+    "typing": "Q réfléchit..."
+  },
+  "booking": {
+    "title": "Prendre Rendez-vous",
+    "subtitle": "Planifiez un appel avec notre équipe stratégie",
+    "discovery": "Appel Découverte",
+    "discovery_desc": "Appel introductif de 15 minutes pour comprendre vos besoins",
+    "express_consult": "Consultation Express",
+    "express_desc": "Session ciblée de 15 minutes sur une question précise",
+    "strategy_session": "Session Stratégie",
+    "strategy_desc": "Analyse approfondie de 30 minutes de vos enjeux",
+    "executive_briefing": "Briefing Exécutif",
+    "executive_desc": "Revue stratégique complète de 60 minutes"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Commençons une conversation sur vos besoins stratégiques",
+    "name": "Nom Complet",
+    "email": "Adresse Email",
+    "company": "Entreprise",
+    "message": "Message",
+    "submit": "Envoyer le Message",
+    "success": "Message envoyé avec succès. Nous vous recontacterons rapidement.",
+    "error": "Échec de l'envoi du message. Veuillez réessayer."
+  },
+  "footer": {
+    "tagline": "Conseil stratégique de la Californie au monde entier.",
+    "services": "Services",
+    "company": "Entreprise",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "cookies": "Préférences Cookies",
+    "copyright": "© {year} Quartermasters. Tous droits réservés."
+  },
+  "cookie_banner": {
+    "gdpr_title": "Paramètres de Confidentialité",
+    "ccpa_title": "Ne Pas Vendre Mes Données Personnelles",
+    "default_title": "Avis sur les Cookies",
+    "gdpr_body": "Nous respectons votre vie privée. Vous devez accepter les cookies non essentiels.",
+    "ccpa_body": "Conformément à la loi californienne, vous avez le droit de refuser la vente de vos données personnelles.",
+    "default_body": "Nous utilisons des cookies pour analyser le trafic et améliorer votre expérience.",
+    "essential": "Essentiel",
+    "essential_desc": "Requis pour la sécurité et le fonctionnement du site.",
+    "analytics": "Analytique",
+    "analytics_desc": "Données d'utilisation anonymes pour améliorer l'UX.",
+    "preferences": "Préférences",
+    "preferences_desc": "Personnalisation et paramètres du site.",
+    "marketing": "Marketing",
+    "marketing_desc": "Pertinence du contenu personnalisé.",
+    "accept_all": "Tout Accepter",
+    "reject_all": "Tout Refuser",
+    "save_preferences": "Enregistrer les Préférences",
+    "manage": "Gérer les Préférences"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "back": "Retour",
+    "next": "Suivant",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "or": "ou"
+  }
+}
