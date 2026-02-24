@@ -8,6 +8,8 @@ import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { TypingIndicator } from './TypingIndicator';
 import { VelvetRope } from './VelvetRope';
+import { WelcomeScreen } from './WelcomeScreen';
+import { FABTooltip } from './FABTooltip';
 import { QAvatar2D } from '../avatar/QAvatar2D';
 import { QAvatar3D } from '../avatar/QAvatar3D';
 import { parseMirrorBlocks, MirrorBlock } from './mirror/MirrorRegistry';
@@ -24,7 +26,7 @@ export function ChatPanel() {
     const [splitScreen, setSplitScreen] = useState(false);
     const [latestBlocks, setLatestBlocks] = useState<MirrorBlock[]>([]);
     const [isMobile, setIsMobile] = useState(false);
-    const { messages, input, setInput, handleSubmit, isLoading, chatState } = useQChat();
+    const { messages, input, setInput, handleSubmit, sendMessage, isLoading, chatState } = useQChat();
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -51,6 +53,27 @@ export function ChatPanel() {
         window.addEventListener('resize', check);
         return () => window.removeEventListener('resize', check);
     }, []);
+
+    // FAB tooltip: appears after 5s, auto-dismisses after 6s, once per page load
+    const [showTooltip, setShowTooltip] = useState(false);
+    const tooltipShownRef = useRef(false);
+
+    useEffect(() => {
+        if (tooltipShownRef.current) return;
+        const showTimer = setTimeout(() => {
+            if (panelState === 'collapsed') {
+                tooltipShownRef.current = true;
+                setShowTooltip(true);
+            }
+        }, 5000);
+        return () => clearTimeout(showTimer);
+    }, [panelState]);
+
+    useEffect(() => {
+        if (!showTooltip) return;
+        const dismissTimer = setTimeout(() => setShowTooltip(false), 6000);
+        return () => clearTimeout(dismissTimer);
+    }, [showTooltip]);
 
     // Auto-enter split screen for new Mirror blocks
     useEffect(() => {
@@ -134,29 +157,35 @@ export function ChatPanel() {
 
     return (
         <>
-            {/* Collapsed State: Floating Button */}
+            {/* Collapsed State: Floating Button + Tooltip */}
             <AnimatePresence>
                 {panelState === 'collapsed' && (
-                    <motion.button
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{
-                            opacity: 1,
-                            scale: [1, 1.05, 1],
-                            boxShadow: ['0 0 0px rgba(193,90,44,0)', '0 0 20px rgba(193,90,44,0.3)', '0 0 0px rgba(193,90,44,0)']
-                        }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        transition={{
-                            scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                            boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                            opacity: { duration: 0.2 }
-                        }}
-                        onClick={() => setPanelState(isMobile ? 'fullscreen' : 'expanded')}
-                        className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-105 active:scale-95 transition-transform"
-                        style={{ background: 'transparent' }}
-                        aria-label="Open Quartermasters Chat"
-                    >
-                        <QAvatar2D chatState={chatState} className="w-full h-full" />
-                    </motion.button>
+                    <>
+                        <FABTooltip visible={showTooltip} />
+                        <motion.button
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{
+                                opacity: 1,
+                                scale: [1, 1.05, 1],
+                                boxShadow: ['0 0 0px rgba(193,90,44,0)', '0 0 20px rgba(193,90,44,0.3)', '0 0 0px rgba(193,90,44,0)']
+                            }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            transition={{
+                                scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                                boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                                opacity: { duration: 0.2 }
+                            }}
+                            onClick={() => {
+                                setShowTooltip(false);
+                                setPanelState(isMobile ? 'fullscreen' : 'expanded');
+                            }}
+                            className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-105 active:scale-95 transition-transform"
+                            style={{ background: 'transparent' }}
+                            aria-label="Open Quartermasters Chat"
+                        >
+                            <QAvatar2D chatState={chatState} className="w-full h-full" />
+                        </motion.button>
+                    </>
                 )}
             </AnimatePresence>
 
@@ -223,12 +252,7 @@ export function ChatPanel() {
                                 className="flex-1 overflow-y-auto p-5 scroll-smooth"
                             >
                                 {messages.length === 0 && (
-                                    <div className="h-full flex flex-col items-center justify-center text-center px-4 opacity-70">
-                                        <QAvatar3D chatState="idle" className="w-24 h-24 mb-4" />
-                                        <p className="text-slate-300 text-sm max-w-[250px]">
-                                            Engage Quartermasters intelligence. Ask about our 6 service verticals, pricing, or methodology.
-                                        </p>
-                                    </div>
+                                    <WelcomeScreen onSend={sendMessage} />
                                 )}
 
                                 {messages.map((m: any, index: number) => {

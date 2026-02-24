@@ -332,6 +332,16 @@ body::after {
   color: var(--sector-mgmt);
 }
 
+.pill-tag--it {
+  border-color: var(--sector-it);
+  color: var(--sector-it);
+}
+
+.pill-tag--copper {
+  border-color: #C15A2C;
+  color: #C15A2C;
+}
+
 /* ============================================================
    Button Effects
    ============================================================ */

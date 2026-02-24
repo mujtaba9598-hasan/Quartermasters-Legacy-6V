@@ -27,6 +27,7 @@
 
 ## Key Features
 - **Q** — AI consultant (Claude-powered, streaming via Vercel AI SDK)
+- **Q Proactive Welcome** — Typewriter greeting, 6 suggestion chips, FAB tooltip nudge
 - **Iron Grip Pricing** — Deterministic state machine, server-enforced
 - **Velvet Rope UI** — Standard vs Premium side-by-side pricing
 - **ScrollStack** — Lenis-powered scroll-pinning card stack (react-bits)

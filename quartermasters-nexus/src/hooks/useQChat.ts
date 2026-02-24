@@ -8,6 +8,7 @@ export type UseQChatReturn = {
     input: string;
     setInput: React.Dispatch<React.SetStateAction<string>>;
     handleSubmit: (e: any, options?: any) => void;
+    sendMessage: (text: string) => void;
     isLoading: boolean;
     error: Error | undefined;
     conversationId: string | null;
@@ -110,6 +111,18 @@ export function useQChat(): UseQChatReturn {
         setInput('');
     }, [originalHandleSubmit]);
 
+    // Safe message sender: syncs input and submits on next frame to avoid race condition
+    const sendMessage = useCallback((text: string) => {
+        setLastInteractionTime(Date.now());
+        setHesitating(false);
+        setInput(text);
+        setChatInput(text);
+        requestAnimationFrame(() => {
+            originalHandleSubmit(new Event('submit') as any);
+            setInput('');
+        });
+    }, [setChatInput, originalHandleSubmit]);
+
     // 7. Hesitation Timer
     useEffect(() => {
         const interval = setInterval(() => {
@@ -141,6 +154,7 @@ export function useQChat(): UseQChatReturn {
         input,
         setInput: handleSetInput,
         handleSubmit: handleFormSubmit,
+        sendMessage,
         isLoading,
         error,
         conversationId,
