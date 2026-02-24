@@ -1,17 +1,14 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useConsent } from '@/hooks/useConsent';
 import { initPostHog, shutdownPostHog, posthog } from '@/lib/analytics/posthog';
 
 /**
- * PostHogProvider — consent-gated analytics wrapper.
- * Only initializes PostHog when `consent.analytics === true`.
- * Tracks page views on route changes.
- * Shuts down if consent is revoked.
+ * Inner tracker that uses useSearchParams (requires Suspense boundary).
  */
-export function PostHogProvider({ children }: { children: React.ReactNode }) {
+function PostHogTracker({ children }: { children: React.ReactNode }) {
     const { consent, isLoaded } = useConsent();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -50,4 +47,16 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     }, [pathname, searchParams, consent.analytics]);
 
     return <>{children}</>;
+}
+
+/**
+ * PostHogProvider — consent-gated analytics wrapper.
+ * Wraps the tracker in Suspense to satisfy Next.js useSearchParams requirement.
+ */
+export function PostHogProvider({ children }: { children: React.ReactNode }) {
+    return (
+        <Suspense fallback={null}>
+            <PostHogTracker>{children}</PostHogTracker>
+        </Suspense>
+    );
 }
