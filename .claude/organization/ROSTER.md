@@ -24,7 +24,7 @@
 | **Frontend Lead** | Next.js, React, Tailwind, Framer Motion, SSR, UI components | CTO | ACTIVE | `.claude/agents/frontend-lead.md` |
 | **Backend Lead** | Supabase, API routes, RAG pipeline, pricing engine, Claude API | CTO | ACTIVE | `.claude/agents/backend-lead.md` |
 | **DevOps** | Vercel deployment, CI/CD, monitoring, infra | CEO | ACTIVE | `.claude/agents/devops.md` |
-| **Compliance Officer** | Privacy policy, TOS, cookie consent, UAE PDPL, FTC AI disclosure | CEO | ACTIVE | `.claude/agents/compliance-officer.md` |
+| **Compliance Officer** | Privacy policy, TOS, cookie consent, data protection, FTC AI disclosure | CEO | ACTIVE | `.claude/agents/compliance-officer.md` |
 
 ---
 

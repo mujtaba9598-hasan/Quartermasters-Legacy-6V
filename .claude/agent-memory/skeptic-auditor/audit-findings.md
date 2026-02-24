@@ -10,10 +10,10 @@
 3. Score 20: FTC Operation AI Comply -- psychological manipulation via AI = enforcement target
 4. Score 20: Web scraping legality (CFAA circuit split, ToS violations, PII collection)
 5. Score 20: Email automation (CAN-SPAM, domain blacklisting, deliverability collapse)
-6. Score 20: No privacy policy / legal pages (CCPA, UAE PDPL, FTC Section 5)
+6. Score 20: No privacy policy / legal pages (CCPA, PDPL, FTC Section 5)
 7. Score 20: Zero test coverage (no test framework even installed)
 8. Score 20: SSR/SEO death ("use client" on page.tsx)
-9. Score 16: Cross-border contract enforceability (UAE FZ vs US jurisdiction)
+9. Score 16: Cross-border contract enforceability (cross-border jurisdiction)
 10. Score 16: WebGL crash on low-end devices (no error boundary, no fallback)
 11. Score 16: "Iron Grip" branding -- adversarial perception risk with US CTOs
 12. Score 16: No rollback plan / kill switch for Q malfunction

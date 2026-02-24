@@ -1,7 +1,7 @@
 # S1-06: Cookie Consent Banner Specification
 
 > **Task**: S1-06 | **Owner**: Compliance Officer | **Status**: COMPLETE
-> **Entity**: Quartermasters F.Z.C | **License**: AFZA #37357
+> **Entity**: Quartermasters | **Base**: California, United States
 > **Created**: 2026-02-12 | **Spec Version**: 1.0
 > **Implementation Target**: Sprint 2, Task S2-08
 
@@ -668,5 +668,5 @@ export const config = {
 
 ---
 
-*Specification prepared by the Compliance Officer, Quartermasters F.Z.C.*
+*Specification prepared by the Compliance Officer, Quartermasters.*
 *Document version: 1.0 | 2026-02-12*

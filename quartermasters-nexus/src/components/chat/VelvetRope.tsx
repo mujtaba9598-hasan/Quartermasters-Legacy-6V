@@ -95,11 +95,11 @@ export function VelvetRope({
                     <div className="mb-6">
                         {standardPrices.original && (
                             <span className="text-sm text-slate-500 line-through block font-mono">
-                                AED {standardPrices.original.toLocaleString()}
+                                ${standardPrices.original.toLocaleString()}
                             </span>
                         )}
                         <span className="text-2xl font-bold text-white font-mono tracking-tighter">
-                            AED {standardPrices.current.toLocaleString()}
+                            ${standardPrices.current.toLocaleString()}
                         </span>
                         <span className="text-xs text-slate-400 ml-1">/mo</span>
                     </div>
@@ -162,11 +162,11 @@ export function VelvetRope({
                     <div className="mb-6 relative z-10">
                         {premiumPrices.original && (
                             <span className="text-sm text-[#C8872E]/50 line-through block font-mono">
-                                AED {premiumPrices.original.toLocaleString()}
+                                ${premiumPrices.original.toLocaleString()}
                             </span>
                         )}
                         <span className="text-2xl font-bold text-white font-mono tracking-tighter">
-                            AED {premiumPrices.current.toLocaleString()}
+                            ${premiumPrices.current.toLocaleString()}
                         </span>
                         <span className="text-xs text-[#C8872E]/70 ml-1">/mo</span>
                     </div>

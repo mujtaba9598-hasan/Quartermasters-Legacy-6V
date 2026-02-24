@@ -7,7 +7,7 @@
 - Cookie Consent: MISSING (blocking)
 - FTC AI Disclosure: MISSING (blocking before Q goes live)
 - Testimonials on homepage are unverifiable — FTC risk
-- Service pages have UAE regulatory disclaimers (good)
-- UAE PDPL effective Jan 2026, mandatory Jan 2027
+- Service pages have regulatory disclaimers (good)
+- PDPL effective Jan 2026, mandatory Jan 2027
 - California SB 243 (AI disclosure) effective Jan 2026
 - Colorado CAIA effective Jun 2026

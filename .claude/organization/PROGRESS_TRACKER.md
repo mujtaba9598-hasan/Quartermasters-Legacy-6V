@@ -13,7 +13,7 @@
 | A-03 | `src/app/(pages)/*/page.tsx` (5 services) | ACCEPTED | ~50 each | Placeholder content for all 5 service pages |
 | A-04 | `src/app/sitemap.ts` | ACCEPTED | 75 | All 11 public routes, /portal excluded |
 | A-05 | `src/app/robots.ts` | ACCEPTED | 15 | Allows all crawlers, disallows /api/ and /portal/ |
-| FIX  | CookieConsentBanner PDPL text | ACCEPTED | - | Was showing "CCPA Compliant" for UAE PDPL mode |
+| FIX  | CookieConsentBanner PDPL text | ACCEPTED | - | Was showing "CCPA Compliant" for PDPL mode |
 
 ---
 
@@ -124,17 +124,17 @@
 ### California Scrub (42 files)
 | Category | Files | Status | Notes |
 |----------|-------|--------|-------|
-| Homepage + SEO | `page.tsx`, `layout.tsx`, `JsonLd.tsx` | DONE | All "Ajman" → "California" |
+| Homepage + SEO | `page.tsx`, `layout.tsx`, `JsonLd.tsx` | DONE | All location refs → "California" |
 | Globe component | `Globe.tsx`, `GlobeSection.tsx` | DONE | HQ pin moved to LA (34.05, -118.24) |
-| Hero | `HeroSection.tsx` | DONE | "Ajman-headquartered" → "California-based" |
-| Service pages | `financial-advisory`, `human-capital`, `it-services` | DONE | UAE refs → US market |
-| Legal pages | `terms/page.tsx`, `privacy/page.tsx` | DONE | Full legal rewrite UAE→California law |
-| Compliance | `CookieConsentBanner.tsx`, `consent-constants.ts` | DONE | UAE PDPL → Data Protection Compliant |
-| Pricing | `packages.ts` | DONE | UAE Labor Law → US Labor Law |
+| Hero | `HeroSection.tsx` | DONE | Updated to "California-based" |
+| Service pages | `financial-advisory`, `human-capital`, `it-services` | DONE | Updated to US market |
+| Legal pages | `terms/page.tsx`, `privacy/page.tsx` | DONE | Full legal rewrite to California law |
+| Compliance | `CookieConsentBanner.tsx`, `consent-constants.ts` | DONE | PDPL → Data Protection Compliant |
+| Pricing | `packages.ts` | DONE | Updated to US Labor Law |
 | AI prompt | `claude.ts` | DONE | Q scope updated to 6 verticals |
 | Contact | `contact.php` | DONE | Footer scrubbed |
 | Footer | `Footer.tsx` | DONE | California, United States |
-| Knowledge base | 13 .md files | DONE | All F.Z.C → Quartermasters, UAE → US market |
+| Knowledge base | 13 .md files | DONE | All refs updated to Quartermasters, US market |
 
 ## Visual Overhaul (2026-02-22) — Gemini Delivered, CEO Verified
 

@@ -1,7 +1,7 @@
 # Skeptic Auditor - Persistent Memory
 
-## Project: Quartermasters F.Z.C (AFZA License 37357)
-- UAE Free Zone consultancy targeting US enterprise/tech market
+## Project: Quartermasters
+- California-based consultancy targeting US enterprise/tech market
 - Next.js 16.1.6 + React 19 + Three.js 0.182 + Framer Motion 12 + TailwindCSS v4
 - Planned: Supabase, Claude API RAG, Stripe + PayTabs, Redis, cold email backend
 - Entire homepage is `"use client"` -- zero SSR, no ISR, no SSG
@@ -20,7 +20,7 @@
 - Top risks: No legal compliance (25), AI pricing hallucination (20), scraping legality (20), email blacklisting (20), FTC AI disclosure (20), zero tests (20)
 
 ## Regulatory Knowledge
-- UAE PDPL (Federal Decree-Law 45/2021): In effect since Jan 2022, executive regs STILL pending Feb 2026. Criminal: 20k+ AED + up to 1yr prison
+- PDPL (Federal Decree-Law 45/2021): In effect since Jan 2022, executive regs STILL pending Feb 2026
 - FTC AI Disclosure: Maine (Sep 2025), California SB 243 (Jan 2026), Colorado CAIA (Jun 2026). FTC chatbot inquiry Sep 2025
 - CAN-SPAM: Applies to B2B. Physical address required, unsubscribe mandatory, $50k+ per violation
 - CFAA: hiQ v. LinkedIn (2022) narrowed scope but no blanket scraping right

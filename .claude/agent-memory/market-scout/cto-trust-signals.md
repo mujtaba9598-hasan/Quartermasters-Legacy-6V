@@ -24,7 +24,7 @@
 
 ## International/Remote-Specific Trust Barriers
 - No US legal entity = friction in enterprise procurement
-- Time zone misalignment concerns (UAE is +9-12h from US coasts)
+- Time zone misalignment concerns (international time zone alignment)
 - IP protection and data sovereignty concerns
 - Lack of US-based references
 - 35% of US businesses using fractional/remote talent by 2025 (up from 25% in 2023) -- trend is favorable but trust must be earned

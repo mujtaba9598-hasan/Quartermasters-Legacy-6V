@@ -67,17 +67,18 @@ export function GlobeSection() {
               </motion.p>
 
               {/* 4-Region Legend */}
-              <motion.div variants={staggerItem} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
-                {/* Americas */}
+              <motion.div variants={staggerItem} className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
+                {/* Americas (HQ) */}
                 <div className="glass rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#60A5FA]"></span>
                     <span className="text-sm font-semibold text-white">Americas</span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed">
-                    &bull; Los Angeles <span className="text-[#C15A2C]">★</span><br />
-                    &bull; New York<br />
-                    <span className="text-white/40 italic">+ 7 more</span>
+                    &bull; Los Angeles <span className="text-[#C15A2C]">★ HQ</span><br />
+                    &bull; New York &bull; Chicago<br />
+                    &bull; San Francisco<br />
+                    <span className="text-white/40 italic">+ 6 more</span>
                   </p>
                 </div>
 
@@ -88,22 +89,9 @@ export function GlobeSection() {
                     <span className="text-sm font-semibold text-white">Europe</span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed">
-                    &bull; London<br />
-                    &bull; Zurich<br />
-                    <span className="text-white/40 italic">+ 8 more</span>
-                  </p>
-                </div>
-
-                {/* Middle East */}
-                <div className="glass rounded-lg p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#FBBF24]"></span>
-                    <span className="text-sm font-semibold text-white">Middle East</span>
-                  </div>
-                  <p className="text-xs text-white/70 leading-relaxed">
-                    &bull; Dubai<br />
-                    &bull; Riyadh<br />
-                    <span className="text-white/40 italic">+ 8 more</span>
+                    &bull; London &bull; Zurich<br />
+                    &bull; Paris &bull; Berlin<br />
+                    <span className="text-white/40 italic">+ 6 more</span>
                   </p>
                 </div>
 
@@ -114,9 +102,9 @@ export function GlobeSection() {
                     <span className="text-sm font-semibold text-white">Asia-Pacific</span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed">
-                    &bull; Singapore<br />
-                    &bull; Tokyo<br />
-                    <span className="text-white/40 italic">+ 7 more</span>
+                    &bull; Singapore &bull; Tokyo<br />
+                    &bull; Sydney &bull; Seoul<br />
+                    <span className="text-white/40 italic">+ 5 more</span>
                   </p>
                 </div>
               </motion.div>
@@ -124,7 +112,7 @@ export function GlobeSection() {
               {/* Stats Row */}
               <motion.div variants={staggerItem} className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <div className="text-2xl font-bold text-[#C15A2C]" style={{ fontFamily: "var(--font-heading)" }}>4</div>
+                  <div className="text-2xl font-bold text-[#C15A2C]" style={{ fontFamily: "var(--font-heading)" }}>3</div>
                   <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Continents</div>
                 </div>
                 <div>

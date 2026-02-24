@@ -1,7 +1,7 @@
 # Market Scout - Institutional Memory
 
 ## Client Context
-- Quartermasters F.Z.C. is a UAE Free Zone consultancy (AFZA License 37357)
+- Quartermasters is a California-based consultancy
 - Building Next.js 16 + Three.js WebGL platform with AI Host "Q" (RAG/Claude API)
 - Targeting US enterprise + tech startup clients
 - Brand: "Sovereign Nexus" design system, Deep Harbor + Burnt Copper palette

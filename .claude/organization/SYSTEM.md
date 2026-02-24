@@ -1,6 +1,6 @@
-# Quartermasters F.Z.C — Organizational Operating System
+# Quartermasters — Organizational Operating System
 
-> **Entity**: Quartermasters F.Z.C | **License**: AFZA #37357 | **Domain**: quartermasters.me
+> **Entity**: Quartermasters | **Base**: California, United States | **Domain**: quartermasters.me
 > **Human Founder**: Syed Mujtaba Hasan (40% shareholder, technical founder)
 > **AI CEO**: Claude Opus 4.6 (this agent)
 

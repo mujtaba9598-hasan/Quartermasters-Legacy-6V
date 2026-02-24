@@ -384,6 +384,329 @@ export type Database = {
                     updated_at?: string | null
                 }
             }
+            projects: {
+                Row: {
+                    id: string
+                    client_id: string
+                    title: string
+                    description: string | null
+                    status: string
+                    service_vertical: string | null
+                    created_at: string
+                    updated_at: string
+                }
+                Insert: {
+                    id?: string
+                    client_id: string
+                    title: string
+                    description?: string | null
+                    status?: string
+                    service_vertical?: string | null
+                    created_at?: string
+                    updated_at?: string
+                }
+                Update: {
+                    id?: string
+                    client_id?: string
+                    title?: string
+                    description?: string | null
+                    status?: string
+                    service_vertical?: string | null
+                    created_at?: string
+                    updated_at?: string
+                }
+            }
+        }
+        client_documents: {
+            Row: {
+                id: string
+                client_id: string
+                project_id: string | null
+                file_name: string
+                file_type: string
+                file_size: number
+                storage_path: string
+                category: string
+                uploaded_by: string
+                created_at: string
+                updated_at: string
+            }
+            Insert: {
+                id?: string
+                client_id: string
+                project_id?: string | null
+                file_name: string
+                file_type: string
+                file_size: number
+                storage_path: string
+                category?: string
+                uploaded_by?: string
+                created_at?: string
+                updated_at?: string
+            }
+            Update: {
+                id?: string
+                client_id?: string
+                project_id?: string | null
+                file_name?: string
+                file_type?: string
+                file_size?: number
+                storage_path?: string
+                category?: string
+                uploaded_by?: string
+                created_at?: string
+                updated_at?: string
+            }
+        }
+        invoices: {
+            Row: {
+                id: string
+                client_id: string
+                project_id: string | null
+                invoice_number: string
+                amount: number
+                currency: string
+                status: string
+                service: string
+                tier: string
+                line_items: Record<string, unknown>[]
+                tax_rate: number
+                tax_amount: number
+                total_amount: number
+                notes: string | null
+                issued_at: string
+                due_at: string
+                paid_at: string | null
+                stripe_payment_id: string | null
+                created_at: string
+                updated_at: string
+            }
+            Insert: {
+                id?: string
+                client_id: string
+                project_id?: string | null
+                invoice_number: string
+                amount: number
+                currency?: string
+                status?: string
+                service: string
+                tier: string
+                line_items?: Record<string, unknown>[]
+                tax_rate?: number
+                tax_amount?: number
+                total_amount: number
+                notes?: string | null
+                issued_at?: string
+                due_at?: string
+                paid_at?: string | null
+                stripe_payment_id?: string | null
+                created_at?: string
+                updated_at?: string
+            }
+            Update: {
+                id?: string
+                client_id?: string
+                project_id?: string | null
+                invoice_number?: string
+                amount?: number
+                currency?: string
+                status?: string
+                service?: string
+                tier?: string
+                line_items?: Record<string, unknown>[]
+                tax_rate?: number
+                tax_amount?: number
+                total_amount?: number
+                notes?: string | null
+                issued_at?: string
+                due_at?: string
+                paid_at?: string | null
+                stripe_payment_id?: string | null
+                created_at?: string
+                updated_at?: string
+            }
+        }
+        payments: {
+            Row: {
+                id: string
+                client_id: string
+                invoice_id: string | null
+                stripe_session_id: string
+                stripe_payment_intent_id: string | null
+                amount: number
+                currency: string
+                status: string
+                service: string
+                tier: string
+                metadata: Record<string, unknown> | null
+                created_at: string
+            }
+            Insert: {
+                id?: string
+                client_id: string
+                invoice_id?: string | null
+                stripe_session_id: string
+                stripe_payment_intent_id?: string | null
+                amount: number
+                currency?: string
+                status: string
+                service: string
+                tier: string
+                metadata?: Record<string, unknown> | null
+                created_at?: string
+            }
+            Update: {
+                id?: string
+                client_id?: string
+                invoice_id?: string | null
+                stripe_session_id?: string
+                stripe_payment_intent_id?: string | null
+                amount?: number
+                currency?: string
+                status?: string
+                service?: string
+                tier?: string
+                metadata?: Record<string, unknown> | null
+                created_at?: string
+            }
+        }
+        client_messages: {
+            Row: {
+                id: string
+                client_id: string
+                project_id: string | null
+                sender_role: string
+                sender_name: string
+                content: string
+                read_at: string | null
+                created_at: string
+            }
+            Insert: {
+                id?: string
+                client_id: string
+                project_id?: string | null
+                sender_role: string
+                sender_name: string
+                content: string
+                read_at?: string | null
+                created_at?: string
+            }
+            Update: {
+                id?: string
+                client_id?: string
+                project_id?: string | null
+                sender_role?: string
+                sender_name?: string
+                content?: string
+                read_at?: string | null
+                created_at?: string
+            }
+            invoices: {
+                Row: {
+                    id: string
+                    client_id: string
+                    project_id: string | null
+                    invoice_number: string
+                    amount: number
+                    currency: string
+                    status: string
+                    service: string | null
+                    tier: string | null
+                    line_items: any | null
+                    tax_amount: number | null
+                    total_amount: number
+                    issued_at: string | null
+                    due_at: string | null
+                    paid_at: string | null
+                    stripe_payment_id: string | null
+                    created_at: string | null
+                    updated_at: string | null
+                }
+                Insert: {
+                    id?: string
+                    client_id: string
+                    project_id?: string | null
+                    invoice_number: string
+                    amount: number
+                    currency?: string
+                    status?: string
+                    service?: string | null
+                    tier?: string | null
+                    line_items?: any | null
+                    tax_amount?: number | null
+                    total_amount: number
+                    issued_at?: string | null
+                    due_at?: string | null
+                    paid_at?: string | null
+                    stripe_payment_id?: string | null
+                    created_at?: string | null
+                    updated_at?: string | null
+                }
+                Update: {
+                    id?: string
+                    client_id?: string
+                    project_id?: string | null
+                    invoice_number?: string
+                    amount?: number
+                    currency?: string
+                    status?: string
+                    service?: string | null
+                    tier?: string | null
+                    line_items?: any | null
+                    tax_amount?: number | null
+                    total_amount?: number
+                    issued_at?: string | null
+                    due_at?: string | null
+                    paid_at?: string | null
+                    stripe_payment_id?: string | null
+                    created_at?: string | null
+                    updated_at?: string | null
+                }
+            }
+            payments: {
+                Row: {
+                    id: string
+                    client_id: string
+                    invoice_id: string | null
+                    stripe_session_id: string
+                    stripe_payment_intent_id: string | null
+                    amount: number
+                    currency: string
+                    status: string
+                    service: string | null
+                    tier: string | null
+                    metadata: any | null
+                    created_at: string | null
+                }
+                Insert: {
+                    id?: string
+                    client_id: string
+                    invoice_id?: string | null
+                    stripe_session_id: string
+                    stripe_payment_intent_id?: string | null
+                    amount: number
+                    currency?: string
+                    status: string
+                    service?: string | null
+                    tier?: string | null
+                    metadata?: any | null
+                    created_at?: string | null
+                }
+                Update: {
+                    id?: string
+                    client_id?: string
+                    invoice_id?: string | null
+                    stripe_session_id?: string
+                    stripe_payment_intent_id?: string | null
+                    amount?: number
+                    currency?: string
+                    status?: string
+                    service?: string | null
+                    tier?: string | null
+                    metadata?: any | null
+                    created_at?: string | null
+                }
+            }
         }
         Views: Record<string, never>
         Functions: Record<string, never>

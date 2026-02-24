@@ -21,7 +21,6 @@ function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector
 const REGION_COLORS = {
   americas: "#60A5FA",
   europe: "#A78BFA",
-  middleEast: "#FBBF24",
   asia: "#34D399",
 };
 
@@ -29,27 +28,27 @@ const connections = [
   { name: "London", lat: 51.5, lng: -0.12, region: "europe" as const },
   { name: "Singapore", lat: 1.35, lng: 103.8, region: "asia" as const },
   { name: "New York", lat: 40.71, lng: -74.0, region: "americas" as const },
-  { name: "Dubai", lat: 25.2, lng: 55.27, region: "middleEast" as const },
-  { name: "Riyadh", lat: 24.7, lng: 46.7, region: "middleEast" as const },
+  { name: "San Francisco", lat: 37.77, lng: -122.42, region: "americas" as const },
+  { name: "Chicago", lat: 41.88, lng: -87.63, region: "americas" as const },
   { name: "Tokyo", lat: 35.6, lng: 139.6, region: "asia" as const },
   { name: "Zurich", lat: 47.3, lng: 8.5, region: "europe" as const },
 ];
 
 const crossConnections = [
   { from: "London", to: "Zurich", color: REGION_COLORS.europe },
-  { from: "Dubai", to: "Riyadh", color: REGION_COLORS.middleEast },
+  { from: "San Francisco", to: "Chicago", color: REGION_COLORS.americas },
   { from: "Singapore", to: "Tokyo", color: REGION_COLORS.asia },
   { from: "New York", to: "London", color: REGION_COLORS.europe },
 ];
 
 const mapNodes = [
-  // Middle East (Dense)
+  // Americas (Dense — US focus)
   ...[
-    { lat: 25.2, lng: 55.3 }, { lat: 24.7, lng: 46.7 }, { lat: 24.4, lng: 54.3 },
-    { lat: 25.3, lng: 51.5 }, { lat: 29.3, lng: 47.9 }, { lat: 26.0, lng: 50.5 },
-    { lat: 23.6, lng: 58.5 }, { lat: 21.5, lng: 39.1 }, { lat: 30.0, lng: 31.2 },
-    { lat: 31.9, lng: 35.9 }
-  ].map(n => ({ ...n, region: "middleEast" as const })),
+    { lat: 34.05, lng: -118.24 }, { lat: 37.77, lng: -122.42 }, { lat: 41.88, lng: -87.63 },
+    { lat: 29.76, lng: -95.37 }, { lat: 33.45, lng: -112.07 }, { lat: 47.6, lng: -122.33 },
+    { lat: 25.76, lng: -80.19 }, { lat: 42.36, lng: -71.06 }, { lat: 39.74, lng: -104.99 },
+    { lat: 43.65, lng: -79.38 }
+  ].map(n => ({ ...n, region: "americas" as const })),
 
   // Europe (Hubs)
   ...[

@@ -28,7 +28,7 @@
 ## Gap 5: Underserved Segments
 - Series A-C startups needing premium agency work can't afford R/GA/Huge rates ($500K+ projects)
 - Startups often get junior teams from big agencies -- gap for senior-led boutique attention
-- Middle East / MENA-connected US companies have zero specialized premium agencies
+- Internationally connected US companies have zero specialized premium agencies
 - Fractional CTO + agency services combined: 67% of mid-sized companies used fractional CTOs in 2024
 
 ## Market Size Context

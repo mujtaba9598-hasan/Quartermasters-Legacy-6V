@@ -49,7 +49,7 @@ PHASE C ── Sprint 4 Frontend (Q Chat + UI)  ── 10 tasks ── PRIORITY:
 
 ### A-03: Fix Privacy Policy Placeholders
 **File**: `quartermasters-nexus/src/app/privacy/page.tsx`
-**What**: Find-and-replace ALL instances of `[BRAND]` with `Quartermasters F.Z.C`. There are approximately 15+ occurrences. Do NOT change any other text, styling, or structure. Only the placeholder replacement.
+**What**: Find-and-replace ALL instances of `[BRAND]` with `Quartermasters`. There are approximately 15+ occurrences. Do NOT change any other text, styling, or structure. Only the placeholder replacement.
 
 ### A-04: Create Sitemap
 **File**: `quartermasters-nexus/src/app/sitemap.ts` (NEW)
@@ -221,7 +221,7 @@ Add indexes on: `conversations.visitor_id`, `messages.conversation_id`, `documen
 **What**: Claude API wrapper with Q's personality.
 - Export `askQ(params: { userMessage: string, conversationHistory: Message[], context: RetrievedChunk[], pricingState?: PricingState }): Promise<string>`
 - System prompt for Q:
-  - Name: Q | Role: Senior Strategy Consultant for Quartermasters F.Z.C
+  - Name: Q | Role: Senior Strategy Consultant for Quartermasters
   - Personality: Professional, authoritative, concise. Not chatty. Speaks like a seasoned consultant.
   - Scope: ONLY the 5 licensed activities. If asked about anything outside scope, redirect.
   - NEVER fabricate prices — all pricing comes from PricingEngine (injected into context)

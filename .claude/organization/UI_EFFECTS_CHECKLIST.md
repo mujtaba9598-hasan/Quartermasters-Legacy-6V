@@ -50,7 +50,7 @@
 | G-33 | Tech R&D — capability card 4 | `src/components/services/TechRndClient.tsx` | GlitchEffect | `#3B82C4` | DONE |
 | G-34 | Tech R&D — capability card 5 | `src/components/services/TechRndClient.tsx` | GlitchEffect | `#3B82C4` | DONE |
 | G-35 | About — Key Figures card 1 (5 Licensed) | `src/app/about/page.tsx` | glass card | `#C8872E` | DONE |
-| G-36 | About — Key Figures card 2 (UAE Location) | `src/app/about/page.tsx` | glass card | `#C8872E` | DONE |
+| G-36 | About — Key Figures card 2 (California Location) | `src/app/about/page.tsx` | glass card | `#C8872E` | DONE |
 | G-37 | About — CTA card | `src/app/about/page.tsx` | glass card | `#C8872E` | DONE |
 | G-38 | Knowledge Base — category card 1 | `src/app/knowledge-base/page.tsx` | link card | `#C8872E` | DONE |
 | G-39 | Knowledge Base — category card 2 | `src/app/knowledge-base/page.tsx` | link card | `#C8872E` | DONE |

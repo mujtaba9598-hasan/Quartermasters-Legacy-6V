@@ -98,7 +98,7 @@ The advisor correctly identifies that a static 2D fallback would feel broken. Ou
 **VERDICT: REJECTED**
 - **Out of scope**: Not in MASTER_PLAN, V2, or PHASE_1_2_BLUEPRINT
 - **Legal risk**: Scraping client websites without explicit consent raises CFAA/CMA issues
-- **License scope**: Our AFZA license covers consultancy, not automated web auditing SaaS
+- **License scope**: Our license covers consultancy, not automated web auditing SaaS
 - **Infrastructure cost**: Selenium/headless browser infrastructure requires paid compute — and we haven't scoped or budgeted this
 - **Complexity creep**: This adds a Python runtime dependency to a Next.js/TypeScript stack
 - **Rationale**: Q should qualify leads through conversation, not by crawling their sites. If we want site audit capability in the future, it needs its own sprint with legal review and founder budget approval.
@@ -187,7 +187,7 @@ S3-06 (anti-hallucination guardrails) covers this with schema validator and comm
 
 | ID | Item | Reason |
 |---|---|---|
-| KT-08 | "Aggressive Hunter" cold outreach engine (Python/Selenium crawling) | REJECTED for third time. Out of AFZA license scope, CFAA/CMA legal risk, ethical concerns with scraping without consent. Not building this. |
+| KT-08 | "Aggressive Hunter" cold outreach engine (Python/Selenium crawling) | REJECTED for third time. Out of license scope, CFAA/CMA legal risk, ethical concerns with scraping without consent. Not building this. |
 | KT-09 | "Burner Domains" for cold outreach | Reputation poison. Using disposable domains to send unsolicited emails is spam infrastructure. Hard no. |
 | KT-10 | LangChain as AI orchestrator | Unnecessary abstraction layer. Claude API direct + Vercel AI SDK is cleaner, fewer dependencies, less complexity. LangChain adds bloat for no benefit in our use case. |
 | KT-11 | GSAP animation library | We are committed to Framer Motion 12. Two animation libraries fragments the codebase and increases bundle size. |
@@ -197,7 +197,7 @@ S3-06 (anti-hallucination guardrails) covers this with schema validator and comm
 
 | ID | Item | Question |
 |---|---|---|
-| KT-13 | "Local Opt-Out" — deprioritize UAE, focus on developed nations | **RESOLVED by Founder**: Target markets are USA, EU, UK, Singapore, developed nations. UAE clients deprioritized. Arabic support deferred indefinitely. Logged as DEC-007. |
+| KT-13 | "Local Opt-Out" — focus on developed nations | **RESOLVED by Founder**: Target markets are USA, EU, UK, Singapore, developed nations. Other regions deprioritized. Arabic support deferred indefinitely. Logged as DEC-007. |
 
 #### Knowledge Transfer Summary
 

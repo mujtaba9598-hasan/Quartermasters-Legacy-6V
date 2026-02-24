@@ -1,4 +1,4 @@
-# Quartermasters F.Z.C — Master Execution Plan
+# Quartermasters — Master Execution Plan
 
 > **Version**: 1.0 | **Created**: 2026-02-12
 > **Author**: CEO (AI) | **Approved by**: Founder (Mujtaba)
@@ -38,9 +38,9 @@
 ## PART 2: STRATEGIC FRAMEWORK
 
 ### Company
-- **Entity**: Quartermasters F.Z.C | AFZA License #37357
-- **Base**: Ajman Free Zone, C1 Building, Office SF2097
-- **Licensed Activities**: HR Consultancy, Management Consultancies, Tech Education R&D, Event Management, Banking Services Consultancy
+- **Entity**: Quartermasters
+- **Base**: California, United States
+- **Licensed Activities**: HR Consultancy, Management Consultancies, Tech Education R&D, Event Management, Banking Services Consultancy, IT Services
 
 ### Target Markets (DEC-007)
 | Priority | Markets | Focus |
@@ -48,7 +48,7 @@
 | **Primary** | USA | Broad spectrum — Express Lane (<$2k) + Executive Track (>$10k) |
 | **Secondary** | UK, EU (Germany, France) | Enterprise consultancy, tech education |
 | **Tertiary** | Singapore, Japan, Australia | Tech-forward developed nations |
-| **Deprioritized** | UAE, GCC | Maintain compliance as UAE entity, not primary sales target |
+| **Deprioritized** | Other regions | Not primary sales targets |
 
 ### Revenue Model: "Autonomous Revenue Engine"
 The website is not a brochure — it is a 24/7 Sales Director.
@@ -98,7 +98,7 @@ The website is not a brochure — it is a 24/7 Sales Director.
 | **Auth** | Supabase Auth | Planned (S6) |
 | **Email** | Resend (separate sending domain) | Partial (contact form done) |
 | **Booking** | Cal.com API | Planned (S5) |
-| **Payments** | Stripe (USD primary) + PayTabs (regional) | Planned (S7) |
+| **Payments** | Stripe (USD primary) | Planned (S7) |
 | **Analytics** | PostHog (consent-gated) | Planned (S9) |
 | **Caching** | Upstash Redis | Planned (S3) |
 | **Hosting** | Docker (local server) + Cloudflare Tunnel | Pending (S1-08) |
@@ -130,7 +130,7 @@ booking_reminders       -- Automated reminder queue
 
 -- Payments
 invoices                -- Generated invoices
-payments                -- Stripe/PayTabs records
+payments                -- Stripe payment records
 subscriptions           -- Recurring engagements
 
 -- Compliance & Audit
@@ -299,17 +299,15 @@ User Message
 | ID | Task | Owner | Priority |
 |---|---|---|---|
 | S7-01 | Stripe integration (USD primary) | Backend Lead | CRITICAL |
-| S7-02 | PayTabs integration (regional payments, AED) | Backend Lead | HIGH |
-| S7-03 | Invoice generation (PDF, branded) | Backend Lead | HIGH |
-| S7-04 | Multi-currency support (USD, EUR, GBP, SGD, AED) | Backend Lead | HIGH |
-| S7-05 | UAE VAT (5%) calculation and compliance | Compliance Officer | HIGH |
-| S7-06 | Self-service checkout for Express Packages | Frontend Lead | CRITICAL |
+| S7-02 | Invoice generation (PDF, branded) | Backend Lead | HIGH |
+| S7-03 | Multi-currency support (USD, EUR, GBP, SGD) | Backend Lead | HIGH |
+| S7-04 | Tax compliance (US sales tax) | Compliance Officer | HIGH |
+| S7-05 | Self-service checkout for Express Packages | Frontend Lead | CRITICAL |
 | S7-07 | **KT-04: Magic Mirror** — Q streams live React wireframes in chat | Frontend + Backend | HIGH |
 | S7-08 | **KT-06: Split Screen layout** — 30% chat / 70% visual canvas | Frontend Lead | HIGH |
 
 **Cost items requiring founder approval**:
 - Stripe fees (2.9% + $0.30 per transaction)
-- PayTabs fees (varies by region)
 
 **Milestone**: Revenue flows. Express Packages sell automatically. Enterprise deals get invoiced. Q can generate live wireframes.
 
@@ -370,7 +368,7 @@ User Message
 - Rich service pages rank for long-tail consultancy keywords
 - Privacy/Terms pages build Google trust signals
 - Blog/knowledge base content (created for RAG) doubles as SEO content
-- Target keywords per vertical (e.g., "HR consultancy for startups USA", "banking advisory UAE free zone")
+- Target keywords per vertical (e.g., "HR consultancy for startups USA", "banking advisory California")
 
 ### Post-Q (Sprint 3-4): The Website IS the Sales Team
 - Q handles 100% of first-touch qualification
@@ -445,7 +443,6 @@ User Message
 | Item | Cost | Frequency |
 |---|---|---|
 | Stripe processing | 2.9% + $0.30/transaction | Per transaction |
-| PayTabs processing | Varies | Per transaction |
 
 ### Phase 4 (Sprint 8-10)
 | Item | Cost | Frequency |

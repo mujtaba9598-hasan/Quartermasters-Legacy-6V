@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
+import {
+    sendBookingConfirmation,
+    sendBookingCancellation,
+    sendBookingReschedule,
+    sendInternalNotification,
+} from "@/lib/email/booking-emails";
 
 export async function POST(req: NextRequest) {
     try {
@@ -43,6 +49,24 @@ export async function POST(req: NextRequest) {
                     metadata: { cal_booking_id: data.bookingId },
                 });
             }
+
+            // Send emails (don't fail webhook if email fails)
+            const bookingData = {
+                attendee_name: data.attendees[0].name,
+                attendee_email: data.attendees[0].email,
+                cal_event_type: data.eventTitle,
+                start_time: data.startTime,
+                end_time: data.endTime,
+                attendee_timezone: data.attendees[0].timeZone,
+            };
+            try {
+                await Promise.all([
+                    sendBookingConfirmation(bookingData),
+                    sendInternalNotification(bookingData),
+                ]);
+            } catch (emailErr) {
+                console.error("Email send failed:", emailErr);
+            }
         }
 
         if (triggerEvent === "BOOKING_CANCELLED") {
@@ -50,6 +74,18 @@ export async function POST(req: NextRequest) {
                 .from("bookings")
                 .update({ status: "cancelled" })
                 .eq("cal_booking_id", String(data.bookingId));
+
+            try {
+                await sendBookingCancellation({
+                    attendee_name: data.attendees[0].name,
+                    attendee_email: data.attendees[0].email,
+                    cal_event_type: data.eventTitle,
+                    start_time: data.startTime,
+                    end_time: data.endTime,
+                });
+            } catch (emailErr) {
+                console.error("Cancellation email failed:", emailErr);
+            }
         }
 
         if (triggerEvent === "BOOKING_RESCHEDULED") {
@@ -62,6 +98,19 @@ export async function POST(req: NextRequest) {
                     updated_at: new Date().toISOString(),
                 })
                 .eq("cal_booking_id", String(data.bookingId));
+
+            try {
+                await sendBookingReschedule({
+                    attendee_name: data.attendees[0].name,
+                    attendee_email: data.attendees[0].email,
+                    cal_event_type: data.eventTitle,
+                    start_time: data.startTime,
+                    end_time: data.endTime,
+                    attendee_timezone: data.attendees[0].timeZone,
+                });
+            } catch (emailErr) {
+                console.error("Reschedule email failed:", emailErr);
+            }
         }
 
         return NextResponse.json({ received: true });

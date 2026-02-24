@@ -1,9 +1,9 @@
-# Quartermasters F.Z.C — Project Recovery & Status Document
+# Quartermasters — Project Recovery & Status Document
 
 > **Last Updated**: 2026-02-22 (Session 9 — Logo Integration + Card Brightness + Globe V2 Directive)
 > **Git**: https://github.com/mujtaba9598-hasan/Quarter_USA
 > **Purpose**: Complete project state so work can resume from ANY new session without context loss.
-> **Entity**: Quartermasters F.Z.C | AFZA License #37357 | Ajman Free Zone
+> **Entity**: Quartermasters | California, United States
 > **Domain**: quartermasters.me
 > **CEO**: AI (Claude Opus 4.6) | **Founder**: Syed Mujtaba Hasan
 
@@ -62,7 +62,7 @@ BUILD:     CLEAN (0 TS errors)
 - Logo: 3 concepts generated, Monogram Q approved by founder, placed in public/
 - Globe + Logo integration directive sent (GlobeSection enhancement + Header/Footer logo)
 - CEO-Gemini Workflow SOP written to Project_Comms/CEO_GEMINI_WORKFLOW_SOP.md
-- California scrub: 42 files, all UAE refs replaced with US/California
+- California scrub: 42 files, all location refs updated to US/California
 - TypeScript: 0 errors throughout
 
 ### Immediate Next Steps
@@ -105,8 +105,8 @@ VISUAL  ── Hero + Service Visuals + Glass   ── ALL ACCEPTED        ─�
 |------|------|---------------|---------|
 | A-01 | `src/app/layout.tsx` | Wired CookieConsentBanner import + JSX into layout | ACCEPTED |
 | A-02 | `quartermasters-nexus/middleware.ts` | Created geo-detection middleware (cf-ipcountry → qm_geo_mode cookie: gdpr/ccpa/pdpl/default). maxAge: 2592000 (30 days). | ACCEPTED (after IMPROVE — maxAge was 1yr, fixed to 30d) |
-| A-03a | `src/app/layout.tsx` | Replaced all [BRAND]→Quartermasters F.Z.C, example.com→quartermasters.me, California→Ajman | ACCEPTED |
-| A-03b | `src/app/privacy/page.tsx` | Replaced all [BRAND]→Quartermasters F.Z.C (11 occurrences) | ACCEPTED |
+| A-03a | `src/app/layout.tsx` | Replaced all [BRAND]→Quartermasters, example.com→quartermasters.me, location placeholders replaced | ACCEPTED |
+| A-03b | `src/app/privacy/page.tsx` | Replaced all [BRAND]→Quartermasters (11 occurrences) | ACCEPTED |
 | A-04 | `src/app/sitemap.ts` | Created sitemap with all 11 public routes, correct priorities | ACCEPTED |
 | A-05 | `src/app/robots.ts` | Created robots.ts — allow all, disallow /api/ and /portal/, sitemap URL | ACCEPTED |
 | BUG | `src/components/compliance/CookieConsentBanner.tsx` | Fixed PDPL text swap — was showing "CCPA Compliant" for PDPL mode | ACCEPTED |
@@ -215,7 +215,7 @@ C-10 (needs everything)
 ```
 Quartermasters 3/                          ← PROJECT ROOT
 ├── README.md                              ← THIS FILE (recovery doc)
-├── License.pdf                            ← AFZA trade license scan
+├── License.pdf                            ← Business license scan
 ├── quartermasters-logo.avif               ← Brand logo asset
 │
 ├── quartermasters-nexus/                  ← MAIN NEXT.JS APPLICATION

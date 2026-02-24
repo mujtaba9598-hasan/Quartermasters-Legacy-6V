@@ -108,8 +108,8 @@
 ### Sprint 7: Generative UI + Payments (MASTER_PLAN_V2 Phase 6)
 - **KT-04: "Magic Mirror"** — Q streams live React wireframes in chat (Vercel AI SDK streamUI)
 - **KT-06: "Split Screen" layout** — Left 30% chat + Right 70% visual canvas
-- Stripe + PayTabs integration
-- UAE VAT (5%) compliance, invoice generation, multi-currency
+- Stripe integration
+- Tax compliance, invoice generation, multi-currency (USD, EUR, GBP, SGD)
 
 ### Sprint 8: PWA + Mobile (MASTER_PLAN_V2 Phase 7-8)
 - **KT-07: "Morphing Backgrounds"** — 3D scene changes based on conversation context
@@ -121,7 +121,7 @@
 
 ### Sprint 10: Scale, Compliance & Internationalization (MASTER_PLAN_V2 Phase 10)
 - GDPR/CCPA compliance hardening (primary markets: USA, EU, UK, Singapore)
-- UAE PDPL maintained (legal requirement)
+- International data protection compliance maintained
 - **Multilingual support for target markets**: Spanish (US), French (EU), German (EU), Mandarin (Singapore), Japanese, Portuguese
 - i18n framework (next-intl or similar), translated service pages, Q multilingual responses
 - Arabic: deprioritized (DEC-007)

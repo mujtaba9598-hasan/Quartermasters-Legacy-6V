@@ -34,16 +34,16 @@
 **Rationale**: Direct founder instruction — "you have to run this company, except outgoing and expenses. income generations, decision making and operational activities to be held by you. get the reports, you have right to reject or accept the decisions or advices received by the other ai."
 **Decided by**: Human Founder (Mujtaba)
 
-## DEC-007: Market Focus — Developed Nations, Deprioritize UAE (2026-02-12)
-**Decision**: Quartermasters targets USA, EU, UK, Singapore, and other developed nations. UAE clients are deprioritized.
+## DEC-007: Market Focus — Developed Nations (2026-02-12)
+**Decision**: Quartermasters targets USA, EU, UK, Singapore, and other developed nations. Other regions are deprioritized.
 **Implications**:
-- Branding/UX: Global/western positioning, not local UAE
+- Branding/UX: Global/western positioning
 - Pricing: USD primary, EUR/GBP/SGD secondary
 - Q's persona: Already designed for US market tone (confirmed alignment)
 - Content: English primary. Multilingual support for target market languages.
-- Compliance: UAE PDPL maintained (legal requirement as UAE entity) but GDPR and CCPA are the primary compliance targets
+- Compliance: GDPR and CCPA are the primary compliance targets
 - Language support needed for target markets: English (primary), Spanish (US Hispanic), French (EU), German (EU), Mandarin Chinese (Singapore), Japanese, Portuguese (EU/Brazil)
-- Arabic: Deprioritized (UAE not primary market)
+- Arabic: Deprioritized (not primary market)
 **Decided by**: Human Founder (Mujtaba)
 
 ## DEC-008: Gemini Advisory Channel — Knowledge Transfer Complete (2026-02-12)
