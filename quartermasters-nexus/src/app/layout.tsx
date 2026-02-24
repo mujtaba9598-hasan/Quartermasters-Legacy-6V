@@ -9,6 +9,8 @@ import { ServiceWorkerRegister } from "@/components/pwa/ServiceWorkerRegister";
 import { PushPermissionPrompt } from "@/components/pwa/PushPermissionPrompt";
 import { MorphingBackgroundProvider } from "@/lib/contexts/MorphingBackgroundContext";
 import { MorphingBackground } from "@/components/layout/MorphingBackground";
+import { PostHogProvider } from "@/components/analytics/PostHogProvider";
+import { WebVitalsReporter } from "@/components/analytics/WebVitalsReporter";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -125,13 +127,16 @@ export default function RootLayout({
 
           <div className="relative z-10 flex flex-col min-h-screen">
             <Providers>
-              <main className="flex-1 overflow-hidden" style={{ perspective: '1000px' }}>
-                {children}
-                <CookieConsentBanner />
-                <ChatPanel />
-                <ServiceWorkerRegister />
-                <PushPermissionPrompt />
-              </main>
+              <PostHogProvider>
+                <main className="flex-1 overflow-hidden" style={{ perspective: '1000px' }}>
+                  {children}
+                  <CookieConsentBanner />
+                  <ChatPanel />
+                  <ServiceWorkerRegister />
+                  <PushPermissionPrompt />
+                  <WebVitalsReporter />
+                </main>
+              </PostHogProvider>
             </Providers>
           </div>
         </MorphingBackgroundProvider>
