@@ -11,6 +11,7 @@
 - [US Interactive Agency Landscape](us-interactive-agency-landscape.md)
 - [CTO Trust Signals](cto-trust-signals.md)
 - [Blue Ocean Gaps](blue-ocean-gaps.md)
+- [US Agency Pricing Intelligence](us-agency-pricing-intelligence.md)
 
 ## Cross-Niche Patterns
 - SOC 2 compliance is baseline for any US enterprise engagement (not a differentiator, a gate)
