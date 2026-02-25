@@ -1,5 +1,5 @@
 # Quartermasters — Progress Tracker
-> Last Updated: 2026-02-22 | Milestone: Hero Redesign + Service Visuals + GlassSurface + Logo Generation
+> Last Updated: 2026-02-25 | Milestone: MAJOR PIVOT — Tech/AI Services Only + 13 Strategic Directives Captured
 > Git: https://github.com/mujtaba9598-hasan/Quarter_USA
 
 ---
@@ -226,12 +226,37 @@
 
 ---
 
+## MAJOR PIVOT (2026-02-25) — Founder Directive
+
+**Decision**: Kill all non-tech services. Quartermasters becomes a pure IT/AI/Web Dev firm.
+
+**Services REMOVED**: HR, Banking, Management, Events, Human Capital, Event Logistics
+**Services KEPT**: Web Development, Website Redesign, Feature Injections, Express Builds, Custom AI Model Training
+
+**13 Strategic Directives Captured (A through M):**
+- A: Q as Live Host (proactive, discovery call flow)
+- B: Custom AI Model Training add-on (pricing tiers)
+- C: Silicon Valley Shield v1 (superseded by E)
+- D: Archive current product + create new tech-only build
+- E: Foundational Brain (Air Gap, 3 Chameleon personas, fallback)
+- F: Design stays, content changes only
+- G: Module 1 — The Rebuild (website redesigns, 2-min audit)
+- H: Module 2 — The Expansion (subdomain micro-frontend)
+- I: Module 3 — Express Build (autonomous, 24h delivery)
+- J: Global Overrides (Human Illusion, escalation email)
+- K: Module 5 — Digital Twin (Crown Jewel, $25K+, nav dominance)
+- L: SEO Engine — "The Verdict" (2-3 articles/week, no dashes, anti-spam)
+- M: Sovereign Brain (custom LLM on RunPod → VPS, endgame)
+
+**Full details**: `memory/AGENT_CONTINUITY.md`
+
+**Next**: Deep research → options → founder approval → phased plan → execute
+
+---
+
 ## Founder Pending Actions
-1. Run `docker compose up -d --build` (Sprint 1 deploy)
-2. Set RESEND_API_KEY environment variable
-3. Approve Supabase + Claude API costs (ZERO spend authority — CEO cannot approve)
-4. Run Supabase migrations (001 + 002) when database provisioned
-5. Visual review: Hero, service visuals, GlassSurface, globe, logo integration on localhost
-6. Logo integrated: Monogram Q in Header, Footer, OG meta — DONE
-7. Globe V2 redesign: DELIVERED by Gemini, verified (0 TS errors). Founder visual review needed.
-8. Silk.tsx: Founder-assigned directly to Gemini — confirmed working on hero + globally
+1. Confirm which env vars are set in Vercel production
+2. Provide Module 4 directive (Web App / SaaS) — slot reserved
+3. Approve research & planning phase to begin
+4. Set up complaints@quartermasters.me in Hostinger
+5. Confirm archive repo name for current 6-vertical product

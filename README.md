@@ -1,6 +1,6 @@
 # Quartermasters — Project Recovery & Status Document
 
-> **Last Updated**: 2026-02-24 (Session 10 — Q Proactive Welcome Experience)
+> **Last Updated**: 2026-02-25 (Session 11 — MAJOR PIVOT: Tech/AI Only + 13 Strategic Directives)
 > **Git**: https://github.com/mujtaba9598-hasan/Quarter_USA
 > **Purpose**: Complete project state so work can resume from ANY new session without context loss.
 > **Entity**: Quartermasters | California, United States
@@ -50,6 +50,18 @@ GLOBE V2:  DONE (Region colors, cross-connections, 4-region legend, stats row �
 Q WELCOME: DONE (WelcomeScreen, FABTooltip, sendMessage, pill-tag variants)
 BUILD:     CLEAN (0 TS errors)
 ```
+
+### Session 11 — MAJOR PIVOT (2026-02-25)
+- **DECISION**: Kill all non-tech services (HR, banking, management, events, human capital, event logistics)
+- **NEW FOCUS**: IT Services, Web Development, Website Redesign, Feature Injections, Express Builds, Custom AI Model Training
+- 13 strategic directives captured (A through M) — see `memory/AGENT_CONTINUITY.md`
+- Q redesigned as 24/7 Live Host (not passive chatbot) with guided discovery call flow
+- 3 Chameleon Engine personas: Strategist (CEOs), Architect (CTOs), Operator (PMs)
+- 5 service modules defined: Rebuild, Expansion, Express Build, Web App (TBD), Digital Twin
+- Autonomous SEO Engine ("The Verdict") — 2-3 articles/week, nav bar feature
+- Endgame: Custom LLM on RunPod → VPS deployment, eliminate API costs
+- Global overrides: Human Illusion (Q never admits AI), 24h Express delivery, complaints@quartermasters.me
+- Agent continuity file created for crash-proof session recovery
 
 ### Session 10 Accomplishments
 - Q Proactive Welcome Experience: WelcomeScreen.tsx (typewriter greeting, 6 suggestion chips with ClickSpark), FABTooltip.tsx (5s nudge, auto-dismiss), sendMessage() in useQChat.ts (race-condition-safe), pill-tag--it + pill-tag--copper CSS variants
